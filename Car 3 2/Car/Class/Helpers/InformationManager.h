@@ -19,6 +19,8 @@
 
 
 
-
+// 拆车页解析
+- (void)chaiCheSolve:(NSString *)urlStr
+       finish:(void (^)(NSMutableArray *arr))finish;
 
 @end

@@ -12,10 +12,20 @@
 #import "motorcycleTypeViewController.h"
 #import "PictureViewController.h"
 #import "MineViewController.h"
+#import "InformationManager.h"
+#import "UIImageView+WebCache.h"
+#import "ChaiCheModel.h"
+
+#import "ChaiCheTableViewCell.h"
+#import "WebViewController.h"
+
 @interface ChaiViewController ()<UICollectionViewDataSource, UIBarPositioningDelegate, UICollectionViewDelegateFlowLayout,jumpDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong)UICollectionView *collection;
 @property (nonatomic, strong)UITableView *table;
 @property (nonatomic, strong)UICollectionViewFlowLayout *layout;
+// 文章model数组
+@property (nonatomic ,strong) NSMutableArray *chaiTextModelArr;
+@property (nonatomic,assign) int count;
 
 @end
 
@@ -23,6 +33,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.chaiTextModelArr = [NSMutableArray array];
+    self.count = 1;
+    
+    
     [self.view addSubview:[MJRootView shareInstance]];
     [MJRootView shareInstance].delegate = self;
     self.view.backgroundColor = [UIColor whiteColor];
@@ -32,11 +46,25 @@
     [self.view addSubview:segment];
     
     
-//    [self creatTableView];
+    [self creatTableView];
 
     [self creatCollection];
     segment.selectedSegmentIndex = 0;
+    
+    
+    
+    [self loadTableViewData];
+    
     // Do any additional setup after loading the view.
+}
+
+-(void)loadTableViewData{
+    NSString *string = [NSString stringWithFormat:chaiDataUrl,self.count];
+    
+    [[InformationManager shareInstance]chaiCheSolve:string finish:^(NSMutableArray *arr) {
+        [self.chaiTextModelArr addObjectsFromArray:arr];
+    }];
+    [self.table reloadData];
 }
 
 - (void)jumpAction:(NSInteger)tag {
@@ -98,7 +126,7 @@
     self.table = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, Width, Height - 50) style:UITableViewStyleGrouped];
     self.table.delegate = self;
     self.table.dataSource = self;
-    [self.table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"table"];
+    [self.table registerNib:[UINib nibWithNibName:@"ChaiCheTableViewCell" bundle:nil] forCellReuseIdentifier:@"myCell"];
     [self.view addSubview:self.table];
     [self.view insertSubview:self.table belowSubview:[MJRootView shareInstance]];
 }
@@ -116,18 +144,29 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.chaiTextModelArr.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"table" forIndexPath:indexPath];
-    cell.textLabel.text = @"123";
+    ChaiCheTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
+    ChaiCheModel *model = self.chaiTextModelArr[indexPath.row];
+    cell.model = model;
     return cell;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 120;
+}
 
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    WebViewController *wbc = [[WebViewController alloc] init];
+    ChaiCheModel *model = self.chaiTextModelArr[indexPath.row];
+    wbc.url = model.url;
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:wbc];
+    [self presentViewController:nvc animated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
