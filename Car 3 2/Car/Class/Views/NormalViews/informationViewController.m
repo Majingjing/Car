@@ -115,6 +115,8 @@
             break;
     }
      */
+//    self.tableView.contentOffset = CGPointMake(0, 0);
+//    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
     [self.arr removeAllObjects];
 
     self.count = 2;
