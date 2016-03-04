@@ -59,6 +59,7 @@
 }
 
 -(void)loadTableViewData{
+    
     NSString *string = [NSString stringWithFormat:chaiDataUrl,self.count];
     
     [[InformationManager shareInstance]chaiCheSolve:string finish:^(NSMutableArray *arr) {
