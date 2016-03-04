@@ -28,7 +28,8 @@ static MJRootView *MJView;
         MJView.layer.cornerRadius = 30;
         
         MJView.center = CGPointMake(Width / 2, Height - 30);
-        MJView.backgroundColor = [UIColor colorWithRed:0.977 green:0.957 blue:1.000 alpha:0.7];    });
+        MJView.backgroundColor = [UIColor colorWithRed:0.977 green:0.957 blue:1.000 alpha:0.7];
+    });
     return MJView;
 }
 
@@ -54,8 +55,9 @@ static MJRootView *MJView;
     self.popButton = [UIButton buttonWithType:UIButtonTypeSystem];
     
     self.popButton.frame = CGRectMake(0, 0, 60, 60);
-    [self.popButton setTitle:@"+" forState:UIControlStateNormal];
+//    [self.popButton setTitle:@"+" forState:UIControlStateNormal];
     self.popButton.backgroundColor = [UIColor colorWithRed:0.693 green:0.974 blue:1.000 alpha:1.000];
+    [self.popButton setBackgroundImage:[UIImage imageNamed:@"添加.png"] forState:UIControlStateNormal];
     self.popButton.layer.cornerRadius = 30;
     [self.popButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.popButton];
@@ -118,8 +120,6 @@ static MJRootView *MJView;
 
 
 - (void)downAction {
-    NSLog(@"123");
-    
     self.popButton.hidden = NO;
     MJView.frame = CGRectMake(0, 0, 60, 60);
     MJView.center = CGPointMake(Width / 2, Height - 30);
