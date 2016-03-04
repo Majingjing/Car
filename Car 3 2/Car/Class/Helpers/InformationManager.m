@@ -8,6 +8,7 @@
 
 #import "InformationManager.h"
 #import "InformationModel.h"
+#import "ChaiCheModel.h"
 static InformationManager *manager;
 @implementation InformationManager
 
@@ -51,7 +52,27 @@ static InformationManager *manager;
         
  
     });
-   }
+}
+
+-(void)chaiCheSolve:(NSString *)urlStr finish:(void (^)(NSMutableArray *arr))finish{
+    NSMutableArray *array = [NSMutableArray array];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        for (NSDictionary *dic in arr) {
+            ChaiCheModel *model = [[ChaiCheModel alloc] init];
+            [model setValuesForKeysWithDictionary:dic];
+            [array addObject:model];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            finish(array);
+        });
+        
+        
+    });
+}
 
 
 @end

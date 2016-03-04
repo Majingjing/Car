@@ -25,6 +25,11 @@
 		C24859381C87C80D00BC8FC9 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C24859281C87C80D00BC8FC9 /* UIView+WebCacheOperation.m */; };
 		C248593E1C87EA1A00BC8FC9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C248593D1C87EA1A00BC8FC9 /* WebViewController.m */; };
 		C24859411C87EE2E00BC8FC9 /* MotorcycleTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C24859401C87EE2E00BC8FC9 /* MotorcycleTypeModel.m */; };
+		C27CDEAD1C885A5F00EDD04F /* ChaiCheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C27CDEAC1C885A5F00EDD04F /* ChaiCheModel.m */; };
+		C27CDEAF1C88615400EDD04F /* chachewenzhang.png in Resources */ = {isa = PBXBuildFile; fileRef = C27CDEAE1C88615400EDD04F /* chachewenzhang.png */; };
+		C27CDEB31C8862F700EDD04F /* ChaiCheTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C27CDEB11C8862F700EDD04F /* ChaiCheTableViewCell.m */; };
+		C27CDEB41C8862F700EDD04F /* ChaiCheTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C27CDEB21C8862F700EDD04F /* ChaiCheTableViewCell.xib */; };
+		C27CDEB61C88736200EDD04F /* 8879-11091423003686.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C27CDEB51C88736200EDD04F /* 8879-11091423003686.jpg */; };
 		C2911B3D1C8672AE00657AFA /* informationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B301C8672AE00657AFA /* informationViewController.m */; };
 		C2911B3E1C8672AE00657AFA /* informationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2911B311C8672AE00657AFA /* informationViewController.xib */; };
 		C2911B3F1C8672AE00657AFA /* MJRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B331C8672AE00657AFA /* MJRootView.m */; };
@@ -37,8 +42,6 @@
 		C2911B4E1C86FCAE00657AFA /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = C2911B4D1C86FCAE00657AFA /* 10.png */; };
 		C2911B511C8701A500657AFA /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B501C8701A500657AFA /* MineViewController.m */; };
 		C2911B531C87044700657AFA /* 52.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2911B521C87044700657AFA /* 52.jpg */; };
-		C2911B551C87044E00657AFA /* 8879-11091423003686.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2911B541C87044E00657AFA /* 8879-11091423003686.jpg */; };
-		C2911B571C87045600657AFA /* 8879-11091423105869.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2911B561C87045600657AFA /* 8879-11091423105869.jpg */; };
 		C2911B591C87046100657AFA /* 8879-11091423105869.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2911B581C87046100657AFA /* 8879-11091423105869.jpg */; };
 		C2911B5B1C87046A00657AFA /* 8879-11091423105869.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2911B5A1C87046A00657AFA /* 8879-11091423105869.jpg */; };
 		C2911B621C871A7000657AFA /* InformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B601C871A7000657AFA /* InformationTableViewCell.m */; };
@@ -91,6 +94,13 @@
 		C248593D1C87EA1A00BC8FC9 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		C248593F1C87EE2E00BC8FC9 /* MotorcycleTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotorcycleTypeModel.h; sourceTree = "<group>"; };
 		C24859401C87EE2E00BC8FC9 /* MotorcycleTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotorcycleTypeModel.m; sourceTree = "<group>"; };
+		C27CDEAB1C885A5F00EDD04F /* ChaiCheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiCheModel.h; sourceTree = "<group>"; };
+		C27CDEAC1C885A5F00EDD04F /* ChaiCheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiCheModel.m; sourceTree = "<group>"; };
+		C27CDEAE1C88615400EDD04F /* chachewenzhang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chachewenzhang.png; sourceTree = "<group>"; };
+		C27CDEB01C8862F700EDD04F /* ChaiCheTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiCheTableViewCell.h; sourceTree = "<group>"; };
+		C27CDEB11C8862F700EDD04F /* ChaiCheTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiCheTableViewCell.m; sourceTree = "<group>"; };
+		C27CDEB21C8862F700EDD04F /* ChaiCheTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChaiCheTableViewCell.xib; sourceTree = "<group>"; };
+		C27CDEB51C88736200EDD04F /* 8879-11091423003686.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "8879-11091423003686.jpg"; sourceTree = "<group>"; };
 		C2911B211C8672AE00657AFA /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		C2911B2F1C8672AE00657AFA /* informationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = informationViewController.h; path = ../../Views/NormalViews/informationViewController.h; sourceTree = "<group>"; };
 		C2911B301C8672AE00657AFA /* informationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = informationViewController.m; path = ../../Views/NormalViews/informationViewController.m; sourceTree = "<group>"; };
@@ -112,8 +122,6 @@
 		C2911B4F1C8701A500657AFA /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		C2911B501C8701A500657AFA /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		C2911B521C87044700657AFA /* 52.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 52.jpg; sourceTree = "<group>"; };
-		C2911B541C87044E00657AFA /* 8879-11091423003686.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "8879-11091423003686.jpg"; sourceTree = "<group>"; };
-		C2911B561C87045600657AFA /* 8879-11091423105869.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "8879-11091423105869.jpg"; sourceTree = "<group>"; };
 		C2911B581C87046100657AFA /* 8879-11091423105869.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "8879-11091423105869.jpg"; sourceTree = "<group>"; };
 		C2911B5A1C87046A00657AFA /* 8879-11091423105869.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "8879-11091423105869.jpg"; sourceTree = "<group>"; };
 		C2911B5F1C871A7000657AFA /* InformationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationTableViewCell.h; sourceTree = "<group>"; };
@@ -221,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				C24859071C87C80D00BC8FC9 /* SDWebImage */,
-				C2911B541C87044E00657AFA /* 8879-11091423003686.jpg */,
 				C2911B641C871C8800657AFA /* InformationManager.h */,
 				C2911B651C871C8800657AFA /* InformationManager.m */,
 			);
@@ -236,6 +243,8 @@
 				C2911B681C871E4600657AFA /* InformationModel.m */,
 				C248593F1C87EE2E00BC8FC9 /* MotorcycleTypeModel.h */,
 				C24859401C87EE2E00BC8FC9 /* MotorcycleTypeModel.m */,
+				C27CDEAB1C885A5F00EDD04F /* ChaiCheModel.h */,
+				C27CDEAC1C885A5F00EDD04F /* ChaiCheModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,7 +252,8 @@
 		C2911B241C8672AE00657AFA /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				C2911B561C87045600657AFA /* 8879-11091423105869.jpg */,
+				C27CDEB51C88736200EDD04F /* 8879-11091423003686.jpg */,
+				C27CDEAE1C88615400EDD04F /* chachewenzhang.png */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -278,6 +288,9 @@
 				C2911B361C8672AE00657AFA /* motorcycleTypeViewController.xib */,
 				C2911B441C86785500657AFA /* ChaiViewController.h */,
 				C2911B451C86785500657AFA /* ChaiViewController.m */,
+				C27CDEB01C8862F700EDD04F /* ChaiCheTableViewCell.h */,
+				C27CDEB11C8862F700EDD04F /* ChaiCheTableViewCell.m */,
+				C27CDEB21C8862F700EDD04F /* ChaiCheTableViewCell.xib */,
 				C2911B471C86DE3900657AFA /* PictureViewController.h */,
 				C2911B481C86DE3900657AFA /* PictureViewController.m */,
 				C2911B4F1C8701A500657AFA /* MineViewController.h */,
@@ -417,16 +430,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E25DB01C854895003EF8F8 /* LaunchScreen.storyboard in Resources */,
+				C27CDEB61C88736200EDD04F /* 8879-11091423003686.jpg in Resources */,
 				C2911B591C87046100657AFA /* 8879-11091423105869.jpg in Resources */,
+				C27CDEAF1C88615400EDD04F /* chachewenzhang.png in Resources */,
+				C27CDEB41C8862F700EDD04F /* ChaiCheTableViewCell.xib in Resources */,
 				C2911B631C871A7000657AFA /* InformationTableViewCell.xib in Resources */,
 				C2911B411C8672AE00657AFA /* motorcycleTypeViewController.xib in Resources */,
 				C2911B4E1C86FCAE00657AFA /* 10.png in Resources */,
-				C2911B571C87045600657AFA /* 8879-11091423105869.jpg in Resources */,
 				C2E25DAD1C854895003EF8F8 /* Assets.xcassets in Resources */,
 				C2E25DAB1C854895003EF8F8 /* Main.storyboard in Resources */,
 				C2911B531C87044700657AFA /* 52.jpg in Resources */,
 				C2911B3E1C8672AE00657AFA /* informationViewController.xib in Resources */,
-				C2911B551C87044E00657AFA /* 8879-11091423003686.jpg in Resources */,
 				C2911B5B1C87046A00657AFA /* 8879-11091423105869.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,10 +474,12 @@
 				C2E25DA51C854895003EF8F8 /* AppDelegate.m in Sources */,
 				C24859311C87C80D00BC8FC9 /* SDWebImagePrefetcher.m in Sources */,
 				C248592D1C87C80D00BC8FC9 /* SDWebImageDecoder.m in Sources */,
+				C27CDEAD1C885A5F00EDD04F /* ChaiCheModel.m in Sources */,
 				C248592B1C87C80D00BC8FC9 /* SDImageCache.m in Sources */,
 				C248592C1C87C80D00BC8FC9 /* SDWebImageCompat.m in Sources */,
 				C24859381C87C80D00BC8FC9 /* UIView+WebCacheOperation.m in Sources */,
 				C2E25DA21C854895003EF8F8 /* main.m in Sources */,
+				C27CDEB31C8862F700EDD04F /* ChaiCheTableViewCell.m in Sources */,
 				C2911B661C871C8800657AFA /* InformationManager.m in Sources */,
 				C248592F1C87C80D00BC8FC9 /* SDWebImageDownloaderOperation.m in Sources */,
 				C2911B4C1C86E32E00657AFA /* ModelCollectionViewCell.m in Sources */,
