@@ -11,4 +11,14 @@
 #define Width CGRectGetWidth([UIScreen mainScreen].bounds)
 #define Height CGRectGetHeight([UIScreen mainScreen].bounds)
 
+
+
+
+#pragma mark --- SYH
+
+#define MorocleUrl @"http://api.tool.chexun.com/mobile/downBrandInfo.do"
+
+#define MscleUrl @"http://api.tool.chexun.com/mobile/downSeriesInfo.do?brandId=%ld"
+
+
 #endif /* Header_h */
