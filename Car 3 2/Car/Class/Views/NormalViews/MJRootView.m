@@ -24,8 +24,11 @@ static MJRootView *MJView;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         MJView = [[MJRootView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+        MJView.layer.masksToBounds = YES;
+        MJView.layer.cornerRadius = 30;
+        
         MJView.center = CGPointMake(Width / 2, Height - 30);
-    });
+        MJView.backgroundColor = [UIColor colorWithRed:0.977 green:0.957 blue:1.000 alpha:0.7];    });
     return MJView;
 }
 
@@ -52,7 +55,7 @@ static MJRootView *MJView;
     
     self.popButton.frame = CGRectMake(0, 0, 60, 60);
     [self.popButton setTitle:@"+" forState:UIControlStateNormal];
-    self.popButton.backgroundColor = [UIColor colorWithRed:1.000 green:0.481 blue:0.939 alpha:1.000];
+    self.popButton.backgroundColor = [UIColor colorWithRed:0.693 green:0.974 blue:1.000 alpha:1.000];
     self.popButton.layer.cornerRadius = 30;
     [self.popButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.popButton];
@@ -81,11 +84,11 @@ static MJRootView *MJView;
             self.button = [[UIButton alloc] initWithFrame:CGRectMake((width  + 10)* i + 10 , Height - 260, width, width)];
             self.lable = [[UILabel alloc] initWithFrame:CGRectMake((width  + 10)* i + 10 , Height - 190, width, 30)];
         }
+         [self.button setBackgroundImage:[UIImage imageNamed:self.arr[i]] forState:UIControlStateNormal];
         self.button.tag = 100+i;
         self.lable.text = self.arr[i];
         self.lable.textAlignment = NSTextAlignmentCenter;
         self.button.layer.cornerRadius = width / 2;
-        self.button.backgroundColor = [UIColor greenColor];
         [self.button addTarget:self action:@selector(tapAction:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.button];
         [self addSubview:self.lable];

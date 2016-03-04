@@ -17,6 +17,8 @@
 #import "InformationManager.h"
 #import "InformationTableViewCell.h"
 #import "WebViewController.h"
+#import "UIImageView+WebCache.h"
+
 @interface informationViewController ()<jumpDelegate, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -30,6 +32,12 @@
 @property (nonatomic, assign)NSInteger index;
 //记录当前刷新的次数
 @property (nonatomic, assign)NSInteger count;
+
+
+// 轮播图地址数组
+@property (nonatomic,strong) NSMutableArray *loopPicUrlArr;
+// 图片新闻地址
+@property (nonatomic,strong) NSMutableArray *loopPicNewsArr;
 @end
 
 @implementation informationViewController
@@ -52,7 +60,40 @@
     
     self.index = 1;
     
+    [self loadLoopPicData];
         // Do any additional setup after loading the view.
+}
+
+// 解析轮播图地址
+-(void)loadLoopPicData{
+    NSURL *url = [NSURL URLWithString:picUrlString];
+    NSString *string = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+    NSArray *arr = [string componentsSeparatedByString:@"\n"];
+    self.loopPicUrlArr = [NSMutableArray array];
+    self.loopPicNewsArr = [NSMutableArray array];
+    for (NSString *str in arr) {
+        if ([str containsString:@".jpg"]) {
+            [self.loopPicUrlArr addObject:str];
+        }else{
+            [self.loopPicNewsArr addObject:str];
+        }
+    }
+    
+    
+    if (self.segment.selectedSegmentIndex == 0) {
+        UIScrollView *loopPicView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+        loopPicView.contentSize = CGSizeMake(self.view.frame.size.width*3, 200);
+        loopPicView.pagingEnabled = YES;
+        loopPicView.bounces = NO;
+        for (int i = 0; i <3; i++) {
+            UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width*i, 0, self.view.frame.size.width, 200)];
+            [imgView sd_setImageWithURL:[NSURL URLWithString:self.loopPicUrlArr[i]]];
+            [loopPicView addSubview:imgView];
+        }
+        self.tableView.tableHeaderView = loopPicView;
+    }
+    
+    
 }
 - (IBAction)segmentAction:(UISegmentedControl *)sender {
     /*
