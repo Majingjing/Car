@@ -56,7 +56,7 @@
     
     
     self.table.scrollEnabled = NO;
-    // Do any additional setup after loading the view.
+
 }
 
 -(void)loadTableViewData{

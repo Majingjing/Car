@@ -92,7 +92,6 @@ static NSString *msIdentifier = @"msCell";
     self.brandIdArray = [NSMutableArray array];
     self.data = [NSMutableArray array];
     
-    
 }
 
 - (void)swipAction
@@ -118,25 +117,40 @@ static NSString *msIdentifier = @"msCell";
             self.data = [morosManger shareInstanceMsclecy].msArr;
             [UIView animateWithDuration:1 animations:^{
                 CGRect rect = self.mTableView.frame;
-                rect.origin.x -= 300;
+                rect.origin.x -= 240;
                 self.mTableView.frame = rect;
             }];
             [self.mTableView reloadData];
         }];
     }];
+    
+    /*
     UIView *tapView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 114, 736)];
     tapView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
     [self.view addSubview:tapView];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
     [tapView addGestureRecognizer:tap];
+     */
+    
+    UIButton *tapBtn = [UIButton  buttonWithType:UIButtonTypeSystem];
+                        
+    tapBtn.frame = CGRectMake(0, 0, 114, 736);
+    
+    //tapBtn.backgroundColor = [UIColor whiteColor];
+    
+    [self.view  addSubview:tapBtn];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+    [tapBtn addGestureRecognizer:tap];
     
 }
 
 - (void)tapAction:(UIGestureRecognizer *)sender {
+    
     [sender.view removeFromSuperview];
-    [UIView animateWithDuration:1 animations:^{
+    [UIView animateWithDuration:0.7 animations:^{
         CGRect rect = self.mTableView.frame;
-        rect.origin.x += 300;
+        rect.origin.x += 240;
         self.mTableView.frame = rect;
     }];
 }

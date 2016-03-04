@@ -52,6 +52,7 @@
 }
 
 - (void)creatModelCollection {
+    
     self.layout = [[UICollectionViewFlowLayout alloc] init];
     self.layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
     self.layout.itemSize = CGSizeMake((Width - 20) / 2, (Width - 20) / 2);
