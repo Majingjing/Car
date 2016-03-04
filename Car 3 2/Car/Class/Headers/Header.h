@@ -12,8 +12,13 @@
 #define Height CGRectGetHeight([UIScreen mainScreen].bounds)
 
 
-#define picUrlString @"http://m.chexun.com/coopdata/www_content4.inc"
 
-#define chaiDataUrl @"http://sitemap.chexun.com/m/ccfnewsjson.do?count=10&page=%d"
+
+#pragma mark --- SYH
+
+#define MorocleUrl @"http://api.tool.chexun.com/mobile/downBrandInfo.do"
+
+#define MscleUrl @"http://api.tool.chexun.com/mobile/downSeriesInfo.do?brandId=%ld"
+
 
 #endif /* Header_h */
