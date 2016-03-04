@@ -54,6 +54,8 @@ static InformationManager *manager;
     });
 }
 
+
+//拆车解析
 -(void)chaiCheSolve:(NSString *)urlStr finish:(void (^)(NSMutableArray *arr))finish{
     NSMutableArray *array = [NSMutableArray array];
     NSURL *url = [NSURL URLWithString:urlStr];
