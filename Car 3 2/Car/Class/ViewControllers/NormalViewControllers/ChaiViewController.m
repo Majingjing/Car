@@ -52,7 +52,6 @@
     segment.selectedSegmentIndex = 0;
     
     
-    
     [self loadTableViewData];
     
     
