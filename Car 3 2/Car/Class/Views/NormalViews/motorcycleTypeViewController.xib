@@ -7,7 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="motorcycleTypeViewController">
             <connections>
-                <outlet property="tableView" destination="e6l-H6-XVR" id="fcC-KG-phJ"/>
+                <outlet property="MTableLeading" destination="6K3-8A-EXm" id="dzu-yO-bBy"/>
+                <outlet property="mTableView" destination="GVN-EX-Y7t" id="uzR-bA-JSg"/>
+                <outlet property="motorccleTable" destination="e6l-H6-XVR" id="V0Y-Wm-E6X"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,9 +28,21 @@
                     <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e6l-H6-XVR">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Mcell" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e6l-H6-XVR">
                     <rect key="frame" x="0.0" y="55" width="414" height="681"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="sOa-J4-rLm"/>
+                        <outlet property="delegate" destination="-1" id="mf9-Rc-3Up"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="msCell" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GVN-EX-Y7t">
+                    <rect key="frame" x="414" y="55" width="374" height="681"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dWN-eq-eEo"/>
+                        <outlet property="delegate" destination="-1" id="XZY-Xs-pOn"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -37,9 +51,13 @@
                 <constraint firstItem="wfC-cI-1ZH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2oT-P8-sAx"/>
                 <constraint firstAttribute="trailing" secondItem="wfC-cI-1ZH" secondAttribute="trailing" id="3aZ-o6-MOf"/>
                 <constraint firstItem="e6l-H6-XVR" firstAttribute="top" secondItem="wfC-cI-1ZH" secondAttribute="bottom" constant="5" id="3bf-tc-iaf"/>
+                <constraint firstItem="GVN-EX-Y7t" firstAttribute="leading" secondItem="e6l-H6-XVR" secondAttribute="trailing" id="6K3-8A-EXm"/>
                 <constraint firstAttribute="bottom" secondItem="e6l-H6-XVR" secondAttribute="bottom" id="ACQ-aN-SrP"/>
                 <constraint firstAttribute="trailing" secondItem="e6l-H6-XVR" secondAttribute="trailing" id="Epg-RD-daA"/>
+                <constraint firstItem="GVN-EX-Y7t" firstAttribute="width" secondItem="e6l-H6-XVR" secondAttribute="width" constant="-40" id="G2c-hy-Vc0"/>
                 <constraint firstItem="e6l-H6-XVR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H9C-CZ-GbB"/>
+                <constraint firstItem="GVN-EX-Y7t" firstAttribute="height" secondItem="e6l-H6-XVR" secondAttribute="height" id="Jnv-Aq-IQg"/>
+                <constraint firstItem="GVN-EX-Y7t" firstAttribute="top" secondItem="e6l-H6-XVR" secondAttribute="top" id="aOe-NJ-QRF"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="398" y="400"/>
