@@ -12,6 +12,9 @@
 #define Height CGRectGetHeight([UIScreen mainScreen].bounds)
 
 
+#define chaiDataUrl @"http://sitemap.chexun.com/m/ccfnewsjson.do?count=10&page=1"
+
+#define picUrlString @"http://m.chexun.com/coopdata/www_content4.inc"
 
 
 #pragma mark --- SYH
