@@ -81,12 +81,12 @@
     
     
     if (self.segment.selectedSegmentIndex == 0) {
-        UIScrollView *loopPicView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-        loopPicView.contentSize = CGSizeMake(self.view.frame.size.width*3, 200);
+        UIScrollView *loopPicView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, Width, 200)];
+        loopPicView.contentSize = CGSizeMake(Width*3, 200);
         loopPicView.pagingEnabled = YES;
         loopPicView.bounces = NO;
         for (int i = 0; i <3; i++) {
-            UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width*i, 0, self.view.frame.size.width, 200)];
+            UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(Width*i, 0, Width, 200)];
             [imgView sd_setImageWithURL:[NSURL URLWithString:self.loopPicUrlArr[i]]];
             [loopPicView addSubview:imgView];
         }
@@ -115,11 +115,14 @@
             break;
     }
      */
+    
+    
     [self.arr removeAllObjects];
 
     self.count = 2;
     self.index = sender.selectedSegmentIndex + 1;
     [self update:sender.selectedSegmentIndex + 1];
+    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionMiddle];
  }
 
 

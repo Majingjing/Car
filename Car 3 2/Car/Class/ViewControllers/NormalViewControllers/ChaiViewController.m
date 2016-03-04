@@ -55,6 +55,8 @@
     
     [self loadTableViewData];
     
+    
+    self.table.scrollEnabled = NO;
     // Do any additional setup after loading the view.
 }
 
@@ -123,12 +125,13 @@
 }
 
 - (void)creatTableView {
-    self.table = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, Width, Height - 50) style:UITableViewStyleGrouped];
+    self.table = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, Width, Height - 50) style:UITableViewStylePlain];
     self.table.delegate = self;
     self.table.dataSource = self;
     [self.table registerNib:[UINib nibWithNibName:@"ChaiCheTableViewCell" bundle:nil] forCellReuseIdentifier:@"myCell"];
     [self.view addSubview:self.table];
     [self.view insertSubview:self.table belowSubview:[MJRootView shareInstance]];
+    
 }
 
 
