@@ -23,5 +23,8 @@
 
 #define MscleUrl @"http://api.tool.chexun.com/mobile/downSeriesInfo.do?brandId=%ld"
 
+#define girlPictureUrl @"http://api.tool.chexun.com/mobile/downEventAlbumList.do?type=3"
+#define carPictureUrl @"http://api.tool.chexun.com/mobile/downEventAlbumList.do?type=0"
 
+#define detailUrl @"http://api.tool.chexun.com/mobile/downEventAlbumPhotoList.do?albumId=%ld"
 #endif /* Header_h */

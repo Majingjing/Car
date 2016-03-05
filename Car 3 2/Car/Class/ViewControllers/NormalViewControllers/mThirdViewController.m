@@ -21,6 +21,7 @@
     
     self.navigationItem.leftBarButtonItem = leftBtn;
     UIWebView *webView = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    webView.scalesPageToFit = NO;
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL  URLWithString:self.textMS]];
     [webView loadRequest:request];
     [self.view addSubview:webView];

@@ -56,10 +56,11 @@
     
     
     self.table.scrollEnabled = NO;
-    // Do any additional setup after loading the view.
+
 }
 
 -(void)loadTableViewData{
+    
     NSString *string = [NSString stringWithFormat:chaiDataUrl,self.count];
     
     [[InformationManager shareInstance]chaiCheSolve:string finish:^(NSMutableArray *arr) {

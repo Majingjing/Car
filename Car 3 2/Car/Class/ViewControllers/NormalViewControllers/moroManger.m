@@ -50,7 +50,6 @@ static moroManger *manger = nil;
         [SYHNetTools SolveDataWithUrl:url HTTpMethod:@"GET" HttpBody:nil revokeBlock:^(NSData *data) {
             
             NSArray  *arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-            
             for (NSDictionary *dict in arr) {
                 
                 moroModel *model = [[moroModel alloc] init];
@@ -59,7 +58,7 @@ static moroManger *manger = nil;
                 
                 [self.morocleArr addObject:model];
             }
-           
+            NSLog(@"%@", self.morocleArr);
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 finish();

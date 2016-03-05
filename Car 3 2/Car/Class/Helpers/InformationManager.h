@@ -23,4 +23,11 @@
 - (void)chaiCheSolve:(NSString *)urlStr
        finish:(void (^)(NSMutableArray *arr))finish;
 
+//图片页解析
+- (void)pictureSolve:(NSString *)urlStr
+              finish:(void(^)(NSMutableArray *arr))finish;
+
+//图片详情解析
+- (void)detailSolve:(NSString *)urlStr
+              finish:(void(^)(NSMutableArray *arr))finish;
 @end
