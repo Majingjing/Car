@@ -190,7 +190,6 @@ static NSString *msIdentifier = @"msCell";
         
         cell.morosNamelable.text = model.seriesName;
         
-        NSLog(@"%@ ==== ",model.seriesName);
         
         cell.morosPriceLable.text = model.guidePrice;
         

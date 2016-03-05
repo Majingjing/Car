@@ -58,7 +58,6 @@ static moroManger *manger = nil;
                 
                 [self.morocleArr addObject:model];
             }
-            NSLog(@"%@", self.morocleArr);
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 finish();

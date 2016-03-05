@@ -30,14 +30,18 @@ static InformationManager *manager;
     return _Modelarr;
 }
 
-
+-(NSMutableArray *)pictureArr {
+    if (_pictureArr == nil) {
+        _pictureArr = [NSMutableArray array];
+    }
+    return _pictureArr;
+}
 
 
 
 
 -(void)solve:(NSString *)urlStr finish:(void (^)(NSMutableArray *arr))finish {
     [self.Modelarr removeAllObjects];
-    NSLog(@"%@", urlStr);
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSURL *url = [NSURL URLWithString:urlStr];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -101,8 +105,7 @@ static InformationManager *manager;
 //图片详情解析
 - (void)detailSolve:(NSString *)urlStr
               finish:(void(^)(NSMutableArray *arr))finish {
-    [self.Modelarr removeAllObjects];
-    NSLog(@"urlstr = %@", urlStr);
+    [self.pictureArr removeAllObjects];
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSURL *url = [NSURL URLWithString:urlStr];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -111,13 +114,22 @@ static InformationManager *manager;
         for (NSDictionary *dic in arr) {
             DetailModel *model = [[DetailModel alloc] init];
             [model setValuesForKeysWithDictionary:dic];
-            NSLog(@"%@", model.bigImagePath);
-            [self.Modelarr addObject:model];
+            [self.pictureArr addObject:model];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-            finish(self.Modelarr);
+            finish(self.pictureArr);
         });
     });
 }
+
+//返回图片页model的albumID
+- (NSInteger)modelIDbyIndex:(NSInteger)index {
+    PictureModel *model = self.Modelarr[index];
+    return model.albumId;
+}
+
+
+
+
 
 @end
