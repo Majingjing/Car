@@ -49,14 +49,12 @@
 }
 
 - (void)segmentAction:(UISegmentedControl *)sender {
-    NSLog(@"123");
     [self.Picturearr removeAllObjects];
     [self solve:self.arr[sender.selectedSegmentIndex]];
     
 }
 
 - (void)solve: (NSString *)url {
-    NSLog(@"aaaaa = %@", url);
     [[InformationManager shareInstance] pictureSolve:url finish:^(NSMutableArray *arr) {
         [self creatModelCollection];
         [self.Picturearr addObjectsFromArray:arr];
@@ -67,7 +65,6 @@
 }
 
 - (void)creatModelCollection {
-    NSLog(@"456");
     self.layout = [[UICollectionViewFlowLayout alloc] init];
     self.layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
     self.layout.itemSize = CGSizeMake((Width - 20) / 2, (Width - 20) / 2);
@@ -91,18 +88,17 @@
     ModelCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"model" forIndexPath:indexPath];
     PictureModel *model = self.Picturearr[indexPath.row];
     cell.lable.text = [NSString stringWithFormat:@"%@共%ld张图片",model.albumName,model.picNumber];
-    NSLog(@"%ld", model.picNumber);
-    NSLog(@"%@", model.albumName);
+    cell.lable.numberOfLines = 0;
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.imagePath]];
-    NSLog(@"%@", model.imagePath);
-    return cell;
+     return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
     DetailViewController *dvc = [[DetailViewController alloc] init];
-    PictureModel *model = self.Picturearr[indexPath.row];
-    dvc.page = model.albumId;
+//    PictureModel *model = self.Picturearr[indexPath.row];
+//    dvc.page = model.albumId;
+    dvc.page = indexPath.row;
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dvc];
     [self presentViewController:nvc animated:YES completion:nil];
     

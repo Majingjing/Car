@@ -116,7 +116,6 @@
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 
     if (indexPath.row == self.arr.count - 2) {
-        NSLog(@"aaa = %ld", self.count);
         [[InformationManager shareInstance] solve:[NSString stringWithFormat:self.str, self.index, self.count, self.count] finish:^(NSMutableArray *arr) {
             [self.arr addObjectsFromArray:arr];
             [self.arr removeObjectAtIndex:self.arr.count - 1];

@@ -11,6 +11,7 @@
 @interface InformationManager : NSObject
 
 @property (nonatomic, strong)NSMutableArray *Modelarr;
+@property (nonatomic, strong)NSMutableArray *pictureArr;
 + (instancetype)shareInstance;
 
 
@@ -30,4 +31,11 @@
 //图片详情解析
 - (void)detailSolve:(NSString *)urlStr
               finish:(void(^)(NSMutableArray *arr))finish;
+
+
+//返回图片页model的albumID
+- (NSInteger)modelIDbyIndex:(NSInteger)index;
+
+
+
 @end
