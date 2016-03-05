@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgX-5s-bX3">
-                        <rect key="frame" x="180" y="30" width="110" height="20.5"/>
+                        <rect key="frame" x="150" y="30" width="110" height="20.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="110" id="IY0-hG-vHZ"/>
                         </constraints>
@@ -33,9 +33,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pAz-Ka-8Av">
-                        <rect key="frame" x="10" y="15" width="160" height="92.5"/>
+                        <rect key="frame" x="10" y="15" width="130" height="92.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="160" id="qop-r0-kAH"/>
+                            <constraint firstAttribute="width" constant="130" id="qop-r0-kAH"/>
                         </constraints>
                     </imageView>
                 </subviews>

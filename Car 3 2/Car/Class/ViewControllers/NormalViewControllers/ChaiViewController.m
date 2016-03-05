@@ -54,10 +54,13 @@
     
     [self loadTableViewData];
     
-    // Do any additional setup after loading the view.
+    
+    self.table.scrollEnabled = NO;
+
 }
 
 -(void)loadTableViewData{
+    
     NSString *string = [NSString stringWithFormat:chaiDataUrl,self.count];
     
     [[InformationManager shareInstance]chaiCheSolve:string finish:^(NSMutableArray *arr) {
@@ -128,6 +131,7 @@
     [self.table registerNib:[UINib nibWithNibName:@"ChaiCheTableViewCell" bundle:nil] forCellReuseIdentifier:@"myCell"];
     [self.view addSubview:self.table];
     [self.view insertSubview:self.table belowSubview:[MJRootView shareInstance]];
+    
 }
 
 
