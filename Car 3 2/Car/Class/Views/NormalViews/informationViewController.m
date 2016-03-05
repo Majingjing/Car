@@ -96,29 +96,6 @@
     
 }
 - (IBAction)segmentAction:(UISegmentedControl *)sender {
-    /*
-    switch (sender.selectedSegmentIndex) {
-        case 0:
-//            self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, Width, 200)];
-//            self.scrollView.contentSize = CGSizeMake(Width * 3, 200);
-//            for (int i = 0; i < 3; i++) {
-//                UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(Width * i, 0, Width, 200)];
-//                imageView.image = [UIImage imageNamed:@"10"];
-//                [self.scrollView addSubview:imageView];
-//            }
-//            self.scrollView.backgroundColor = [UIColor redColor];
-//            self.tableView.tableHeaderView = self.scrollView;
-     
-            break;
-     
-        default:
-            break;
-    }
-     */
-//    self.tableView.contentOffset = CGPointMake(0, 0);
-//    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
-    [self.arr removeAllObjects];
-
     self.count = 2;
     self.index = sender.selectedSegmentIndex + 1;
     [self update:sender.selectedSegmentIndex + 1];
@@ -126,8 +103,9 @@
 
 
 - (void)update:(NSInteger)indesx {
+    self.tableView.contentOffset = CGPointMake(0, -50);
     [[InformationManager shareInstance] solve:[NSString stringWithFormat:self.str, indesx, 1, 1] finish:^(NSMutableArray *arr) {
-        NSLog(@"count = %ld", self.count);
+         [self.arr removeAllObjects];
          [self.arr addObjectsFromArray:arr];
          [self.arr removeObjectAtIndex:self.arr.count - 1];
          [self.tableView reloadData];
@@ -136,8 +114,8 @@
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-  
-    if (indexPath.row >= self.arr.count - 2) {
+
+    if (indexPath.row == self.arr.count - 2) {
         NSLog(@"aaa = %ld", self.count);
         [[InformationManager shareInstance] solve:[NSString stringWithFormat:self.str, self.index, self.count, self.count] finish:^(NSMutableArray *arr) {
             [self.arr addObjectsFromArray:arr];

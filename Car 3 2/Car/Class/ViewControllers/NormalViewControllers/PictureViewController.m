@@ -13,16 +13,23 @@
 #import "ChaiViewController.h"
 #import "ModelCollectionViewCell.h"
 #import "MineViewController.h"
+#import "InformationManager.h"
+#import "PictureModel.h"
+#import "UIImageView+WebCache.h"
+#import "WebViewController.h"
+#import "DetailViewController.h"
 @interface PictureViewController ()<jumpDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong)UICollectionView *modelCollection;
-@property (nonatomic, strong)UICollectionView *carCollection;
 @property (nonatomic, strong)UICollectionViewFlowLayout *layout;
+@property (nonatomic,strong)NSArray *arr;
+@property (nonatomic, strong)NSMutableArray *Picturearr;
 @end
 
 @implementation PictureViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.Picturearr = [NSMutableArray array];
     self.view.backgroundColor = [UIColor whiteColor];
     UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:@[@"美女车模", @"汽车图片"]];
     segment.frame = CGRectMake(0, 20, Width, 30);
@@ -34,29 +41,39 @@
     
     segment.selectedSegmentIndex = 0;
     
-    [self creatModelCollection];
-  
     
+    self.arr = @[girlPictureUrl, carPictureUrl];
+    
+    [self solve:self.arr[0]];
     // Do any additional setup after loading the view.
 }
+
 - (void)segmentAction:(UISegmentedControl *)sender {
-    switch (sender.selectedSegmentIndex) {
-        case 0:
+    NSLog(@"123");
+    [self.Picturearr removeAllObjects];
+    [self solve:self.arr[sender.selectedSegmentIndex]];
+    
+}
+
+- (void)solve: (NSString *)url {
+    NSLog(@"aaaaa = %@", url);
+    [[InformationManager shareInstance] pictureSolve:url finish:^(NSMutableArray *arr) {
+        [self creatModelCollection];
+        [self.Picturearr addObjectsFromArray:arr];
         
-            break;
-         case 1:
-            break;
-        default:
-            break;
-    }
+        [self.modelCollection reloadData];
+    }];
+
 }
 
 - (void)creatModelCollection {
-    
+    NSLog(@"456");
     self.layout = [[UICollectionViewFlowLayout alloc] init];
     self.layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
     self.layout.itemSize = CGSizeMake((Width - 20) / 2, (Width - 20) / 2);
     self.modelCollection = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 50, Width, Height - 50) collectionViewLayout:self.layout];
+    self.modelCollection.backgroundColor = [UIColor redColor];
+ 
     [self.modelCollection registerClass:[ModelCollectionViewCell class] forCellWithReuseIdentifier:@"model"];
     self.modelCollection.backgroundColor = [UIColor whiteColor];
     self.modelCollection.delegate = self;
@@ -64,20 +81,32 @@
     [self.view addSubview:self.modelCollection];
     [self.view insertSubview:self.modelCollection belowSubview:[MJRootView shareInstance]];
 }
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 20;
+    return self.Picturearr.count;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ModelCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"model" forIndexPath:indexPath];
-//    cell.backgroundColor = [UIColor yellowColor];
-    cell.lable.text = @"123";
-    cell.imageView.image = [UIImage imageNamed:@"10.png"];
+    PictureModel *model = self.Picturearr[indexPath.row];
+    cell.lable.text = [NSString stringWithFormat:@"%@共%ld张图片",model.albumName,model.picNumber];
+    NSLog(@"%ld", model.picNumber);
+    NSLog(@"%@", model.albumName);
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.imagePath]];
+    NSLog(@"%@", model.imagePath);
     return cell;
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
+    DetailViewController *dvc = [[DetailViewController alloc] init];
+    PictureModel *model = self.Picturearr[indexPath.row];
+    dvc.page = model.albumId;
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dvc];
+    [self presentViewController:nvc animated:YES completion:nil];
+    
+}
 
 
 

@@ -9,6 +9,8 @@
 #import "InformationManager.h"
 #import "InformationModel.h"
 #import "ChaiCheModel.h"
+#import "PictureModel.h"
+#import "DetailModel.h"
 static InformationManager *manager;
 @implementation InformationManager
 
@@ -76,5 +78,46 @@ static InformationManager *manager;
     });
 }
 
+//图片页解析
+- (void)pictureSolve:(NSString *)urlStr
+              finish:(void(^)(NSMutableArray *arr))finish {
+    [self.Modelarr removeAllObjects];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSURL *url = [NSURL URLWithString:urlStr];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        for (NSDictionary *dic in arr) {
+            PictureModel *model = [[PictureModel alloc] init];
+            [model setValuesForKeysWithDictionary:dic];
+            [self.Modelarr addObject:model];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            finish(self.Modelarr);
+        });
+    });
+}
+
+//图片详情解析
+- (void)detailSolve:(NSString *)urlStr
+              finish:(void(^)(NSMutableArray *arr))finish {
+    [self.Modelarr removeAllObjects];
+    NSLog(@"urlstr = %@", urlStr);
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSURL *url = [NSURL URLWithString:urlStr];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        for (NSDictionary *dic in arr) {
+            DetailModel *model = [[DetailModel alloc] init];
+            [model setValuesForKeysWithDictionary:dic];
+            NSLog(@"%@", model.bigImagePath);
+            [self.Modelarr addObject:model];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            finish(self.Modelarr);
+        });
+    });
+}
 
 @end
