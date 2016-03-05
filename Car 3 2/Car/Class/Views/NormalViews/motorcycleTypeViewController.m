@@ -160,23 +160,21 @@ static NSString *msIdentifier = @"msCell";
     
     if (tableView == self.motorccleTable) {
         
-        return [[moroManger  shareInstanceMotorcycle] countOfArray];
+        return [[moroManger  shareInstanceMotorcycle] countOfArray ];
     }
     else{
         
-        return [[morosManger shareInstanceMsclecy] countMsOfArray];
+        return [[morosManger shareInstanceMsclecy] countMsOfArray ];
         
     }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-   
     //  if 判断当前选中的是那个tableview
     if(tableView == self.motorccleTable)
     {
         moroCycleTableViewCell *cell = [tableView  dequeueReusableCellWithIdentifier:Identifer forIndexPath:indexPath];
-        cell.modelMTtype = [[moroManger shareInstanceMotorcycle]modelWithIndex:indexPath.row];
+        cell.modelMTtype = [[moroManger shareInstanceMotorcycle]modelWithIndex:indexPath.row ];
         
         [self.mTableView reloadData];
        
@@ -190,6 +188,7 @@ static NSString *msIdentifier = @"msCell";
         
         cell.morosNamelable.text = model.seriesName;
         
+       // NSLog(@"%@ ==== ",model.seriesName);
         
         cell.morosPriceLable.text = model.guidePrice;
         
@@ -206,6 +205,7 @@ static NSString *msIdentifier = @"msCell";
     if(tableView == self.motorccleTable)
     {
 #pragma mark 下标的获取
+        
         self.indexPath = indexPath;
         [self swipAction];
         
@@ -231,9 +231,6 @@ static NSString *msIdentifier = @"msCell";
     return 170;
     
 }
-
-
-
 - (void)jumpAction:(NSInteger)tag {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];
     switch (tag) {
