@@ -25,6 +25,12 @@
 		C24859381C87C80D00BC8FC9 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C24859281C87C80D00BC8FC9 /* UIView+WebCacheOperation.m */; };
 		C248593E1C87EA1A00BC8FC9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C248593D1C87EA1A00BC8FC9 /* WebViewController.m */; };
 		C24859411C87EE2E00BC8FC9 /* MotorcycleTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C24859401C87EE2E00BC8FC9 /* MotorcycleTypeModel.m */; };
+		C26439E01C8D77250097B766 /* ChaiCheVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C26439DF1C8D77250097B766 /* ChaiCheVideoModel.m */; };
+		C26439E41C8D7B320097B766 /* ChaiVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26439E21C8D7B320097B766 /* ChaiVideoCollectionViewCell.m */; };
+		C26439E51C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26439E31C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib */; };
+		C2643A0F1C8D884F0097B766 /* ChaiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2643A0D1C8D884F0097B766 /* ChaiDetailViewController.m */; };
+		C2643A101C8D884F0097B766 /* ChaiDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2643A0E1C8D884F0097B766 /* ChaiDetailViewController.xib */; };
+		C2643A131C8D89680097B766 /* ChaiDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2643A121C8D89680097B766 /* ChaiDetailModel.m */; };
 		C27508281C891F850061CD5E /* 52.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C27508271C891F850061CD5E /* 52.jpg */; };
 		C275083C1C892D6E0061CD5E /* 添加.png in Resources */ = {isa = PBXBuildFile; fileRef = C27508371C892D6E0061CD5E /* 添加.png */; };
 		C27508421C892ECE0061CD5E /* 车型.png in Resources */ = {isa = PBXBuildFile; fileRef = C27508411C892ECE0061CD5E /* 车型.png */; };
@@ -114,6 +120,16 @@
 		C248593D1C87EA1A00BC8FC9 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		C248593F1C87EE2E00BC8FC9 /* MotorcycleTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotorcycleTypeModel.h; sourceTree = "<group>"; };
 		C24859401C87EE2E00BC8FC9 /* MotorcycleTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotorcycleTypeModel.m; sourceTree = "<group>"; };
+		C26439DE1C8D77250097B766 /* ChaiCheVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiCheVideoModel.h; sourceTree = "<group>"; };
+		C26439DF1C8D77250097B766 /* ChaiCheVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiCheVideoModel.m; sourceTree = "<group>"; };
+		C26439E11C8D7B320097B766 /* ChaiVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiVideoCollectionViewCell.h; sourceTree = "<group>"; };
+		C26439E21C8D7B320097B766 /* ChaiVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiVideoCollectionViewCell.m; sourceTree = "<group>"; };
+		C26439E31C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChaiVideoCollectionViewCell.xib; sourceTree = "<group>"; };
+		C2643A0C1C8D884F0097B766 /* ChaiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiDetailViewController.h; sourceTree = "<group>"; };
+		C2643A0D1C8D884F0097B766 /* ChaiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiDetailViewController.m; sourceTree = "<group>"; };
+		C2643A0E1C8D884F0097B766 /* ChaiDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChaiDetailViewController.xib; sourceTree = "<group>"; };
+		C2643A111C8D89680097B766 /* ChaiDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiDetailModel.h; sourceTree = "<group>"; };
+		C2643A121C8D89680097B766 /* ChaiDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiDetailModel.m; sourceTree = "<group>"; };
 		C27508271C891F850061CD5E /* 52.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 52.jpg; sourceTree = "<group>"; };
 		C27508371C892D6E0061CD5E /* 添加.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加.png"; sourceTree = "<group>"; };
 		C27508411C892ECE0061CD5E /* 车型.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "车型.png"; sourceTree = "<group>"; };
@@ -296,6 +312,10 @@
 				C24859401C87EE2E00BC8FC9 /* MotorcycleTypeModel.m */,
 				C27CDEAB1C885A5F00EDD04F /* ChaiCheModel.h */,
 				C27CDEAC1C885A5F00EDD04F /* ChaiCheModel.m */,
+				C26439DE1C8D77250097B766 /* ChaiCheVideoModel.h */,
+				C26439DF1C8D77250097B766 /* ChaiCheVideoModel.m */,
+				C2643A111C8D89680097B766 /* ChaiDetailModel.h */,
+				C2643A121C8D89680097B766 /* ChaiDetailModel.m */,
 				C27508781C896A710061CD5E /* PictureModel.h */,
 				C27508791C896A710061CD5E /* PictureModel.m */,
 				C27508871C8990FF0061CD5E /* DetailModel.h */,
@@ -371,6 +391,9 @@
 				C27CDEB01C8862F700EDD04F /* ChaiCheTableViewCell.h */,
 				C27CDEB11C8862F700EDD04F /* ChaiCheTableViewCell.m */,
 				C27CDEB21C8862F700EDD04F /* ChaiCheTableViewCell.xib */,
+				C2643A0C1C8D884F0097B766 /* ChaiDetailViewController.h */,
+				C2643A0D1C8D884F0097B766 /* ChaiDetailViewController.m */,
+				C2643A0E1C8D884F0097B766 /* ChaiDetailViewController.xib */,
 				C2911B471C86DE3900657AFA /* PictureViewController.h */,
 				C2911B481C86DE3900657AFA /* PictureViewController.m */,
 				C27508801C898B0D0061CD5E /* DetailViewController.h */,
@@ -410,6 +433,9 @@
 				C2911B5F1C871A7000657AFA /* InformationTableViewCell.h */,
 				C2911B601C871A7000657AFA /* InformationTableViewCell.m */,
 				C2911B611C871A7000657AFA /* InformationTableViewCell.xib */,
+				C26439E11C8D7B320097B766 /* ChaiVideoCollectionViewCell.h */,
+				C26439E21C8D7B320097B766 /* ChaiVideoCollectionViewCell.m */,
+				C26439E31C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib */,
 				C2911B4D1C86FCAE00657AFA /* 10.png */,
 			);
 			path = NormalViews;
@@ -516,6 +542,7 @@
 				C27508421C892ECE0061CD5E /* 车型.png in Resources */,
 				C27508281C891F850061CD5E /* 52.jpg in Resources */,
 				C27508481C89301E0061CD5E /* 拆车坊.png in Resources */,
+				C26439E51C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib in Resources */,
 				C275084A1C89301E0061CD5E /* 图片.png in Resources */,
 				C2E25DB01C854895003EF8F8 /* LaunchScreen.storyboard in Resources */,
 				C2911B591C87046100657AFA /* 8879-11091423105869.jpg in Resources */,
@@ -530,6 +557,7 @@
 				C2E25DAD1C854895003EF8F8 /* Assets.xcassets in Resources */,
 				C2E25DAB1C854895003EF8F8 /* Main.storyboard in Resources */,
 				C2911B3E1C8672AE00657AFA /* informationViewController.xib in Resources */,
+				C2643A101C8D884F0097B766 /* ChaiDetailViewController.xib in Resources */,
 				C275088C1C89A8AD0061CD5E /* 下一张.png in Resources */,
 				C27508491C89301E0061CD5E /* 我的.png in Resources */,
 				C2911B5B1C87046A00657AFA /* 8879-11091423105869.jpg in Resources */,
@@ -586,6 +614,10 @@
 				C275086D1C893D120061CD5E /* moroModel.m in Sources */,
 				C24859371C87C80D00BC8FC9 /* UIImageView+WebCache.m in Sources */,
 				C24859361C87C80D00BC8FC9 /* UIImageView+HighlightedWebCache.m in Sources */,
+				C26439E01C8D77250097B766 /* ChaiCheVideoModel.m in Sources */,
+				C2643A131C8D89680097B766 /* ChaiDetailModel.m in Sources */,
+				C2643A0F1C8D884F0097B766 /* ChaiDetailViewController.m in Sources */,
+				C26439E41C8D7B320097B766 /* ChaiVideoCollectionViewCell.m in Sources */,
 				C27508771C893D370061CD5E /* SYHNetTools.m in Sources */,
 				C2911B3D1C8672AE00657AFA /* informationViewController.m in Sources */,
 			);

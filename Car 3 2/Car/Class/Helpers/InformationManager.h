@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class ChaiDetailModel;
 
 @interface InformationManager : NSObject
 
@@ -22,6 +23,13 @@
 // 拆车页解析
 - (void)chaiCheSolve:(NSString *)urlStr
        finish:(void (^)(NSMutableArray *arr))finish;
+
+// 拆车页视频解析
+-(void)chaiCheVideoSolve:(NSString *)urlStr
+                  finish:(void (^)(NSMutableArray *arr))finish;
+// 拆车视频详情
+-(void)chaiCheVideoDetailSolve:(NSString *)urlStr
+                  finish:(void (^)(ChaiDetailModel *model))finish;
 
 //图片页解析
 - (void)pictureSolve:(NSString *)urlStr

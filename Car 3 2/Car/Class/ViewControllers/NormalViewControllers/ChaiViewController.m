@@ -15,16 +15,22 @@
 #import "InformationManager.h"
 #import "UIImageView+WebCache.h"
 #import "ChaiCheModel.h"
+#import "ChaiCheVideoModel.h"
 
 #import "ChaiCheTableViewCell.h"
 #import "WebViewController.h"
+#import "ChaiVideoCollectionViewCell.h"
+#import "ChaiDetailViewController.h"
 
-@interface ChaiViewController ()<UICollectionViewDataSource, UIBarPositioningDelegate, UICollectionViewDelegateFlowLayout,jumpDelegate, UITableViewDataSource, UITableViewDelegate>
+
+@interface ChaiViewController ()<UICollectionViewDataSource, UIBarPositioningDelegate, UICollectionViewDelegateFlowLayout,jumpDelegate, UITableViewDataSource, UITableViewDelegate,UICollectionViewDelegate>
 @property (nonatomic, strong)UICollectionView *collection;
 @property (nonatomic, strong)UITableView *table;
 @property (nonatomic, strong)UICollectionViewFlowLayout *layout;
 // 文章model数组
 @property (nonatomic ,strong) NSMutableArray *chaiTextModelArr;
+@property (nonatomic,strong) NSMutableArray *chaiVideoModelArr;
+
 @property (nonatomic,assign) int count;
 
 @end
@@ -34,6 +40,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.chaiTextModelArr = [NSMutableArray array];
+    self.chaiVideoModelArr = [NSMutableArray array];
     self.count = 1;
     
     
@@ -53,7 +60,7 @@
     
     
     [self loadTableViewData];
-    
+    [self loadCollectionData];
     
     self.table.scrollEnabled = NO;
 
@@ -67,6 +74,16 @@
         [self.chaiTextModelArr addObjectsFromArray:arr];
     }];
     [self.table reloadData];
+}
+
+-(void)loadCollectionData{
+    
+    NSString *string = [NSString stringWithFormat:chaiVideoDataUrl,self.count];
+    [[InformationManager shareInstance]chaiCheVideoSolve:string finish:^(NSMutableArray *arr) {
+        [self.chaiVideoModelArr addObjectsFromArray:arr];
+        [self.collection reloadData];
+    }];
+    
 }
 
 - (void)jumpAction:(NSInteger)tag {
@@ -116,7 +133,7 @@
     self.layout.itemSize = CGSizeMake((Width - 20) / 2, (Width - 20) / 2);
     self.collection = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 50, Width, Height - 50) collectionViewLayout:self.layout];
     self.collection.backgroundColor = [UIColor whiteColor];
-    [self.collection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    [self.collection registerNib:[UINib nibWithNibName:@"ChaiVideoCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"VideoCell"];
     self.collection.delegate = self;
     self.collection.dataSource = self;
     [self.view addSubview:self.collection];
@@ -138,13 +155,26 @@
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return self.chaiVideoModelArr.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
+    ChaiVideoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VideoCell" forIndexPath:indexPath];
+    ChaiCheVideoModel *model = self.chaiVideoModelArr[indexPath.row];
+    [cell.imgView sd_setImageWithURL:[NSURL URLWithString:model.covimg] placeholderImage:[UIImage imageNamed:@"chachewenzhang"]];
+    cell.titleLabel.text = model.title;
     return cell;
 }
+
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    ChaiDetailViewController *dbc = [[ChaiDetailViewController alloc] initWithNibName:@"ChaiDetailViewController" bundle:nil];
+    ChaiCheVideoModel *model = self.chaiVideoModelArr[indexPath.row];
+    NSString *string = [NSString stringWithFormat:chaiVideoUrl,model.Nid];
+    dbc.urlString = string;
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dbc];
+    [self presentViewController:nvc animated:YES completion:nil];
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.chaiTextModelArr.count;

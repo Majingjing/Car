@@ -11,6 +11,9 @@
 #import "ChaiCheModel.h"
 #import "PictureModel.h"
 #import "DetailModel.h"
+#import "ChaiCheVideoModel.h"
+#import "ChaiDetailModel.h"
+
 static InformationManager *manager;
 @implementation InformationManager
 
@@ -37,7 +40,6 @@ static InformationManager *manager;
 
 -(void)solve:(NSString *)urlStr finish:(void (^)(NSMutableArray *arr))finish {
     [self.Modelarr removeAllObjects];
-    NSLog(@"%@", urlStr);
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSURL *url = [NSURL URLWithString:urlStr];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -73,8 +75,44 @@ static InformationManager *manager;
         dispatch_async(dispatch_get_main_queue(), ^{
             finish(array);
         });
-        
-        
+    });
+}
+
+// 拆车页视频解析
+-(void)chaiCheVideoSolve:(NSString *)urlStr
+                  finish:(void (^)(NSMutableArray *arr))finish{
+    NSMutableArray *array = [NSMutableArray array];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        for (NSDictionary *dic in arr) {
+            ChaiCheVideoModel *model = [[ChaiCheVideoModel alloc] init];
+            [model setValuesForKeysWithDictionary:dic];
+            [array addObject:model];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            finish(array);
+        });
+    });
+    
+}
+// 拆车视频详情
+-(void)chaiCheVideoDetailSolve:(NSString *)urlStr
+                        finish:(void (^)(ChaiDetailModel *model))finish{
+    ChaiDetailModel *model = [[ChaiDetailModel alloc] init];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        for (NSDictionary *dic in arr) {
+            [model setValuesForKeysWithDictionary:dic];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            finish(model);
+        });
     });
 }
 
