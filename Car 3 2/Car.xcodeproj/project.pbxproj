@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C21A581C1C8DA499009737DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C21A581B1C8DA499009737DD /* AppDelegate.m */; };
 		C24859291C87C80D00BC8FC9 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C24859091C87C80D00BC8FC9 /* MKAnnotationView+WebCache.m */; };
 		C248592A1C87C80D00BC8FC9 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = C248590B1C87C80D00BC8FC9 /* NSData+ImageContentType.m */; };
 		C248592B1C87C80D00BC8FC9 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C248590D1C87C80D00BC8FC9 /* SDImageCache.m */; };
@@ -75,7 +76,6 @@
 		C2911B631C871A7000657AFA /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2911B611C871A7000657AFA /* InformationTableViewCell.xib */; };
 		C2911B691C871E4600657AFA /* InformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B681C871E4600657AFA /* InformationModel.m */; };
 		C2E25DA21C854895003EF8F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E25DA11C854895003EF8F8 /* main.m */; };
-		C2E25DA51C854895003EF8F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E25DA41C854895003EF8F8 /* AppDelegate.m */; };
 		C2E25DA81C854895003EF8F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E25DA71C854895003EF8F8 /* ViewController.m */; };
 		C2E25DAB1C854895003EF8F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E25DA91C854895003EF8F8 /* Main.storyboard */; };
 		C2E25DAD1C854895003EF8F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E25DAC1C854895003EF8F8 /* Assets.xcassets */; };
@@ -83,6 +83,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C21A581A1C8DA499009737DD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C21A581B1C8DA499009737DD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C24859081C87C80D00BC8FC9 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		C24859091C87C80D00BC8FC9 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		C248590A1C87C80D00BC8FC9 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -200,8 +202,6 @@
 		C2911B681C871E4600657AFA /* InformationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationModel.m; sourceTree = "<group>"; };
 		C2E25D9D1C854895003EF8F8 /* Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Car.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E25DA11C854895003EF8F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C2E25DA31C854895003EF8F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
-		C2E25DA41C854895003EF8F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
 		C2E25DA61C854895003EF8F8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C2E25DA71C854895003EF8F8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C2E25DAA1C854895003EF8F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -221,6 +221,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C21A58191C8DA499009737DD /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C21A581A1C8DA499009737DD /* AppDelegate.h */,
+				C21A581B1C8DA499009737DD /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		C24859071C87C80D00BC8FC9 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,7 +273,7 @@
 		C2911B1E1C8672AE00657AFA /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				C2911B1F1C8672AE00657AFA /* AppDelegate */,
+				C21A58191C8DA499009737DD /* AppDelegate */,
 				C2911B201C8672AE00657AFA /* Headers */,
 				C2911B221C8672AE00657AFA /* Helpers */,
 				C2911B231C8672AE00657AFA /* Models */,
@@ -273,15 +282,6 @@
 				C2911B2C1C8672AE00657AFA /* Views */,
 			);
 			path = Class;
-			sourceTree = "<group>";
-		};
-		C2911B1F1C8672AE00657AFA /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				C2E25DA31C854895003EF8F8 /* AppDelegate.h */,
-				C2E25DA41C854895003EF8F8 /* AppDelegate.m */,
-			);
-			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		C2911B201C8672AE00657AFA /* Headers */ = {
@@ -591,6 +591,7 @@
 				C2911B691C871E4600657AFA /* InformationModel.m in Sources */,
 				C275087F1C8974BE0061CD5E /* InformationManager.m in Sources */,
 				C275087A1C896A710061CD5E /* PictureModel.m in Sources */,
+				C21A581C1C8DA499009737DD /* AppDelegate.m in Sources */,
 				C2911B621C871A7000657AFA /* InformationTableViewCell.m in Sources */,
 				C27508621C893D070061CD5E /* moroCycleTableViewCell.m in Sources */,
 				C24859291C87C80D00BC8FC9 /* MKAnnotationView+WebCache.m in Sources */,
@@ -598,7 +599,6 @@
 				C248592A1C87C80D00BC8FC9 /* NSData+ImageContentType.m in Sources */,
 				C24859331C87C80D00BC8FC9 /* UIImage+GIF.m in Sources */,
 				C24859321C87C80D00BC8FC9 /* UIButton+WebCache.m in Sources */,
-				C2E25DA51C854895003EF8F8 /* AppDelegate.m in Sources */,
 				C275086C1C893D120061CD5E /* moroManger.m in Sources */,
 				C24859311C87C80D00BC8FC9 /* SDWebImagePrefetcher.m in Sources */,
 				C248592D1C87C80D00BC8FC9 /* SDWebImageDecoder.m in Sources */,
