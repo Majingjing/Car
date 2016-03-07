@@ -19,11 +19,11 @@
     // 车标
     _moroNameLable.text = modelMTtype.brandName;
     
-    NSLog(@"%@ === ",modelMTtype.brandName);
+    // NSLog(@"%@ === ",modelMTtype.brandName);
     // 车的图片
     
     [self.moroCleImageView sd_setImageWithURL:[NSURL URLWithString:modelMTtype.logo] placeholderImage:[UIImage imageNamed:@"2.jpg"]];
-    NSLog(@"%@ ---------",modelMTtype.logo);
+   // NSLog(@"%@ ---------",modelMTtype.logo);
     
     
 }
