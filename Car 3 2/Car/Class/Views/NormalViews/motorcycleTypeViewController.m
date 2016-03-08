@@ -63,7 +63,7 @@ static NSString *msIdentifier = @"msCell";
 
 @property (nonatomic, strong)NSIndexPath *indexPath;
 
-
+@property (nonatomic,assign) BOOL isOpening;
 
 @end
 
@@ -75,6 +75,7 @@ static NSString *msIdentifier = @"msCell";
     [self.view addSubview:[MJRootView shareInstance]];
     [MJRootView shareInstance].delegate = self;
     
+    self.isOpening = NO;
 #pragma mark -- 获取 Xib 中的tableView
     
     [self.motorccleTable registerNib:[UINib nibWithNibName:@"moroCycleTableViewCell" bundle:nil] forCellReuseIdentifier:Identifer];
@@ -114,11 +115,12 @@ static NSString *msIdentifier = @"msCell";
       
         NSString *url = [NSString stringWithFormat:MscleUrl,self.brandId];
         [[morosManger  shareInstanceMsclecy] requestMscycleWithUrl:url didFinsn:^{
-            self.data = [morosManger shareInstanceMsclecy].msArr;
-            [UIView animateWithDuration:1 animations:^{
+//            self.data = [morosManger shareInstanceMsclecy].msArr;
+            [UIView animateWithDuration:0.3 animations:^{
                 CGRect rect = self.mTableView.frame;
                 rect.origin.x -= 240;
                 self.mTableView.frame = rect;
+                self.isOpening = YES;
             }];
             [self.mTableView reloadData];
         }];
@@ -134,25 +136,25 @@ static NSString *msIdentifier = @"msCell";
     
     UIButton *tapBtn = [UIButton  buttonWithType:UIButtonTypeSystem];
                         
-    tapBtn.frame = CGRectMake(0, 0, 114, 736);
+    tapBtn.frame = CGRectMake(0, 0, Width, Height);
     
     //tapBtn.backgroundColor = [UIColor whiteColor];
     
-    [self.view  addSubview:tapBtn];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
-    [tapBtn addGestureRecognizer:tap];
+    [self.view  insertSubview:tapBtn atIndex:2];
+    [tapBtn addTarget:self action:@selector(tapAction:) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
-- (void)tapAction:(UIGestureRecognizer *)sender {
-    
-    [sender.view removeFromSuperview];
-    [UIView animateWithDuration:0.7 animations:^{
-        CGRect rect = self.mTableView.frame;
-        rect.origin.x += 240;
-        self.mTableView.frame = rect;
-    }];
+- (void)tapAction:(UIButton *)sender {
+    if (self.isOpening) {
+        [sender removeFromSuperview];
+        [UIView animateWithDuration:0.7 animations:^{
+            CGRect rect = self.mTableView.frame;
+            rect.origin.x += 240;
+            self.mTableView.frame = rect;
+            self.isOpening = NO;
+        }];
+    }
 }
 
 #pragma mark -- tableView 必须实现的方法
@@ -184,7 +186,7 @@ static NSString *msIdentifier = @"msCell";
     {
         mosCycleTableViewCell *cell = [self.mTableView dequeueReusableCellWithIdentifier:msIdentifier forIndexPath:indexPath];
 #pragma mark --  model  的获取
-        morosModel *model = self.data[indexPath.row];
+        morosModel *model = [morosManger shareInstanceMsclecy].msArr[indexPath.row];
         
         cell.morosNamelable.text = model.seriesName;
         
@@ -216,7 +218,7 @@ static NSString *msIdentifier = @"msCell";
         mThirdViewController *mvc = [[mThirdViewController  alloc] init];
         
         // 通过下标获取模型
-        morosModel *model = self.data[indexPath.row];
+        morosModel *model = [morosManger shareInstanceMsclecy].msArr[indexPath.row];
         
         UINavigationController *mnvc = [[UINavigationController  alloc] initWithRootViewController:mvc];
         
@@ -228,7 +230,7 @@ static NSString *msIdentifier = @"msCell";
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 170;
+    return 160;
     
 }
 - (void)jumpAction:(NSInteger)tag {

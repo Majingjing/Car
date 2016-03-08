@@ -49,7 +49,6 @@
 }
 
 - (void)segmentAction:(UISegmentedControl *)sender {
-    [self.Picturearr removeAllObjects];
     [self solve:self.arr[sender.selectedSegmentIndex]];
     
 }
@@ -57,6 +56,7 @@
 - (void)solve: (NSString *)url {
     [[InformationManager shareInstance] pictureSolve:url finish:^(NSMutableArray *arr) {
         [self creatModelCollection];
+        [self.Picturearr removeAllObjects];
         [self.Picturearr addObjectsFromArray:arr];
         
         [self.modelCollection reloadData];

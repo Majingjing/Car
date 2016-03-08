@@ -11,20 +11,11 @@
             <rect key="frame" x="0.0" y="0.0" width="615" height="158"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="615" height="157.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="615" height="157"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adc-Af-EDb">
-                        <rect key="frame" x="15" y="117" width="130" height="20.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="130" id="p0h-xh-4Yy"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgX-5s-bX3">
-                        <rect key="frame" x="150" y="30" width="110" height="20.5"/>
+                        <rect key="frame" x="150" y="30" width="110" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="110" id="IY0-hG-vHZ"/>
                         </constraints>
@@ -32,12 +23,21 @@
                         <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pAz-Ka-8Av">
-                        <rect key="frame" x="10" y="15" width="130" height="92.5"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pAz-Ka-8Av">
+                        <rect key="frame" x="10" y="15" width="130" height="92"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="130" id="qop-r0-kAH"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adc-Af-EDb">
+                        <rect key="frame" x="15" y="117" width="130" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="p0h-xh-4Yy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Adc-Af-EDb" firstAttribute="top" secondItem="pAz-Ka-8Av" secondAttribute="bottom" constant="10" id="1zh-7p-1Vs"/>
@@ -57,7 +57,4 @@
             <point key="canvasLocation" x="423.5" y="368"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="3.jpg" width="512" height="539"/>
-    </resources>
 </document>

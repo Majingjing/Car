@@ -37,7 +37,7 @@
                     </connections>
                 </tableView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="msCell" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GVN-EX-Y7t">
-                    <rect key="frame" x="422" y="55" width="374" height="681"/>
+                    <rect key="frame" x="414" y="55" width="374" height="681"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="dWN-eq-eEo"/>
@@ -51,7 +51,7 @@
                 <constraint firstItem="wfC-cI-1ZH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2oT-P8-sAx"/>
                 <constraint firstAttribute="trailing" secondItem="wfC-cI-1ZH" secondAttribute="trailing" id="3aZ-o6-MOf"/>
                 <constraint firstItem="e6l-H6-XVR" firstAttribute="top" secondItem="wfC-cI-1ZH" secondAttribute="bottom" constant="5" id="3bf-tc-iaf"/>
-                <constraint firstItem="GVN-EX-Y7t" firstAttribute="leading" secondItem="e6l-H6-XVR" secondAttribute="trailing" constant="8" symbolic="YES" id="6K3-8A-EXm"/>
+                <constraint firstItem="GVN-EX-Y7t" firstAttribute="leading" secondItem="e6l-H6-XVR" secondAttribute="trailing" id="6K3-8A-EXm"/>
                 <constraint firstAttribute="bottom" secondItem="e6l-H6-XVR" secondAttribute="bottom" id="ACQ-aN-SrP"/>
                 <constraint firstAttribute="trailing" secondItem="e6l-H6-XVR" secondAttribute="trailing" id="Epg-RD-daA"/>
                 <constraint firstItem="GVN-EX-Y7t" firstAttribute="width" secondItem="e6l-H6-XVR" secondAttribute="width" constant="-40" id="G2c-hy-Vc0"/>
@@ -60,7 +60,7 @@
                 <constraint firstItem="GVN-EX-Y7t" firstAttribute="top" secondItem="e6l-H6-XVR" secondAttribute="top" id="aOe-NJ-QRF"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-            <point key="canvasLocation" x="398" y="400"/>
+            <point key="canvasLocation" x="333" y="389"/>
         </view>
     </objects>
 </document>
