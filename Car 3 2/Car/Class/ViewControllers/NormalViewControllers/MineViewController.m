@@ -14,6 +14,11 @@
 #import "PictureViewController.h"
 
 
+
+#import "LoginViewController.h"
+#import "IntroductionViewController.h"
+#import "PositionViewController.h"
+
 #import "MineView.h"
 
 @interface MineViewController ()<jumpDelegate,UITableViewDataSource,UITableViewDelegate>
@@ -116,6 +121,33 @@
     
     return 70;
     
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.row) {
+        case 0:{
+            PositionViewController *pvc = [[PositionViewController alloc] init];
+            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:pvc];
+            [self presentViewController:nvc animated:YES completion:nil];
+            break;
+        }
+        case 1:{
+            LoginViewController *lvc = [[LoginViewController alloc] init];
+            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:lvc];
+            [self presentViewController:nvc animated:YES completion:nil];
+            break;
+        }
+        case 2:{
+            IntroductionViewController *ivc = [[IntroductionViewController alloc] init];
+            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:ivc];
+            [self presentViewController:nvc animated:YES completion:nil];
+            break;
+        }
+            
+        default:
+            break;
+    }
 }
 
 
