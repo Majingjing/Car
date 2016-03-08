@@ -64,7 +64,6 @@
     
     [self loadData:[[InformationManager shareInstance] modelIDbyIndex:self.page]];
     
-    NSLog(@"123");
     
     
     
@@ -75,7 +74,6 @@
 
 
 - (void)loadData:(NSInteger)index {
-    NSLog(@"456");
     [[InformationManager shareInstance] detailSolve:[NSString stringWithFormat:detailUrl,index] finish:^(NSMutableArray *arr) {
         self.scrollView.contentSize = CGSizeMake(Width * (arr.count + 1), Height - 300);
         self.count = arr.count;
@@ -123,9 +121,7 @@
 }
 
 - (void)action {
-    NSLog(@"%ld", self.page);
     self.page++;
-    NSLog(@"%ld", self.page);
     [self loadData:[[InformationManager shareInstance] modelIDbyIndex:self.page]];
     self.scrollView.contentOffset = CGPointMake(0, 0);
 }
