@@ -103,7 +103,6 @@
 
 
 - (void)update:(NSInteger)indesx {
-    self.tableView.contentOffset = CGPointMake(0, -50);
     [[InformationManager shareInstance] solve:[NSString stringWithFormat:self.str, indesx, 1, 1] finish:^(NSMutableArray *arr) {
          [self.arr removeAllObjects];
          [self.arr addObjectsFromArray:arr];
