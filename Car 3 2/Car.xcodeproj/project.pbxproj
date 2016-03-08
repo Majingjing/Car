@@ -39,26 +39,26 @@
 		C27508481C89301E0061CD5E /* 拆车坊.png in Resources */ = {isa = PBXBuildFile; fileRef = C27508441C89301E0061CD5E /* 拆车坊.png */; };
 		C27508491C89301E0061CD5E /* 我的.png in Resources */ = {isa = PBXBuildFile; fileRef = C27508451C89301E0061CD5E /* 我的.png */; };
 		C275084A1C89301E0061CD5E /* 图片.png in Resources */ = {isa = PBXBuildFile; fileRef = C27508461C89301E0061CD5E /* 图片.png */; };
-		C27508621C893D070061CD5E /* moroCycleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C275085B1C893D070061CD5E /* moroCycleTableViewCell.m */; };
-		C27508631C893D070061CD5E /* moroCycleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C275085C1C893D070061CD5E /* moroCycleTableViewCell.xib */; };
-		C27508641C893D070061CD5E /* morosManger.m in Sources */ = {isa = PBXBuildFile; fileRef = C275085F1C893D070061CD5E /* morosManger.m */; };
-		C27508651C893D070061CD5E /* morosModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C27508611C893D070061CD5E /* morosModel.m */; };
-		C275086C1C893D120061CD5E /* moroManger.m in Sources */ = {isa = PBXBuildFile; fileRef = C27508661C893D120061CD5E /* moroManger.m */; };
-		C275086D1C893D120061CD5E /* moroModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C27508681C893D120061CD5E /* moroModel.m */; };
-		C275086E1C893D120061CD5E /* mosCycleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C275086A1C893D120061CD5E /* mosCycleTableViewCell.m */; };
-		C275086F1C893D120061CD5E /* mosCycleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C275086B1C893D120061CD5E /* mosCycleTableViewCell.xib */; };
 		C27508731C893D190061CD5E /* mThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27508711C893D190061CD5E /* mThirdViewController.m */; };
 		C27508741C893D190061CD5E /* mThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C27508721C893D190061CD5E /* mThirdViewController.xib */; };
-		C27508771C893D370061CD5E /* SYHNetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C27508761C893D370061CD5E /* SYHNetTools.m */; };
 		C275087A1C896A710061CD5E /* PictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C27508791C896A710061CD5E /* PictureModel.m */; };
 		C275087F1C8974BE0061CD5E /* InformationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C275087E1C8974BE0061CD5E /* InformationManager.m */; };
 		C27508821C898B0D0061CD5E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27508811C898B0D0061CD5E /* DetailViewController.m */; };
 		C27508891C8990FF0061CD5E /* DetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C27508881C8990FF0061CD5E /* DetailModel.m */; };
 		C275088C1C89A8AD0061CD5E /* 下一张.png in Resources */ = {isa = PBXBuildFile; fileRef = C275088A1C89A8AD0061CD5E /* 下一张.png */; };
 		C275088D1C89A8AD0061CD5E /* 上一张.png in Resources */ = {isa = PBXBuildFile; fileRef = C275088B1C89A8AD0061CD5E /* 上一张.png */; };
+		C279A6121C8E6F7000202A0D /* moroManger.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A60F1C8E6F7000202A0D /* moroManger.m */; };
+		C279A6131C8E6F7000202A0D /* morosManger.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6111C8E6F7000202A0D /* morosManger.m */; };
+		C279A6161C8E6FAF00202A0D /* moroModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6151C8E6FAF00202A0D /* moroModel.m */; };
+		C279A6191C8E6FE800202A0D /* morosModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6181C8E6FE800202A0D /* morosModel.m */; };
+		C279A61C1C8E702A00202A0D /* SYHNetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A61B1C8E702A00202A0D /* SYHNetTools.m */; };
+		C279A6231C8E712A00202A0D /* moroCycleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A61E1C8E712A00202A0D /* moroCycleTableViewCell.m */; };
+		C279A6241C8E712A00202A0D /* moroCycleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C279A61F1C8E712A00202A0D /* moroCycleTableViewCell.xib */; };
+		C279A6251C8E712A00202A0D /* mosCycleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6211C8E712A00202A0D /* mosCycleTableViewCell.m */; };
+		C279A6261C8E712A00202A0D /* mosCycleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C279A6221C8E712A00202A0D /* mosCycleTableViewCell.xib */; };
+		C279A62A1C8E713300202A0D /* ChaiCheTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6281C8E713300202A0D /* ChaiCheTableViewCell.m */; };
+		C279A62B1C8E713300202A0D /* ChaiCheTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C279A6291C8E713300202A0D /* ChaiCheTableViewCell.xib */; };
 		C27CDEAD1C885A5F00EDD04F /* ChaiCheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C27CDEAC1C885A5F00EDD04F /* ChaiCheModel.m */; };
-		C27CDEB31C8862F700EDD04F /* ChaiCheTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C27CDEB11C8862F700EDD04F /* ChaiCheTableViewCell.m */; };
-		C27CDEB41C8862F700EDD04F /* ChaiCheTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C27CDEB21C8862F700EDD04F /* ChaiCheTableViewCell.xib */; };
 		C2911B3D1C8672AE00657AFA /* informationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B301C8672AE00657AFA /* informationViewController.m */; };
 		C2911B3E1C8672AE00657AFA /* informationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2911B311C8672AE00657AFA /* informationViewController.xib */; };
 		C2911B3F1C8672AE00657AFA /* MJRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B331C8672AE00657AFA /* MJRootView.m */; };
@@ -139,25 +139,9 @@
 		C27508441C89301E0061CD5E /* 拆车坊.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "拆车坊.png"; sourceTree = "<group>"; };
 		C27508451C89301E0061CD5E /* 我的.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的.png"; sourceTree = "<group>"; };
 		C27508461C89301E0061CD5E /* 图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图片.png"; sourceTree = "<group>"; };
-		C275085A1C893D070061CD5E /* moroCycleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moroCycleTableViewCell.h; sourceTree = "<group>"; };
-		C275085B1C893D070061CD5E /* moroCycleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moroCycleTableViewCell.m; sourceTree = "<group>"; };
-		C275085C1C893D070061CD5E /* moroCycleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = moroCycleTableViewCell.xib; sourceTree = "<group>"; };
-		C275085D1C893D070061CD5E /* moroManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moroManger.h; sourceTree = "<group>"; };
-		C275085E1C893D070061CD5E /* morosManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = morosManger.h; sourceTree = "<group>"; };
-		C275085F1C893D070061CD5E /* morosManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = morosManger.m; sourceTree = "<group>"; };
-		C27508601C893D070061CD5E /* morosModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = morosModel.h; sourceTree = "<group>"; };
-		C27508611C893D070061CD5E /* morosModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = morosModel.m; sourceTree = "<group>"; };
-		C27508661C893D120061CD5E /* moroManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moroManger.m; sourceTree = "<group>"; };
-		C27508671C893D120061CD5E /* moroModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moroModel.h; sourceTree = "<group>"; };
-		C27508681C893D120061CD5E /* moroModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moroModel.m; sourceTree = "<group>"; };
-		C27508691C893D120061CD5E /* mosCycleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mosCycleTableViewCell.h; sourceTree = "<group>"; };
-		C275086A1C893D120061CD5E /* mosCycleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mosCycleTableViewCell.m; sourceTree = "<group>"; };
-		C275086B1C893D120061CD5E /* mosCycleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mosCycleTableViewCell.xib; sourceTree = "<group>"; };
 		C27508701C893D190061CD5E /* mThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mThirdViewController.h; sourceTree = "<group>"; };
 		C27508711C893D190061CD5E /* mThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mThirdViewController.m; sourceTree = "<group>"; };
 		C27508721C893D190061CD5E /* mThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mThirdViewController.xib; sourceTree = "<group>"; };
-		C27508751C893D370061CD5E /* SYHNetTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYHNetTools.h; sourceTree = "<group>"; };
-		C27508761C893D370061CD5E /* SYHNetTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYHNetTools.m; sourceTree = "<group>"; };
 		C27508781C896A710061CD5E /* PictureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureModel.h; sourceTree = "<group>"; };
 		C27508791C896A710061CD5E /* PictureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureModel.m; sourceTree = "<group>"; };
 		C275087E1C8974BE0061CD5E /* InformationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationManager.m; sourceTree = "<group>"; };
@@ -167,11 +151,27 @@
 		C27508881C8990FF0061CD5E /* DetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailModel.m; sourceTree = "<group>"; };
 		C275088A1C89A8AD0061CD5E /* 下一张.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下一张.png"; sourceTree = "<group>"; };
 		C275088B1C89A8AD0061CD5E /* 上一张.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上一张.png"; sourceTree = "<group>"; };
+		C279A60E1C8E6F7000202A0D /* moroManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moroManger.h; sourceTree = "<group>"; };
+		C279A60F1C8E6F7000202A0D /* moroManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moroManger.m; sourceTree = "<group>"; };
+		C279A6101C8E6F7000202A0D /* morosManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = morosManger.h; sourceTree = "<group>"; };
+		C279A6111C8E6F7000202A0D /* morosManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = morosManger.m; sourceTree = "<group>"; };
+		C279A6141C8E6FAF00202A0D /* moroModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moroModel.h; sourceTree = "<group>"; };
+		C279A6151C8E6FAF00202A0D /* moroModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moroModel.m; sourceTree = "<group>"; };
+		C279A6171C8E6FE800202A0D /* morosModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = morosModel.h; sourceTree = "<group>"; };
+		C279A6181C8E6FE800202A0D /* morosModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = morosModel.m; sourceTree = "<group>"; };
+		C279A61A1C8E702A00202A0D /* SYHNetTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYHNetTools.h; sourceTree = "<group>"; };
+		C279A61B1C8E702A00202A0D /* SYHNetTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYHNetTools.m; sourceTree = "<group>"; };
+		C279A61D1C8E712A00202A0D /* moroCycleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moroCycleTableViewCell.h; sourceTree = "<group>"; };
+		C279A61E1C8E712A00202A0D /* moroCycleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moroCycleTableViewCell.m; sourceTree = "<group>"; };
+		C279A61F1C8E712A00202A0D /* moroCycleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = moroCycleTableViewCell.xib; sourceTree = "<group>"; };
+		C279A6201C8E712A00202A0D /* mosCycleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mosCycleTableViewCell.h; sourceTree = "<group>"; };
+		C279A6211C8E712A00202A0D /* mosCycleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mosCycleTableViewCell.m; sourceTree = "<group>"; };
+		C279A6221C8E712A00202A0D /* mosCycleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mosCycleTableViewCell.xib; sourceTree = "<group>"; };
+		C279A6271C8E713300202A0D /* ChaiCheTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiCheTableViewCell.h; sourceTree = "<group>"; };
+		C279A6281C8E713300202A0D /* ChaiCheTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiCheTableViewCell.m; sourceTree = "<group>"; };
+		C279A6291C8E713300202A0D /* ChaiCheTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChaiCheTableViewCell.xib; sourceTree = "<group>"; };
 		C27CDEAB1C885A5F00EDD04F /* ChaiCheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiCheModel.h; sourceTree = "<group>"; };
 		C27CDEAC1C885A5F00EDD04F /* ChaiCheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiCheModel.m; sourceTree = "<group>"; };
-		C27CDEB01C8862F700EDD04F /* ChaiCheTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiCheTableViewCell.h; sourceTree = "<group>"; };
-		C27CDEB11C8862F700EDD04F /* ChaiCheTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiCheTableViewCell.m; sourceTree = "<group>"; };
-		C27CDEB21C8862F700EDD04F /* ChaiCheTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChaiCheTableViewCell.xib; sourceTree = "<group>"; };
 		C2911B211C8672AE00657AFA /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		C2911B2F1C8672AE00657AFA /* informationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = informationViewController.h; path = ../../Views/NormalViews/informationViewController.h; sourceTree = "<group>"; };
 		C2911B301C8672AE00657AFA /* informationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = informationViewController.m; path = ../../Views/NormalViews/informationViewController.m; sourceTree = "<group>"; };
@@ -295,9 +295,15 @@
 		C2911B221C8672AE00657AFA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C279A61A1C8E702A00202A0D /* SYHNetTools.h */,
+				C279A61B1C8E702A00202A0D /* SYHNetTools.m */,
 				C24859071C87C80D00BC8FC9 /* SDWebImage */,
 				C2911B641C871C8800657AFA /* InformationManager.h */,
 				C275087E1C8974BE0061CD5E /* InformationManager.m */,
+				C279A60E1C8E6F7000202A0D /* moroManger.h */,
+				C279A60F1C8E6F7000202A0D /* moroManger.m */,
+				C279A6101C8E6F7000202A0D /* morosManger.h */,
+				C279A6111C8E6F7000202A0D /* morosManger.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -305,6 +311,10 @@
 		C2911B231C8672AE00657AFA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C279A6171C8E6FE800202A0D /* morosModel.h */,
+				C279A6181C8E6FE800202A0D /* morosModel.m */,
+				C279A6141C8E6FAF00202A0D /* moroModel.h */,
+				C279A6151C8E6FAF00202A0D /* moroModel.m */,
 				C27508271C891F850061CD5E /* 52.jpg */,
 				C2911B671C871E4600657AFA /* InformationModel.h */,
 				C2911B681C871E4600657AFA /* InformationModel.m */,
@@ -359,25 +369,9 @@
 		C2911B271C8672AE00657AFA /* NormalViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C27508751C893D370061CD5E /* SYHNetTools.h */,
-				C27508761C893D370061CD5E /* SYHNetTools.m */,
 				C27508701C893D190061CD5E /* mThirdViewController.h */,
 				C27508711C893D190061CD5E /* mThirdViewController.m */,
 				C27508721C893D190061CD5E /* mThirdViewController.xib */,
-				C27508671C893D120061CD5E /* moroModel.h */,
-				C27508681C893D120061CD5E /* moroModel.m */,
-				C27508691C893D120061CD5E /* mosCycleTableViewCell.h */,
-				C275086A1C893D120061CD5E /* mosCycleTableViewCell.m */,
-				C275086B1C893D120061CD5E /* mosCycleTableViewCell.xib */,
-				C275085A1C893D070061CD5E /* moroCycleTableViewCell.h */,
-				C275085B1C893D070061CD5E /* moroCycleTableViewCell.m */,
-				C275085C1C893D070061CD5E /* moroCycleTableViewCell.xib */,
-				C275085D1C893D070061CD5E /* moroManger.h */,
-				C27508661C893D120061CD5E /* moroManger.m */,
-				C275085E1C893D070061CD5E /* morosManger.h */,
-				C275085F1C893D070061CD5E /* morosManger.m */,
-				C27508601C893D070061CD5E /* morosModel.h */,
-				C27508611C893D070061CD5E /* morosModel.m */,
 				C2911B371C8672AE00657AFA /* RootViewController.h */,
 				C2911B381C8672AE00657AFA /* RootViewController.m */,
 				C2911B2F1C8672AE00657AFA /* informationViewController.h */,
@@ -388,9 +382,6 @@
 				C2911B361C8672AE00657AFA /* motorcycleTypeViewController.xib */,
 				C2911B441C86785500657AFA /* ChaiViewController.h */,
 				C2911B451C86785500657AFA /* ChaiViewController.m */,
-				C27CDEB01C8862F700EDD04F /* ChaiCheTableViewCell.h */,
-				C27CDEB11C8862F700EDD04F /* ChaiCheTableViewCell.m */,
-				C27CDEB21C8862F700EDD04F /* ChaiCheTableViewCell.xib */,
 				C2643A0C1C8D884F0097B766 /* ChaiDetailViewController.h */,
 				C2643A0D1C8D884F0097B766 /* ChaiDetailViewController.m */,
 				C2643A0E1C8D884F0097B766 /* ChaiDetailViewController.xib */,
@@ -426,6 +417,15 @@
 		C2911B2E1C8672AE00657AFA /* NormalViews */ = {
 			isa = PBXGroup;
 			children = (
+				C279A6271C8E713300202A0D /* ChaiCheTableViewCell.h */,
+				C279A6281C8E713300202A0D /* ChaiCheTableViewCell.m */,
+				C279A6291C8E713300202A0D /* ChaiCheTableViewCell.xib */,
+				C279A61D1C8E712A00202A0D /* moroCycleTableViewCell.h */,
+				C279A61E1C8E712A00202A0D /* moroCycleTableViewCell.m */,
+				C279A61F1C8E712A00202A0D /* moroCycleTableViewCell.xib */,
+				C279A6201C8E712A00202A0D /* mosCycleTableViewCell.h */,
+				C279A6211C8E712A00202A0D /* mosCycleTableViewCell.m */,
+				C279A6221C8E712A00202A0D /* mosCycleTableViewCell.xib */,
 				C2911B321C8672AE00657AFA /* MJRootView.h */,
 				C2911B331C8672AE00657AFA /* MJRootView.m */,
 				C2911B4A1C86E32E00657AFA /* ModelCollectionViewCell.h */,
@@ -538,23 +538,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C27508471C89301E0061CD5E /* 资讯.png in Resources */,
-				C275086F1C893D120061CD5E /* mosCycleTableViewCell.xib in Resources */,
 				C27508421C892ECE0061CD5E /* 车型.png in Resources */,
 				C27508281C891F850061CD5E /* 52.jpg in Resources */,
 				C27508481C89301E0061CD5E /* 拆车坊.png in Resources */,
 				C26439E51C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib in Resources */,
+				C279A6261C8E712A00202A0D /* mosCycleTableViewCell.xib in Resources */,
 				C275084A1C89301E0061CD5E /* 图片.png in Resources */,
 				C2E25DB01C854895003EF8F8 /* LaunchScreen.storyboard in Resources */,
 				C2911B591C87046100657AFA /* 8879-11091423105869.jpg in Resources */,
-				C27CDEB41C8862F700EDD04F /* ChaiCheTableViewCell.xib in Resources */,
 				C275083C1C892D6E0061CD5E /* 添加.png in Resources */,
+				C279A62B1C8E713300202A0D /* ChaiCheTableViewCell.xib in Resources */,
 				C275088D1C89A8AD0061CD5E /* 上一张.png in Resources */,
-				C27508631C893D070061CD5E /* moroCycleTableViewCell.xib in Resources */,
 				C2911B631C871A7000657AFA /* InformationTableViewCell.xib in Resources */,
 				C27508741C893D190061CD5E /* mThirdViewController.xib in Resources */,
 				C2911B411C8672AE00657AFA /* motorcycleTypeViewController.xib in Resources */,
 				C2911B4E1C86FCAE00657AFA /* 10.png in Resources */,
 				C2E25DAD1C854895003EF8F8 /* Assets.xcassets in Resources */,
+				C279A6241C8E712A00202A0D /* moroCycleTableViewCell.xib in Resources */,
 				C2E25DAB1C854895003EF8F8 /* Main.storyboard in Resources */,
 				C2911B3E1C8672AE00657AFA /* informationViewController.xib in Resources */,
 				C2643A101C8D884F0097B766 /* ChaiDetailViewController.xib in Resources */,
@@ -572,20 +572,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C24859341C87C80D00BC8FC9 /* UIImage+MultiFormat.m in Sources */,
+				C279A62A1C8E713300202A0D /* ChaiCheTableViewCell.m in Sources */,
 				C24859351C87C80D00BC8FC9 /* UIImage+WebP.m in Sources */,
 				C2E25DA81C854895003EF8F8 /* ViewController.m in Sources */,
 				C24859301C87C80D00BC8FC9 /* SDWebImageManager.m in Sources */,
-				C275086E1C893D120061CD5E /* mosCycleTableViewCell.m in Sources */,
 				C24859411C87EE2E00BC8FC9 /* MotorcycleTypeModel.m in Sources */,
+				C279A6251C8E712A00202A0D /* mosCycleTableViewCell.m in Sources */,
 				C2911B401C8672AE00657AFA /* motorcycleTypeViewController.m in Sources */,
 				C27508821C898B0D0061CD5E /* DetailViewController.m in Sources */,
 				C27508891C8990FF0061CD5E /* DetailModel.m in Sources */,
+				C279A6231C8E712A00202A0D /* moroCycleTableViewCell.m in Sources */,
 				C2911B3F1C8672AE00657AFA /* MJRootView.m in Sources */,
 				C27508731C893D190061CD5E /* mThirdViewController.m in Sources */,
 				C2911B461C86785500657AFA /* ChaiViewController.m in Sources */,
 				C248592E1C87C80D00BC8FC9 /* SDWebImageDownloader.m in Sources */,
 				C2911B491C86DE3900657AFA /* PictureViewController.m in Sources */,
-				C27508641C893D070061CD5E /* morosManger.m in Sources */,
 				C2911B511C8701A500657AFA /* MineViewController.m in Sources */,
 				C248593E1C87EA1A00BC8FC9 /* WebViewController.m in Sources */,
 				C2911B691C871E4600657AFA /* InformationModel.m in Sources */,
@@ -593,32 +594,31 @@
 				C275087A1C896A710061CD5E /* PictureModel.m in Sources */,
 				C21A581C1C8DA499009737DD /* AppDelegate.m in Sources */,
 				C2911B621C871A7000657AFA /* InformationTableViewCell.m in Sources */,
-				C27508621C893D070061CD5E /* moroCycleTableViewCell.m in Sources */,
 				C24859291C87C80D00BC8FC9 /* MKAnnotationView+WebCache.m in Sources */,
 				C2911B421C8672AE00657AFA /* RootViewController.m in Sources */,
 				C248592A1C87C80D00BC8FC9 /* NSData+ImageContentType.m in Sources */,
 				C24859331C87C80D00BC8FC9 /* UIImage+GIF.m in Sources */,
+				C279A6131C8E6F7000202A0D /* morosManger.m in Sources */,
 				C24859321C87C80D00BC8FC9 /* UIButton+WebCache.m in Sources */,
-				C275086C1C893D120061CD5E /* moroManger.m in Sources */,
+				C279A6191C8E6FE800202A0D /* morosModel.m in Sources */,
 				C24859311C87C80D00BC8FC9 /* SDWebImagePrefetcher.m in Sources */,
 				C248592D1C87C80D00BC8FC9 /* SDWebImageDecoder.m in Sources */,
-				C27508651C893D070061CD5E /* morosModel.m in Sources */,
 				C27CDEAD1C885A5F00EDD04F /* ChaiCheModel.m in Sources */,
 				C248592B1C87C80D00BC8FC9 /* SDImageCache.m in Sources */,
 				C248592C1C87C80D00BC8FC9 /* SDWebImageCompat.m in Sources */,
 				C24859381C87C80D00BC8FC9 /* UIView+WebCacheOperation.m in Sources */,
 				C2E25DA21C854895003EF8F8 /* main.m in Sources */,
-				C27CDEB31C8862F700EDD04F /* ChaiCheTableViewCell.m in Sources */,
 				C248592F1C87C80D00BC8FC9 /* SDWebImageDownloaderOperation.m in Sources */,
 				C2911B4C1C86E32E00657AFA /* ModelCollectionViewCell.m in Sources */,
-				C275086D1C893D120061CD5E /* moroModel.m in Sources */,
 				C24859371C87C80D00BC8FC9 /* UIImageView+WebCache.m in Sources */,
+				C279A61C1C8E702A00202A0D /* SYHNetTools.m in Sources */,
 				C24859361C87C80D00BC8FC9 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C26439E01C8D77250097B766 /* ChaiCheVideoModel.m in Sources */,
 				C2643A131C8D89680097B766 /* ChaiDetailModel.m in Sources */,
 				C2643A0F1C8D884F0097B766 /* ChaiDetailViewController.m in Sources */,
+				C279A6161C8E6FAF00202A0D /* moroModel.m in Sources */,
 				C26439E41C8D7B320097B766 /* ChaiVideoCollectionViewCell.m in Sources */,
-				C27508771C893D370061CD5E /* SYHNetTools.m in Sources */,
+				C279A6121C8E6F7000202A0D /* moroManger.m in Sources */,
 				C2911B3D1C8672AE00657AFA /* informationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
