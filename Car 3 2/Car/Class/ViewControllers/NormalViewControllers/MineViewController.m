@@ -12,18 +12,43 @@
 #import "motorcycleTypeViewController.h"
 #import "ChaiViewController.h"
 #import "PictureViewController.h"
-@interface MineViewController ()<jumpDelegate>
+
+
+#import "MineView.h"
+
+@interface MineViewController ()<jumpDelegate,UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic,strong)MineView *rootView;
+
 
 @end
 
 @implementation MineViewController
+
+-(void)loadView{
+    
+    self.rootView = [[MineView  alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.view = self.rootView;
+    
+    
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:[MJRootView shareInstance]];
     [MJRootView shareInstance].delegate = self;
     
-    // Do any additional setup after loading the view.
+    self.rootView.mineTableView.dataSource = self;
+    self.rootView.mineTableView.delegate = self;
+    
+#pragma mark -- 注册cell
+    
+    [self.rootView.mineTableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"m_cell"];
+    
+    
+    
+
 }
 
 - (void)jumpAction:(NSInteger)tag {
@@ -50,20 +75,49 @@
     }
 }
 
+#pragma mark -- tableView  必须实现的方法
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    
+    return 3;
+    
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView  dequeueReusableCellWithIdentifier:@"m_cell" forIndexPath:indexPath];
+    
+    switch (indexPath.row) {
+        case 0:
+            cell.textLabel.text = @"我的收藏";
+            cell.textLabel.font = [UIFont  systemFontOfSize:23 weight:1];
+            break;
+        case 1:
+            cell.textLabel.text = @"欢迎分享";
+            cell.textLabel.font = [UIFont systemFontOfSize:23 weight:1];
+            break;
+        case 2:
+            cell.textLabel.text = @"团队简介";
+            cell.textLabel.font = [UIFont  systemFontOfSize:23 weight:1];
+            break;
+        default:
+            break;
+    }
+    
+    return cell;
+    
 }
-*/
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 70;
+    
+}
+
+
 
 @end

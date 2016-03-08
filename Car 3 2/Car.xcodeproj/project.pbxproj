@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8F21E4D1C8EF7CC00CD06E9 /* MineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F21E4C1C8EF7CC00CD06E9 /* MineView.m */; };
 		C21A581C1C8DA499009737DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C21A581B1C8DA499009737DD /* AppDelegate.m */; };
 		C24859291C87C80D00BC8FC9 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C24859091C87C80D00BC8FC9 /* MKAnnotationView+WebCache.m */; };
 		C248592A1C87C80D00BC8FC9 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = C248590B1C87C80D00BC8FC9 /* NSData+ImageContentType.m */; };
@@ -81,6 +82,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8F21E4B1C8EF7CC00CD06E9 /* MineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineView.h; sourceTree = "<group>"; };
+		B8F21E4C1C8EF7CC00CD06E9 /* MineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineView.m; sourceTree = "<group>"; };
 		C21A581A1C8DA499009737DD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C21A581B1C8DA499009737DD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C24859081C87C80D00BC8FC9 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -394,6 +397,8 @@
 		C2911B2C1C8672AE00657AFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B8F21E4B1C8EF7CC00CD06E9 /* MineView.h */,
+				B8F21E4C1C8EF7CC00CD06E9 /* MineView.m */,
 				C2911B2D1C8672AE00657AFA /* BaseViews */,
 				C2911B2E1C8672AE00657AFA /* NormalViews */,
 			);
@@ -596,6 +601,7 @@
 				C24859311C87C80D00BC8FC9 /* SDWebImagePrefetcher.m in Sources */,
 				C248592D1C87C80D00BC8FC9 /* SDWebImageDecoder.m in Sources */,
 				C27CDEAD1C885A5F00EDD04F /* ChaiCheModel.m in Sources */,
+				B8F21E4D1C8EF7CC00CD06E9 /* MineView.m in Sources */,
 				C248592B1C87C80D00BC8FC9 /* SDImageCache.m in Sources */,
 				C248592C1C87C80D00BC8FC9 /* SDWebImageCompat.m in Sources */,
 				C24859381C87C80D00BC8FC9 /* UIView+WebCacheOperation.m in Sources */,
