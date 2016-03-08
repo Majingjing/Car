@@ -101,7 +101,7 @@ static NSString *msIdentifier = @"msCell";
      self.mTableView.frame = CGRectMake(self.view.frame.size.width - self.mTableView.frame.size.width, 0, self.mTableView.frame.size.width, self.view.frame.size.height);
      }];0
      */
-    
+#warning 第二步
     [[moroManger  shareInstanceMotorcycle] requestMotocleWithUrl:MorocleUrl didFinsn:^{
 #pragma mark -- 值的传递与数据的解析
         
@@ -111,7 +111,7 @@ static NSString *msIdentifier = @"msCell";
 
         self.brandId = model.brandId;
         
-      
+#warning 第三步  拼接URL
         NSString *url = [NSString stringWithFormat:MscleUrl,self.brandId];
         [[morosManger  shareInstanceMsclecy] requestMscycleWithUrl:url didFinsn:^{
             self.data = [morosManger shareInstanceMsclecy].msArr;
@@ -183,7 +183,9 @@ static NSString *msIdentifier = @"msCell";
     else
     {
         mosCycleTableViewCell *cell = [self.mTableView dequeueReusableCellWithIdentifier:msIdentifier forIndexPath:indexPath];
-#pragma mark --  model  的获取
+#pragma mark --  model的获取
+        
+#warning 第四步  数据的显示
         morosModel *model = self.data[indexPath.row];
         
         cell.morosNamelable.text = model.seriesName;
@@ -205,7 +207,8 @@ static NSString *msIdentifier = @"msCell";
     if(tableView == self.motorccleTable)
     {
 #pragma mark 下标的获取
-        
+ 
+#warning 第一步
         self.indexPath = indexPath;
         [self swipAction];
         
