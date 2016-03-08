@@ -43,11 +43,11 @@ static morosManger *manger = nil;
 
 -(void)requestMscycleWithUrl:(NSString *)url didFinsn:(void(^)())finish{
     
-       [self.msArr removeAllObjects];
+    
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         
         [SYHNetTools   SolveDataWithUrl:url HTTpMethod:@"GET" HttpBody:nil revokeBlock:^(NSData *data) {
-            
+            [self.msArr removeAllObjects];
             NSArray *mArr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
             // NSLog(@"%@ === ",mArr);
             

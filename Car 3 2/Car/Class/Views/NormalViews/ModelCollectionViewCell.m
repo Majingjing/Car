@@ -19,10 +19,8 @@
 }
 
 - (void)setupItem {
-    self.lable = [[UILabel alloc] initWithFrame:CGRectMake(0, 130, self.contentView.frame.size.width, 60)];
+    self.lable = [[UILabel alloc] initWithFrame:CGRectMake(0, 130, self.contentView.frame.size.width, 30)];
     self.lable.font = [UIFont systemFontOfSize:16];
-    self.lable.numberOfLines = 0;
-    self.lable.textAlignment = NSTextAlignmentCenter;
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.contentView.frame.size.width, 120)];
     [self.contentView addSubview:self.lable];
     [self.contentView addSubview:self.imageView];

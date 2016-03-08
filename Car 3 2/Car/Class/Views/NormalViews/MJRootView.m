@@ -101,6 +101,7 @@ static MJRootView *MJView;
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(downAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:button];
+    [UIColor colorWithRed:0.487 green:1.000 blue:0.682 alpha:1.000];
 
 }
 

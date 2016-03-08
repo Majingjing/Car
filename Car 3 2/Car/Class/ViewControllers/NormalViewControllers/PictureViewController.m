@@ -49,16 +49,16 @@
 }
 
 - (void)segmentAction:(UISegmentedControl *)sender {
-    [self.Picturearr removeAllObjects];
     [self solve:self.arr[sender.selectedSegmentIndex]];
     
 }
 
 - (void)solve: (NSString *)url {
     [[InformationManager shareInstance] pictureSolve:url finish:^(NSMutableArray *arr) {
+        [self.Picturearr removeAllObjects];
         [self creatModelCollection];
+        [self.Picturearr removeAllObjects];
         [self.Picturearr addObjectsFromArray:arr];
-        
         [self.modelCollection reloadData];
     }];
 
@@ -97,8 +97,6 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
     DetailViewController *dvc = [[DetailViewController alloc] init];
-//    PictureModel *model = self.Picturearr[indexPath.row];
-//    dvc.page = model.albumId;
     dvc.page = indexPath.row;
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dvc];
     [self presentViewController:nvc animated:YES completion:nil];

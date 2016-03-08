@@ -81,12 +81,12 @@
     
     
     if (self.segment.selectedSegmentIndex == 0) {
-        UIScrollView *loopPicView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-        loopPicView.contentSize = CGSizeMake(self.view.frame.size.width*3, 200);
+        UIScrollView *loopPicView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, Width, 200)];
+        loopPicView.contentSize = CGSizeMake(Width*3, 200);
         loopPicView.pagingEnabled = YES;
         loopPicView.bounces = NO;
         for (int i = 0; i <3; i++) {
-            UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width*i, 0, self.view.frame.size.width, 200)];
+            UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(Width*i, 0, Width, 200)];
             [imgView sd_setImageWithURL:[NSURL URLWithString:self.loopPicUrlArr[i]]];
             [loopPicView addSubview:imgView];
         }
@@ -103,7 +103,6 @@
 
 
 - (void)update:(NSInteger)indesx {
-    self.tableView.contentOffset = CGPointMake(0, -50);
     [[InformationManager shareInstance] solve:[NSString stringWithFormat:self.str, indesx, 1, 1] finish:^(NSMutableArray *arr) {
          [self.arr removeAllObjects];
          [self.arr addObjectsFromArray:arr];
@@ -119,7 +118,6 @@
         [[InformationManager shareInstance] solve:[NSString stringWithFormat:self.str, self.index, self.count, self.count] finish:^(NSMutableArray *arr) {
             [self.arr addObjectsFromArray:arr];
             [self.arr removeObjectAtIndex:self.arr.count - 1];
-
             [self.tableView reloadData];
             self.count = self.count + 2;
         }];

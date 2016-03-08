@@ -11,17 +11,17 @@
             <rect key="frame" x="0.0" y="0.0" width="583" height="159"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="583" height="158.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="583" height="158"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6zs-UZ-NkE">
-                        <rect key="frame" x="10" y="26" width="100" height="106.5"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zs-UZ-NkE">
+                        <rect key="frame" x="10" y="10" width="145" height="139"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="7vQ-VF-hl0"/>
+                            <constraint firstAttribute="width" constant="145" id="7vQ-VF-hl0"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9p-cq-WN3">
-                        <rect key="frame" x="120" y="35" width="135" height="23"/>
+                        <rect key="frame" x="165" y="35" width="135" height="23"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="135" id="LOA-sO-WNR"/>
                         </constraints>
@@ -31,10 +31,10 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="6zs-UZ-NkE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="KBc-cZ-vmv"/>
+                    <constraint firstItem="6zs-UZ-NkE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="KBc-cZ-vmv"/>
                     <constraint firstItem="F9p-cq-WN3" firstAttribute="leading" secondItem="6zs-UZ-NkE" secondAttribute="trailing" constant="10" id="OpL-h9-VhC"/>
                     <constraint firstItem="F9p-cq-WN3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="R4E-bU-rHG"/>
-                    <constraint firstAttribute="bottom" secondItem="6zs-UZ-NkE" secondAttribute="bottom" constant="26" id="Uaa-9s-v1l"/>
+                    <constraint firstAttribute="bottom" secondItem="6zs-UZ-NkE" secondAttribute="bottom" constant="10" id="Uaa-9s-v1l"/>
                     <constraint firstItem="6zs-UZ-NkE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="zrC-ga-XER"/>
                 </constraints>
             </tableViewCellContentView>
@@ -45,7 +45,4 @@
             <point key="canvasLocation" x="423.5" y="324.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="1.jpg" width="1024" height="1024"/>
-    </resources>
 </document>
