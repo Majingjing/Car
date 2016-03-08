@@ -46,9 +46,6 @@
     
     [self.rootView.mineTableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"m_cell"];
     
-    
-    
-
 }
 
 - (void)jumpAction:(NSInteger)tag {
@@ -79,20 +76,16 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    
     return 3;
     
-    
 }
-
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView  dequeueReusableCellWithIdentifier:@"m_cell" forIndexPath:indexPath];
     
     switch (indexPath.row) {
         case 0:
-            cell.textLabel.text = @"我的收藏";
+            cell.textLabel.text = @"炫车景点";
             cell.textLabel.font = [UIFont  systemFontOfSize:23 weight:1];
             break;
         case 1:
