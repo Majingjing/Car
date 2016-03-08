@@ -49,7 +49,7 @@ static morosManger *manger = nil;
         [SYHNetTools   SolveDataWithUrl:url HTTpMethod:@"GET" HttpBody:nil revokeBlock:^(NSData *data) {
             
             NSArray *mArr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-            NSLog(@"%@ === ",mArr);
+            // NSLog(@"%@ === ",mArr);
             
             for (NSDictionary *dict in mArr) {
                 

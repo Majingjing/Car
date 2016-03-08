@@ -51,7 +51,7 @@ static moroManger *manger = nil;
             
             NSArray  *arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
             
-            NSLog(@"%@ == ",arr);
+            //NSLog(@"%@ == ",arr);
             for (NSDictionary *dict in arr) {
                 
                 moroModel *model = [[moroModel alloc] init];

@@ -14,6 +14,8 @@
 
 
 #define chaiDataUrl @"http://sitemap.chexun.com/m/ccfnewsjson.do?count=10&page=%d"
+#define chaiVideoDataUrl @"http://sitemap.chexun.com/m/ccvideojson.do?count=6&page=%d"
+#define chaiVideoUrl @"http://sitemap.chexun.com/m/videonewsjson.do?id=%@"
 
 #define picUrlString @"http://m.chexun.com/coopdata/www_content4.inc"
 
@@ -28,4 +30,7 @@
 #define carPictureUrl @"http://api.tool.chexun.com/mobile/downEventAlbumList.do?type=0"
 
 #define detailUrl @"http://api.tool.chexun.com/mobile/downEventAlbumPhotoList.do?albumId=%ld"
+
+
+
 #endif /* Header_h */
