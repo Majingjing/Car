@@ -119,7 +119,6 @@
         [[InformationManager shareInstance] solve:[NSString stringWithFormat:self.str, self.index, self.count, self.count] finish:^(NSMutableArray *arr) {
             [self.arr addObjectsFromArray:arr];
             [self.arr removeObjectAtIndex:self.arr.count - 1];
-
             [self.tableView reloadData];
             self.count = self.count + 2;
         }];

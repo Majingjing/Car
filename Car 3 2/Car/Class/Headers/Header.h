@@ -8,6 +8,7 @@
 
 #ifndef Header_h
 #define Header_h
+
 #define Width CGRectGetWidth([UIScreen mainScreen].bounds)
 #define Height CGRectGetHeight([UIScreen mainScreen].bounds)
 
