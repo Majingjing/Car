@@ -12,10 +12,11 @@
 
 @interface ChaiDetailViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic)  UILabel *titleLabel;
+@property (strong, nonatomic)  UIWebView *webView;
 
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (strong, nonatomic)  UILabel *textLabel;
+@property (nonatomic,strong) UIScrollView *scrollView;
 
 @property (nonatomic,strong) ChaiDetailModel *model;
 
@@ -33,7 +34,8 @@
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0.338 green:0.366 blue:1.000 alpha:1.000];
     UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(goBackAction)];
     self.navigationItem.leftBarButtonItem = left;
-
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -41,7 +43,23 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(void)loadNewView{
+    self.scrollView  = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, Width, Height)];
+    self.scrollView.bounces = NO;
+    self.scrollView.contentSize = CGSizeMake(Width, Height+20);
+    [self.view addSubview:self.scrollView];
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, Width-10, 80)];
+    self.titleLabel.numberOfLines = 0;
+    [self.scrollView addSubview:self.titleLabel];
+    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(5, 85, Width-10, 200)];
+    [self.scrollView addSubview:self.webView];
+    self.textLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 290, Width-10, Height-270)];
+    self.textLabel.numberOfLines = 0;
+    [self.scrollView addSubview:self.textLabel];
+}
+
 -(void)viewWillAppear:(BOOL)animated{
+    [self loadNewView];
     [self loadData];
 }
 -(void)loadData{

@@ -57,6 +57,7 @@
     [[InformationManager shareInstance] pictureSolve:url finish:^(NSMutableArray *arr) {
         [self.Picturearr removeAllObjects];
         [self creatModelCollection];
+        [self.Picturearr removeAllObjects];
         [self.Picturearr addObjectsFromArray:arr];
         [self.modelCollection reloadData];
     }];

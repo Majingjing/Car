@@ -167,7 +167,7 @@
 
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    ChaiDetailViewController *dbc = [[ChaiDetailViewController alloc] initWithNibName:@"ChaiDetailViewController" bundle:nil];
+    ChaiDetailViewController *dbc = [[ChaiDetailViewController alloc] init];
     ChaiCheVideoModel *model = self.chaiVideoModelArr[indexPath.row];
     NSString *string = [NSString stringWithFormat:chaiVideoUrl,model.Nid];
     dbc.urlString = string;

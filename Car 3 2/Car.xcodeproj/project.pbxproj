@@ -30,7 +30,6 @@
 		C26439E41C8D7B320097B766 /* ChaiVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26439E21C8D7B320097B766 /* ChaiVideoCollectionViewCell.m */; };
 		C26439E51C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26439E31C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib */; };
 		C2643A0F1C8D884F0097B766 /* ChaiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2643A0D1C8D884F0097B766 /* ChaiDetailViewController.m */; };
-		C2643A101C8D884F0097B766 /* ChaiDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2643A0E1C8D884F0097B766 /* ChaiDetailViewController.xib */; };
 		C2643A131C8D89680097B766 /* ChaiDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2643A121C8D89680097B766 /* ChaiDetailModel.m */; };
 		C27508281C891F850061CD5E /* 52.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C27508271C891F850061CD5E /* 52.jpg */; };
 		C275083C1C892D6E0061CD5E /* 添加.png in Resources */ = {isa = PBXBuildFile; fileRef = C27508371C892D6E0061CD5E /* 添加.png */; };
@@ -70,7 +69,6 @@
 		C2911B4C1C86E32E00657AFA /* ModelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B4B1C86E32E00657AFA /* ModelCollectionViewCell.m */; };
 		C2911B4E1C86FCAE00657AFA /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = C2911B4D1C86FCAE00657AFA /* 10.png */; };
 		C2911B511C8701A500657AFA /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B501C8701A500657AFA /* MineViewController.m */; };
-		C2911B591C87046100657AFA /* 8879-11091423105869.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2911B581C87046100657AFA /* 8879-11091423105869.jpg */; };
 		C2911B5B1C87046A00657AFA /* 8879-11091423105869.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2911B5A1C87046A00657AFA /* 8879-11091423105869.jpg */; };
 		C2911B621C871A7000657AFA /* InformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B601C871A7000657AFA /* InformationTableViewCell.m */; };
 		C2911B631C871A7000657AFA /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2911B611C871A7000657AFA /* InformationTableViewCell.xib */; };
@@ -129,7 +127,6 @@
 		C26439E31C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChaiVideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		C2643A0C1C8D884F0097B766 /* ChaiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiDetailViewController.h; sourceTree = "<group>"; };
 		C2643A0D1C8D884F0097B766 /* ChaiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiDetailViewController.m; sourceTree = "<group>"; };
-		C2643A0E1C8D884F0097B766 /* ChaiDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChaiDetailViewController.xib; sourceTree = "<group>"; };
 		C2643A111C8D89680097B766 /* ChaiDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiDetailModel.h; sourceTree = "<group>"; };
 		C2643A121C8D89680097B766 /* ChaiDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiDetailModel.m; sourceTree = "<group>"; };
 		C27508271C891F850061CD5E /* 52.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 52.jpg; sourceTree = "<group>"; };
@@ -192,7 +189,6 @@
 		C2911B4D1C86FCAE00657AFA /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		C2911B4F1C8701A500657AFA /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		C2911B501C8701A500657AFA /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		C2911B581C87046100657AFA /* 8879-11091423105869.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "8879-11091423105869.jpg"; sourceTree = "<group>"; };
 		C2911B5A1C87046A00657AFA /* 8879-11091423105869.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "8879-11091423105869.jpg"; sourceTree = "<group>"; };
 		C2911B5F1C871A7000657AFA /* InformationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationTableViewCell.h; sourceTree = "<group>"; };
 		C2911B601C871A7000657AFA /* InformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationTableViewCell.m; sourceTree = "<group>"; };
@@ -361,7 +357,6 @@
 		C2911B261C8672AE00657AFA /* BaseViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C2911B581C87046100657AFA /* 8879-11091423105869.jpg */,
 			);
 			path = BaseViewControllers;
 			sourceTree = "<group>";
@@ -384,7 +379,6 @@
 				C2911B451C86785500657AFA /* ChaiViewController.m */,
 				C2643A0C1C8D884F0097B766 /* ChaiDetailViewController.h */,
 				C2643A0D1C8D884F0097B766 /* ChaiDetailViewController.m */,
-				C2643A0E1C8D884F0097B766 /* ChaiDetailViewController.xib */,
 				C2911B471C86DE3900657AFA /* PictureViewController.h */,
 				C2911B481C86DE3900657AFA /* PictureViewController.m */,
 				C27508801C898B0D0061CD5E /* DetailViewController.h */,
@@ -545,7 +539,6 @@
 				C279A6261C8E712A00202A0D /* mosCycleTableViewCell.xib in Resources */,
 				C275084A1C89301E0061CD5E /* 图片.png in Resources */,
 				C2E25DB01C854895003EF8F8 /* LaunchScreen.storyboard in Resources */,
-				C2911B591C87046100657AFA /* 8879-11091423105869.jpg in Resources */,
 				C275083C1C892D6E0061CD5E /* 添加.png in Resources */,
 				C279A62B1C8E713300202A0D /* ChaiCheTableViewCell.xib in Resources */,
 				C275088D1C89A8AD0061CD5E /* 上一张.png in Resources */,
@@ -557,7 +550,6 @@
 				C279A6241C8E712A00202A0D /* moroCycleTableViewCell.xib in Resources */,
 				C2E25DAB1C854895003EF8F8 /* Main.storyboard in Resources */,
 				C2911B3E1C8672AE00657AFA /* informationViewController.xib in Resources */,
-				C2643A101C8D884F0097B766 /* ChaiDetailViewController.xib in Resources */,
 				C275088C1C89A8AD0061CD5E /* 下一张.png in Resources */,
 				C27508491C89301E0061CD5E /* 我的.png in Resources */,
 				C2911B5B1C87046A00657AFA /* 8879-11091423105869.jpg in Resources */,
@@ -662,7 +654,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ly571888330@icloud.com (KAA6W9A27A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ly571888330@icloud.com (KAA6W9A27A)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -705,7 +698,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ly571888330@icloud.com (KAA6W9A27A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ly571888330@icloud.com (KAA6W9A27A)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -730,12 +724,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Car/Class/Headers/Header.h";
 				INFOPLIST_FILE = Car/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.Car;
+				PRODUCT_BUNDLE_IDENTIFIER = coolcar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -744,12 +741,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Car/Class/Headers/Header.h";
 				INFOPLIST_FILE = Car/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.Car;
+				PRODUCT_BUNDLE_IDENTIFIER = coolcar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
