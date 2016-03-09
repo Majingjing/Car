@@ -35,18 +35,17 @@
 
 
 // 轮播图地址数组
-@property (nonatomic,strong) NSMutableArray *loopPicUrlArr;
+@property (nonatomic, strong) NSMutableArray *loopPicUrlArr;
 // 图片新闻地址
-@property (nonatomic,strong) NSMutableArray *loopPicNewsArr;
+@property (nonatomic, strong) NSMutableArray *loopPicNewsArr;
+@property (nonatomic, strong)UIView *whiteView;
 @end
 
 @implementation informationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view addSubview:[MJRootView shareInstance]];
-    [MJRootView shareInstance].delegate = self;
-    self.str = @"http://sitemap.chexun.com/chexun/getDataIntoJson.do?category=%ld&page=%ld_%ld";
+        self.str = @"http://sitemap.chexun.com/chexun/getDataIntoJson.do?category=%ld&page=%ld_%ld";
     
 
     self.arr = [NSMutableArray array];
@@ -61,8 +60,26 @@
     self.index = 1;
     
     [self loadLoopPicData];
+    
+    self.whiteView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.whiteView.backgroundColor = [UIColor whiteColor];
+    self.whiteView.hidden = YES;
+    [self.view addSubview:self.whiteView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissAction:) name:@"dismiss" object:nil];
         // Do any additional setup after loading the view.
 }
+
+- (void)dismissAction:(NSNotification *)sender {
+    [self jumpAction:[sender.userInfo[@"tag"] integerValue]];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self.view addSubview:[MJRootView shareInstance]];
+    [MJRootView shareInstance].delegate = self;
+ 
+}
+
 
 // 解析轮播图地址
 -(void)loadLoopPicData{
@@ -152,6 +169,11 @@
 
 - (void)jumpAction:(NSInteger)tag {
      [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];
+    if (tag != 100) {
+        self.whiteView.hidden = NO;
+    } else {
+        self.whiteView.hidden = YES;
+    }
     switch (tag) {
         case 100:
             break;

@@ -51,53 +51,30 @@
     
     [self.rootView.mineTableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"m_cell"];
     
-    
-    
-
 }
 
 - (void)jumpAction:(NSInteger)tag {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];
-    switch (tag) {
-        case 100:
-            [self presentViewController:[[informationViewController alloc] initWithNibName:@"informationViewController" bundle:nil] animated:YES completion:nil];
-            break;
-        case 101:
-            [self presentViewController:[[motorcycleTypeViewController alloc] init] animated:YES completion:nil];
-            break;
-        case 102:
-            [self presentViewController:[[ChaiViewController alloc] init] animated:YES completion:nil];
-            break;
-        case 103:
-            [self presentViewController:[[PictureViewController alloc] init] animated:YES completion:nil];
-            break;
-        case 104:
-            
-            break;
-            
-        default:
-            break;
-    }
+    [self dismissViewControllerAnimated:NO completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"dismiss" object:nil userInfo:@{@"tag":[NSNumber numberWithInteger:tag]}];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];
+    }];
+
 }
 
 #pragma mark -- tableView  必须实现的方法
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    
     return 3;
     
-    
 }
-
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView  dequeueReusableCellWithIdentifier:@"m_cell" forIndexPath:indexPath];
     
     switch (indexPath.row) {
         case 0:
-            cell.textLabel.text = @"我的收藏";
+            cell.textLabel.text = @"炫车景点";
             cell.textLabel.font = [UIFont  systemFontOfSize:23 weight:1];
             break;
         case 1:
