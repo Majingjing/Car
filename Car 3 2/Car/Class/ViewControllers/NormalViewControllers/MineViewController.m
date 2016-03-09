@@ -12,18 +12,45 @@
 #import "motorcycleTypeViewController.h"
 #import "ChaiViewController.h"
 #import "PictureViewController.h"
-@interface MineViewController ()<jumpDelegate>
+
+
+
+#import "LoginViewController.h"
+#import "IntroductionViewController.h"
+#import "PositionViewController.h"
+
+#import "MineView.h"
+
+@interface MineViewController ()<jumpDelegate,UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic,strong)MineView *rootView;
+
 
 @end
 
 @implementation MineViewController
+
+-(void)loadView{
+    
+    self.rootView = [[MineView  alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.view = self.rootView;
+    
+    
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:[MJRootView shareInstance]];
     [MJRootView shareInstance].delegate = self;
     
-    // Do any additional setup after loading the view.
+    self.rootView.mineTableView.dataSource = self;
+    self.rootView.mineTableView.delegate = self;
+    
+#pragma mark -- 注册cell
+    
+    [self.rootView.mineTableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"m_cell"];
+    
 }
 
 - (void)jumpAction:(NSInteger)tag {
@@ -34,20 +61,72 @@
 
 }
 
+#pragma mark -- tableView  必须实现的方法
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return 3;
+    
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView  dequeueReusableCellWithIdentifier:@"m_cell" forIndexPath:indexPath];
+    
+    switch (indexPath.row) {
+        case 0:
+            cell.textLabel.text = @"炫车景点";
+            cell.textLabel.font = [UIFont  systemFontOfSize:23 weight:1];
+            break;
+        case 1:
+            cell.textLabel.text = @"欢迎分享";
+            cell.textLabel.font = [UIFont systemFontOfSize:23 weight:1];
+            break;
+        case 2:
+            cell.textLabel.text = @"团队简介";
+            cell.textLabel.font = [UIFont  systemFontOfSize:23 weight:1];
+            break;
+        default:
+            break;
+    }
+    
+    return cell;
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 70;
+    
 }
-*/
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.row) {
+        case 0:{
+            PositionViewController *pvc = [[PositionViewController alloc] init];
+            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:pvc];
+            [self presentViewController:nvc animated:YES completion:nil];
+            break;
+        }
+        case 1:{
+            LoginViewController *lvc = [[LoginViewController alloc] init];
+            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:lvc];
+            [self presentViewController:nvc animated:YES completion:nil];
+            break;
+        }
+        case 2:{
+            IntroductionViewController *ivc = [[IntroductionViewController alloc] init];
+            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:ivc];
+            [self presentViewController:nvc animated:YES completion:nil];
+            break;
+        }
+            
+        default:
+            break;
+    }
+}
+
+
 
 @end

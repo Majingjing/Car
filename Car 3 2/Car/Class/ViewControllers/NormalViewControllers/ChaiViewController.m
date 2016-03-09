@@ -21,6 +21,7 @@
 #import "WebViewController.h"
 #import "ChaiVideoCollectionViewCell.h"
 #import "ChaiDetailViewController.h"
+#import "MJRefresh.h"
 
 
 @interface ChaiViewController ()<UICollectionViewDataSource, UIBarPositioningDelegate, UICollectionViewDelegateFlowLayout,jumpDelegate, UITableViewDataSource, UITableViewDelegate,UICollectionViewDelegate>
@@ -32,6 +33,7 @@
 @property (nonatomic,strong) NSMutableArray *chaiVideoModelArr;
 
 @property (nonatomic,assign) int count;
+@property (nonatomic,assign) int count_1;
 
 @end
 
@@ -42,6 +44,8 @@
     self.chaiTextModelArr = [NSMutableArray array];
     self.chaiVideoModelArr = [NSMutableArray array];
     self.count = 1;
+    self.count_1 = 1;
+    
     
     
     [self.view addSubview:[MJRootView shareInstance]];
@@ -54,16 +58,58 @@
     
     
     [self creatTableView];
-
     [self creatCollection];
+    
+    self.table.hidden = YES;
+    self.collection.hidden = NO;
+    
     segment.selectedSegmentIndex = 0;
     
     
     [self loadTableViewData];
     [self loadCollectionData];
     
-    self.table.scrollEnabled = NO;
+  
+}
 
+-(void)FooterAction{
+    if (self.table.hidden) {
+        NSString *string = [NSString stringWithFormat:chaiVideoDataUrl,++self.count_1];
+        [[InformationManager shareInstance]chaiCheVideoSolve:string finish:^(NSMutableArray *arr) {
+            [self.chaiVideoModelArr addObjectsFromArray:arr];
+            [self.collection footerEndRefreshing];
+            [self.collection reloadData];
+        }];
+    }else{
+        NSString *str = [NSString stringWithFormat:chaiDataUrl,++self.count];
+        [[InformationManager shareInstance] chaiCheSolve:str finish:^(NSMutableArray *arr) {
+            [self.chaiTextModelArr addObjectsFromArray:arr];
+            [self.table footerEndRefreshing];
+            [self.table reloadData];
+        }];
+    }
+    
+}
+
+-(void)HeaderAction{
+    if (self.table.hidden) {
+        NSString *string = [NSString stringWithFormat:chaiVideoDataUrl,1];
+        [[InformationManager shareInstance]chaiCheVideoSolve:string finish:^(NSMutableArray *arr) {
+            [self.chaiVideoModelArr removeAllObjects];
+            [self.chaiVideoModelArr addObjectsFromArray:arr];
+            [self.collection headerEndRefreshing];
+            [self.collection reloadData];
+        }];
+        
+    }else{
+        NSString *str = [NSString stringWithFormat:chaiDataUrl,1];
+        [[InformationManager shareInstance] chaiCheSolve:str finish:^(NSMutableArray *arr) {
+            [self.chaiTextModelArr removeAllObjects];
+            [self.chaiTextModelArr addObjectsFromArray:arr];
+            [self.table headerEndRefreshing];
+            [self.table reloadData];
+        }];
+    }
 }
 
 -(void)loadTableViewData{
@@ -120,6 +166,9 @@
     [self.collection registerNib:[UINib nibWithNibName:@"ChaiVideoCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"VideoCell"];
     self.collection.delegate = self;
     self.collection.dataSource = self;
+    self.collection.alwaysBounceVertical = YES;
+    [self.collection addFooterWithTarget:self action:@selector(FooterAction)];
+    [self.collection addHeaderWithTarget:self action:@selector(HeaderAction)];
     [self.view addSubview:self.collection];
     [self.view insertSubview:self.collection belowSubview:[MJRootView shareInstance]];
 
@@ -130,6 +179,8 @@
     self.table.delegate = self;
     self.table.dataSource = self;
     [self.table registerNib:[UINib nibWithNibName:@"ChaiCheTableViewCell" bundle:nil] forCellReuseIdentifier:@"myCell"];
+    [self.table addFooterWithTarget:self action:@selector(FooterAction)];
+    [self.table addHeaderWithTarget:self action:@selector(HeaderAction)];
     [self.view addSubview:self.table];
     [self.view insertSubview:self.table belowSubview:[MJRootView shareInstance]];
     
@@ -145,6 +196,8 @@
     ChaiVideoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VideoCell" forIndexPath:indexPath];
     ChaiCheVideoModel *model = self.chaiVideoModelArr[indexPath.row];
     [cell.imgView sd_setImageWithURL:[NSURL URLWithString:model.covimg] placeholderImage:[UIImage imageNamed:@"chachewenzhang"]];
+    cell.titleLabel.numberOfLines = 0;
+    cell.titleLabel.font = [UIFont systemFontOfSize:14];
     cell.titleLabel.text = model.title;
     return cell;
 }

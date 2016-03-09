@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8F21E4D1C8EF7CC00CD06E9 /* MineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F21E4C1C8EF7CC00CD06E9 /* MineView.m */; };
 		C21A581C1C8DA499009737DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C21A581B1C8DA499009737DD /* AppDelegate.m */; };
 		C24859291C87C80D00BC8FC9 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C24859091C87C80D00BC8FC9 /* MKAnnotationView+WebCache.m */; };
 		C248592A1C87C80D00BC8FC9 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = C248590B1C87C80D00BC8FC9 /* NSData+ImageContentType.m */; };
@@ -57,13 +58,24 @@
 		C279A6261C8E712A00202A0D /* mosCycleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C279A6221C8E712A00202A0D /* mosCycleTableViewCell.xib */; };
 		C279A62A1C8E713300202A0D /* ChaiCheTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6281C8E713300202A0D /* ChaiCheTableViewCell.m */; };
 		C279A62B1C8E713300202A0D /* ChaiCheTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C279A6291C8E713300202A0D /* ChaiCheTableViewCell.xib */; };
+		C279A63D1C8EC02200202A0D /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C279A62D1C8EC02200202A0D /* MJRefresh.bundle */; };
+		C279A63E1C8EC02200202A0D /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6301C8EC02200202A0D /* MJRefreshBaseView.m */; };
+		C279A63F1C8EC02200202A0D /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6321C8EC02200202A0D /* MJRefreshConst.m */; };
+		C279A6401C8EC02200202A0D /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6341C8EC02200202A0D /* MJRefreshFooterView.m */; };
+		C279A6411C8EC02200202A0D /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6361C8EC02200202A0D /* MJRefreshHeaderView.m */; };
+		C279A6421C8EC02200202A0D /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6381C8EC02200202A0D /* UIScrollView+MJExtension.m */; };
+		C279A6431C8EC02200202A0D /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A63A1C8EC02200202A0D /* UIScrollView+MJRefresh.m */; };
+		C279A6441C8EC02200202A0D /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A63C1C8EC02200202A0D /* UIView+MJExtension.m */; };
+		C279A64D1C8EE7F700202A0D /* informationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6461C8EE7F700202A0D /* informationViewController.m */; };
+		C279A64E1C8EE7F700202A0D /* informationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C279A6471C8EE7F700202A0D /* informationViewController.xib */; };
+		C279A64F1C8EE7F700202A0D /* motorcycleTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6491C8EE7F700202A0D /* motorcycleTypeViewController.m */; };
+		C279A6501C8EE7F700202A0D /* motorcycleTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C279A64A1C8EE7F700202A0D /* motorcycleTypeViewController.xib */; };
+		C279A6511C8EE7F700202A0D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A64C1C8EE7F700202A0D /* RootViewController.m */; };
+		C279A6581C8EFF2400202A0D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6571C8EFF2400202A0D /* LoginViewController.m */; };
+		C279A65B1C8EFF7000202A0D /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A65A1C8EFF7000202A0D /* IntroductionViewController.m */; };
+		C279A6611C8F012800202A0D /* PositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6601C8F012800202A0D /* PositionViewController.m */; };
 		C27CDEAD1C885A5F00EDD04F /* ChaiCheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C27CDEAC1C885A5F00EDD04F /* ChaiCheModel.m */; };
-		C2911B3D1C8672AE00657AFA /* informationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B301C8672AE00657AFA /* informationViewController.m */; };
-		C2911B3E1C8672AE00657AFA /* informationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2911B311C8672AE00657AFA /* informationViewController.xib */; };
 		C2911B3F1C8672AE00657AFA /* MJRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B331C8672AE00657AFA /* MJRootView.m */; };
-		C2911B401C8672AE00657AFA /* motorcycleTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B351C8672AE00657AFA /* motorcycleTypeViewController.m */; };
-		C2911B411C8672AE00657AFA /* motorcycleTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2911B361C8672AE00657AFA /* motorcycleTypeViewController.xib */; };
-		C2911B421C8672AE00657AFA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B381C8672AE00657AFA /* RootViewController.m */; };
 		C2911B461C86785500657AFA /* ChaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B451C86785500657AFA /* ChaiViewController.m */; };
 		C2911B491C86DE3900657AFA /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B481C86DE3900657AFA /* PictureViewController.m */; };
 		C2911B4C1C86E32E00657AFA /* ModelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B4B1C86E32E00657AFA /* ModelCollectionViewCell.m */; };
@@ -81,6 +93,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8F21E4B1C8EF7CC00CD06E9 /* MineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineView.h; sourceTree = "<group>"; };
+		B8F21E4C1C8EF7CC00CD06E9 /* MineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineView.m; sourceTree = "<group>"; };
 		C21A581A1C8DA499009737DD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C21A581B1C8DA499009737DD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C24859081C87C80D00BC8FC9 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -167,19 +181,41 @@
 		C279A6271C8E713300202A0D /* ChaiCheTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiCheTableViewCell.h; sourceTree = "<group>"; };
 		C279A6281C8E713300202A0D /* ChaiCheTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiCheTableViewCell.m; sourceTree = "<group>"; };
 		C279A6291C8E713300202A0D /* ChaiCheTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChaiCheTableViewCell.xib; sourceTree = "<group>"; };
+		C279A62D1C8EC02200202A0D /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		C279A62E1C8EC02200202A0D /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		C279A62F1C8EC02200202A0D /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		C279A6301C8EC02200202A0D /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		C279A6311C8EC02200202A0D /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		C279A6321C8EC02200202A0D /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		C279A6331C8EC02200202A0D /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		C279A6341C8EC02200202A0D /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		C279A6351C8EC02200202A0D /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		C279A6361C8EC02200202A0D /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		C279A6371C8EC02200202A0D /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
+		C279A6381C8EC02200202A0D /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		C279A6391C8EC02200202A0D /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		C279A63A1C8EC02200202A0D /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		C279A63B1C8EC02200202A0D /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
+		C279A63C1C8EC02200202A0D /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		C279A6451C8EE7F700202A0D /* informationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = informationViewController.h; sourceTree = "<group>"; };
+		C279A6461C8EE7F700202A0D /* informationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = informationViewController.m; sourceTree = "<group>"; };
+		C279A6471C8EE7F700202A0D /* informationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = informationViewController.xib; sourceTree = "<group>"; };
+		C279A6481C8EE7F700202A0D /* motorcycleTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = motorcycleTypeViewController.h; sourceTree = "<group>"; };
+		C279A6491C8EE7F700202A0D /* motorcycleTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = motorcycleTypeViewController.m; sourceTree = "<group>"; };
+		C279A64A1C8EE7F700202A0D /* motorcycleTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = motorcycleTypeViewController.xib; sourceTree = "<group>"; };
+		C279A64B1C8EE7F700202A0D /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		C279A64C1C8EE7F700202A0D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		C279A6561C8EFF2400202A0D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C279A6571C8EFF2400202A0D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C279A6591C8EFF7000202A0D /* IntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionViewController.h; sourceTree = "<group>"; };
+		C279A65A1C8EFF7000202A0D /* IntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroductionViewController.m; sourceTree = "<group>"; };
+		C279A65F1C8F012800202A0D /* PositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionViewController.h; sourceTree = "<group>"; };
+		C279A6601C8F012800202A0D /* PositionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionViewController.m; sourceTree = "<group>"; };
 		C27CDEAB1C885A5F00EDD04F /* ChaiCheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiCheModel.h; sourceTree = "<group>"; };
 		C27CDEAC1C885A5F00EDD04F /* ChaiCheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiCheModel.m; sourceTree = "<group>"; };
 		C2911B211C8672AE00657AFA /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		C2911B2F1C8672AE00657AFA /* informationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = informationViewController.h; path = ../../Views/NormalViews/informationViewController.h; sourceTree = "<group>"; };
-		C2911B301C8672AE00657AFA /* informationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = informationViewController.m; path = ../../Views/NormalViews/informationViewController.m; sourceTree = "<group>"; };
-		C2911B311C8672AE00657AFA /* informationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = informationViewController.xib; path = ../../Views/NormalViews/informationViewController.xib; sourceTree = "<group>"; };
 		C2911B321C8672AE00657AFA /* MJRootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRootView.h; sourceTree = "<group>"; };
 		C2911B331C8672AE00657AFA /* MJRootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRootView.m; sourceTree = "<group>"; };
-		C2911B341C8672AE00657AFA /* motorcycleTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = motorcycleTypeViewController.h; path = ../../Views/NormalViews/motorcycleTypeViewController.h; sourceTree = "<group>"; };
-		C2911B351C8672AE00657AFA /* motorcycleTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = motorcycleTypeViewController.m; path = ../../Views/NormalViews/motorcycleTypeViewController.m; sourceTree = "<group>"; };
-		C2911B361C8672AE00657AFA /* motorcycleTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = motorcycleTypeViewController.xib; path = ../../Views/NormalViews/motorcycleTypeViewController.xib; sourceTree = "<group>"; };
-		C2911B371C8672AE00657AFA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../../Views/NormalViews/RootViewController.h; sourceTree = "<group>"; };
-		C2911B381C8672AE00657AFA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../../Views/NormalViews/RootViewController.m; sourceTree = "<group>"; };
 		C2911B441C86785500657AFA /* ChaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiViewController.h; sourceTree = "<group>"; };
 		C2911B451C86785500657AFA /* ChaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiViewController.m; sourceTree = "<group>"; };
 		C2911B471C86DE3900657AFA /* PictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
@@ -266,6 +302,42 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		C279A62C1C8EC02200202A0D /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				C279A62D1C8EC02200202A0D /* MJRefresh.bundle */,
+				C279A62E1C8EC02200202A0D /* MJRefresh.h */,
+				C279A62F1C8EC02200202A0D /* MJRefreshBaseView.h */,
+				C279A6301C8EC02200202A0D /* MJRefreshBaseView.m */,
+				C279A6311C8EC02200202A0D /* MJRefreshConst.h */,
+				C279A6321C8EC02200202A0D /* MJRefreshConst.m */,
+				C279A6331C8EC02200202A0D /* MJRefreshFooterView.h */,
+				C279A6341C8EC02200202A0D /* MJRefreshFooterView.m */,
+				C279A6351C8EC02200202A0D /* MJRefreshHeaderView.h */,
+				C279A6361C8EC02200202A0D /* MJRefreshHeaderView.m */,
+				C279A6371C8EC02200202A0D /* UIScrollView+MJExtension.h */,
+				C279A6381C8EC02200202A0D /* UIScrollView+MJExtension.m */,
+				C279A6391C8EC02200202A0D /* UIScrollView+MJRefresh.h */,
+				C279A63A1C8EC02200202A0D /* UIScrollView+MJRefresh.m */,
+				C279A63B1C8EC02200202A0D /* UIView+MJExtension.h */,
+				C279A63C1C8EC02200202A0D /* UIView+MJExtension.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		C279A6521C8EFEF600202A0D /* MineViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C279A6561C8EFF2400202A0D /* LoginViewController.h */,
+				C279A6571C8EFF2400202A0D /* LoginViewController.m */,
+				C279A6591C8EFF7000202A0D /* IntroductionViewController.h */,
+				C279A65A1C8EFF7000202A0D /* IntroductionViewController.m */,
+				C279A65F1C8F012800202A0D /* PositionViewController.h */,
+				C279A6601C8F012800202A0D /* PositionViewController.m */,
+			);
+			path = MineViewControllers;
+			sourceTree = "<group>";
+		};
 		C2911B1E1C8672AE00657AFA /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +363,7 @@
 		C2911B221C8672AE00657AFA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C279A62C1C8EC02200202A0D /* MJRefresh */,
 				C279A61A1C8E702A00202A0D /* SYHNetTools.h */,
 				C279A61B1C8E702A00202A0D /* SYHNetTools.m */,
 				C24859071C87C80D00BC8FC9 /* SDWebImage */,
@@ -348,6 +421,7 @@
 		C2911B251C8672AE00657AFA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C279A6521C8EFEF600202A0D /* MineViewControllers */,
 				C2911B261C8672AE00657AFA /* BaseViewControllers */,
 				C2911B271C8672AE00657AFA /* NormalViewControllers */,
 			);
@@ -364,17 +438,17 @@
 		C2911B271C8672AE00657AFA /* NormalViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C279A6451C8EE7F700202A0D /* informationViewController.h */,
+				C279A6461C8EE7F700202A0D /* informationViewController.m */,
+				C279A6471C8EE7F700202A0D /* informationViewController.xib */,
+				C279A6481C8EE7F700202A0D /* motorcycleTypeViewController.h */,
+				C279A6491C8EE7F700202A0D /* motorcycleTypeViewController.m */,
+				C279A64A1C8EE7F700202A0D /* motorcycleTypeViewController.xib */,
+				C279A64B1C8EE7F700202A0D /* RootViewController.h */,
+				C279A64C1C8EE7F700202A0D /* RootViewController.m */,
 				C27508701C893D190061CD5E /* mThirdViewController.h */,
 				C27508711C893D190061CD5E /* mThirdViewController.m */,
 				C27508721C893D190061CD5E /* mThirdViewController.xib */,
-				C2911B371C8672AE00657AFA /* RootViewController.h */,
-				C2911B381C8672AE00657AFA /* RootViewController.m */,
-				C2911B2F1C8672AE00657AFA /* informationViewController.h */,
-				C2911B301C8672AE00657AFA /* informationViewController.m */,
-				C2911B311C8672AE00657AFA /* informationViewController.xib */,
-				C2911B341C8672AE00657AFA /* motorcycleTypeViewController.h */,
-				C2911B351C8672AE00657AFA /* motorcycleTypeViewController.m */,
-				C2911B361C8672AE00657AFA /* motorcycleTypeViewController.xib */,
 				C2911B441C86785500657AFA /* ChaiViewController.h */,
 				C2911B451C86785500657AFA /* ChaiViewController.m */,
 				C2643A0C1C8D884F0097B766 /* ChaiDetailViewController.h */,
@@ -394,6 +468,8 @@
 		C2911B2C1C8672AE00657AFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B8F21E4B1C8EF7CC00CD06E9 /* MineView.h */,
+				B8F21E4C1C8EF7CC00CD06E9 /* MineView.m */,
 				C2911B2D1C8672AE00657AFA /* BaseViews */,
 				C2911B2E1C8672AE00657AFA /* NormalViews */,
 			);
@@ -531,8 +607,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C279A6501C8EE7F700202A0D /* motorcycleTypeViewController.xib in Resources */,
 				C27508471C89301E0061CD5E /* 资讯.png in Resources */,
 				C27508421C892ECE0061CD5E /* 车型.png in Resources */,
+				C279A63D1C8EC02200202A0D /* MJRefresh.bundle in Resources */,
+				C279A64E1C8EE7F700202A0D /* informationViewController.xib in Resources */,
 				C27508281C891F850061CD5E /* 52.jpg in Resources */,
 				C27508481C89301E0061CD5E /* 拆车坊.png in Resources */,
 				C26439E51C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib in Resources */,
@@ -544,12 +623,10 @@
 				C275088D1C89A8AD0061CD5E /* 上一张.png in Resources */,
 				C2911B631C871A7000657AFA /* InformationTableViewCell.xib in Resources */,
 				C27508741C893D190061CD5E /* mThirdViewController.xib in Resources */,
-				C2911B411C8672AE00657AFA /* motorcycleTypeViewController.xib in Resources */,
 				C2911B4E1C86FCAE00657AFA /* 10.png in Resources */,
 				C2E25DAD1C854895003EF8F8 /* Assets.xcassets in Resources */,
 				C279A6241C8E712A00202A0D /* moroCycleTableViewCell.xib in Resources */,
 				C2E25DAB1C854895003EF8F8 /* Main.storyboard in Resources */,
-				C2911B3E1C8672AE00657AFA /* informationViewController.xib in Resources */,
 				C275088C1C89A8AD0061CD5E /* 下一张.png in Resources */,
 				C27508491C89301E0061CD5E /* 我的.png in Resources */,
 				C2911B5B1C87046A00657AFA /* 8879-11091423105869.jpg in Resources */,
@@ -563,6 +640,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C279A6421C8EC02200202A0D /* UIScrollView+MJExtension.m in Sources */,
 				C24859341C87C80D00BC8FC9 /* UIImage+MultiFormat.m in Sources */,
 				C279A62A1C8E713300202A0D /* ChaiCheTableViewCell.m in Sources */,
 				C24859351C87C80D00BC8FC9 /* UIImage+WebP.m in Sources */,
@@ -570,7 +648,6 @@
 				C24859301C87C80D00BC8FC9 /* SDWebImageManager.m in Sources */,
 				C24859411C87EE2E00BC8FC9 /* MotorcycleTypeModel.m in Sources */,
 				C279A6251C8E712A00202A0D /* mosCycleTableViewCell.m in Sources */,
-				C2911B401C8672AE00657AFA /* motorcycleTypeViewController.m in Sources */,
 				C27508821C898B0D0061CD5E /* DetailViewController.m in Sources */,
 				C27508891C8990FF0061CD5E /* DetailModel.m in Sources */,
 				C279A6231C8E712A00202A0D /* moroCycleTableViewCell.m in Sources */,
@@ -578,40 +655,51 @@
 				C27508731C893D190061CD5E /* mThirdViewController.m in Sources */,
 				C2911B461C86785500657AFA /* ChaiViewController.m in Sources */,
 				C248592E1C87C80D00BC8FC9 /* SDWebImageDownloader.m in Sources */,
+				C279A6411C8EC02200202A0D /* MJRefreshHeaderView.m in Sources */,
 				C2911B491C86DE3900657AFA /* PictureViewController.m in Sources */,
+				C279A6581C8EFF2400202A0D /* LoginViewController.m in Sources */,
+				C279A6401C8EC02200202A0D /* MJRefreshFooterView.m in Sources */,
 				C2911B511C8701A500657AFA /* MineViewController.m in Sources */,
 				C248593E1C87EA1A00BC8FC9 /* WebViewController.m in Sources */,
 				C2911B691C871E4600657AFA /* InformationModel.m in Sources */,
 				C275087F1C8974BE0061CD5E /* InformationManager.m in Sources */,
+				C279A6431C8EC02200202A0D /* UIScrollView+MJRefresh.m in Sources */,
 				C275087A1C896A710061CD5E /* PictureModel.m in Sources */,
 				C21A581C1C8DA499009737DD /* AppDelegate.m in Sources */,
 				C2911B621C871A7000657AFA /* InformationTableViewCell.m in Sources */,
 				C24859291C87C80D00BC8FC9 /* MKAnnotationView+WebCache.m in Sources */,
-				C2911B421C8672AE00657AFA /* RootViewController.m in Sources */,
 				C248592A1C87C80D00BC8FC9 /* NSData+ImageContentType.m in Sources */,
 				C24859331C87C80D00BC8FC9 /* UIImage+GIF.m in Sources */,
+				C279A6441C8EC02200202A0D /* UIView+MJExtension.m in Sources */,
 				C279A6131C8E6F7000202A0D /* morosManger.m in Sources */,
 				C24859321C87C80D00BC8FC9 /* UIButton+WebCache.m in Sources */,
 				C279A6191C8E6FE800202A0D /* morosModel.m in Sources */,
 				C24859311C87C80D00BC8FC9 /* SDWebImagePrefetcher.m in Sources */,
 				C248592D1C87C80D00BC8FC9 /* SDWebImageDecoder.m in Sources */,
 				C27CDEAD1C885A5F00EDD04F /* ChaiCheModel.m in Sources */,
+				B8F21E4D1C8EF7CC00CD06E9 /* MineView.m in Sources */,
 				C248592B1C87C80D00BC8FC9 /* SDImageCache.m in Sources */,
 				C248592C1C87C80D00BC8FC9 /* SDWebImageCompat.m in Sources */,
 				C24859381C87C80D00BC8FC9 /* UIView+WebCacheOperation.m in Sources */,
 				C2E25DA21C854895003EF8F8 /* main.m in Sources */,
 				C248592F1C87C80D00BC8FC9 /* SDWebImageDownloaderOperation.m in Sources */,
+				C279A64D1C8EE7F700202A0D /* informationViewController.m in Sources */,
+				C279A63F1C8EC02200202A0D /* MJRefreshConst.m in Sources */,
 				C2911B4C1C86E32E00657AFA /* ModelCollectionViewCell.m in Sources */,
 				C24859371C87C80D00BC8FC9 /* UIImageView+WebCache.m in Sources */,
+				C279A6611C8F012800202A0D /* PositionViewController.m in Sources */,
 				C279A61C1C8E702A00202A0D /* SYHNetTools.m in Sources */,
+				C279A64F1C8EE7F700202A0D /* motorcycleTypeViewController.m in Sources */,
 				C24859361C87C80D00BC8FC9 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C26439E01C8D77250097B766 /* ChaiCheVideoModel.m in Sources */,
 				C2643A131C8D89680097B766 /* ChaiDetailModel.m in Sources */,
+				C279A6511C8EE7F700202A0D /* RootViewController.m in Sources */,
 				C2643A0F1C8D884F0097B766 /* ChaiDetailViewController.m in Sources */,
 				C279A6161C8E6FAF00202A0D /* moroModel.m in Sources */,
+				C279A65B1C8EFF7000202A0D /* IntroductionViewController.m in Sources */,
 				C26439E41C8D7B320097B766 /* ChaiVideoCollectionViewCell.m in Sources */,
 				C279A6121C8E6F7000202A0D /* moroManger.m in Sources */,
-				C2911B3D1C8672AE00657AFA /* informationViewController.m in Sources */,
+				C279A63E1C8EC02200202A0D /* MJRefreshBaseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
