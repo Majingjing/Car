@@ -22,26 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="389"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="loL-xc-NEx">
-            <objects>
-                <viewController id="dre-yV-jAX" customClass="RootViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sjF-XW-1M0"/>
-                        <viewControllerLayoutGuide type="bottom" id="yvz-x4-ash"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Y7j-VI-Ykh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qn1-X5-BFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="552" y="389"/>
+            <point key="canvasLocation" x="470" y="380"/>
         </scene>
     </scenes>
 </document>

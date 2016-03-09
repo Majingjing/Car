@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "informationViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
 @interface AppDelegate ()
 
 @end
@@ -16,6 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [AVOSCloud setApplicationId:@"3TVAcAmimqqK6CSfYhpmvDDw-gzGzoHsz" clientKey:@"gf5stvmyq1pOxBvWffYjAjmw"];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
