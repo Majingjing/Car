@@ -27,27 +27,11 @@
 }
 
 - (void)jumpAction:(NSInteger)tag {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];
-    switch (tag) {
-        case 100:
-            [self presentViewController:[[informationViewController alloc] initWithNibName:@"informationViewController" bundle:nil] animated:YES completion:nil];
-            break;
-        case 101:
-            [self presentViewController:[[motorcycleTypeViewController alloc] init] animated:YES completion:nil];
-            break;
-        case 102:
-            [self presentViewController:[[ChaiViewController alloc] init] animated:YES completion:nil];
-            break;
-        case 103:
-            [self presentViewController:[[PictureViewController alloc] init] animated:YES completion:nil];
-            break;
-        case 104:
-            
-            break;
-            
-        default:
-            break;
-    }
+    [self dismissViewControllerAnimated:NO completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"dismiss" object:nil userInfo:@{@"tag":[NSNumber numberWithInteger:tag]}];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];
+    }];
+
 }
 
 

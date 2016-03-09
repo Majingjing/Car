@@ -110,6 +110,7 @@ static MJRootView *MJView;
 
 
 - (void)buttonAction:(UIButton *)sender {
+    MJView.layer.cornerRadius = 0;
     MJView.frame = [UIScreen mainScreen].bounds;
     self.popButton.hidden = YES;
 }
@@ -122,6 +123,7 @@ static MJRootView *MJView;
 
 - (void)downAction {
     self.popButton.hidden = NO;
+    MJView.layer.cornerRadius = 30;
     MJView.frame = CGRectMake(0, 0, 60, 60);
     MJView.center = CGPointMake(Width / 2, Height - 30);
 }
