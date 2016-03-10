@@ -79,7 +79,6 @@
 		C2911B461C86785500657AFA /* ChaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B451C86785500657AFA /* ChaiViewController.m */; };
 		C2911B491C86DE3900657AFA /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B481C86DE3900657AFA /* PictureViewController.m */; };
 		C2911B4C1C86E32E00657AFA /* ModelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B4B1C86E32E00657AFA /* ModelCollectionViewCell.m */; };
-		C2911B4E1C86FCAE00657AFA /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = C2911B4D1C86FCAE00657AFA /* 10.png */; };
 		C2911B511C8701A500657AFA /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B501C8701A500657AFA /* MineViewController.m */; };
 		C2911B5B1C87046A00657AFA /* 8879-11091423105869.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2911B5A1C87046A00657AFA /* 8879-11091423105869.jpg */; };
 		C2911B621C871A7000657AFA /* InformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B601C871A7000657AFA /* InformationTableViewCell.m */; };
@@ -222,7 +221,6 @@
 		C2911B481C86DE3900657AFA /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
 		C2911B4A1C86E32E00657AFA /* ModelCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelCollectionViewCell.h; sourceTree = "<group>"; };
 		C2911B4B1C86E32E00657AFA /* ModelCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCollectionViewCell.m; sourceTree = "<group>"; };
-		C2911B4D1C86FCAE00657AFA /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		C2911B4F1C8701A500657AFA /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		C2911B501C8701A500657AFA /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		C2911B5A1C87046A00657AFA /* 8879-11091423105869.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "8879-11091423105869.jpg"; sourceTree = "<group>"; };
@@ -487,26 +485,25 @@
 		C2911B2E1C8672AE00657AFA /* NormalViews */ = {
 			isa = PBXGroup;
 			children = (
-				C279A6271C8E713300202A0D /* ChaiCheTableViewCell.h */,
-				C279A6281C8E713300202A0D /* ChaiCheTableViewCell.m */,
-				C279A6291C8E713300202A0D /* ChaiCheTableViewCell.xib */,
+				C2911B321C8672AE00657AFA /* MJRootView.h */,
+				C2911B331C8672AE00657AFA /* MJRootView.m */,
+				C2911B5F1C871A7000657AFA /* InformationTableViewCell.h */,
+				C2911B601C871A7000657AFA /* InformationTableViewCell.m */,
 				C279A61D1C8E712A00202A0D /* moroCycleTableViewCell.h */,
 				C279A61E1C8E712A00202A0D /* moroCycleTableViewCell.m */,
 				C279A61F1C8E712A00202A0D /* moroCycleTableViewCell.xib */,
 				C279A6201C8E712A00202A0D /* mosCycleTableViewCell.h */,
 				C279A6211C8E712A00202A0D /* mosCycleTableViewCell.m */,
 				C279A6221C8E712A00202A0D /* mosCycleTableViewCell.xib */,
-				C2911B321C8672AE00657AFA /* MJRootView.h */,
-				C2911B331C8672AE00657AFA /* MJRootView.m */,
+				C2911B611C871A7000657AFA /* InformationTableViewCell.xib */,
+				C279A6271C8E713300202A0D /* ChaiCheTableViewCell.h */,
+				C279A6281C8E713300202A0D /* ChaiCheTableViewCell.m */,
+				C279A6291C8E713300202A0D /* ChaiCheTableViewCell.xib */,
 				C2911B4A1C86E32E00657AFA /* ModelCollectionViewCell.h */,
 				C2911B4B1C86E32E00657AFA /* ModelCollectionViewCell.m */,
-				C2911B5F1C871A7000657AFA /* InformationTableViewCell.h */,
-				C2911B601C871A7000657AFA /* InformationTableViewCell.m */,
-				C2911B611C871A7000657AFA /* InformationTableViewCell.xib */,
 				C26439E11C8D7B320097B766 /* ChaiVideoCollectionViewCell.h */,
 				C26439E21C8D7B320097B766 /* ChaiVideoCollectionViewCell.m */,
 				C26439E31C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib */,
-				C2911B4D1C86FCAE00657AFA /* 10.png */,
 			);
 			path = NormalViews;
 			sourceTree = "<group>";
@@ -623,7 +620,6 @@
 				C275088D1C89A8AD0061CD5E /* 上一张.png in Resources */,
 				C2911B631C871A7000657AFA /* InformationTableViewCell.xib in Resources */,
 				C27508741C893D190061CD5E /* mThirdViewController.xib in Resources */,
-				C2911B4E1C86FCAE00657AFA /* 10.png in Resources */,
 				C2E25DAD1C854895003EF8F8 /* Assets.xcassets in Resources */,
 				C279A6241C8E712A00202A0D /* moroCycleTableViewCell.xib in Resources */,
 				C2E25DAB1C854895003EF8F8 /* Main.storyboard in Resources */,

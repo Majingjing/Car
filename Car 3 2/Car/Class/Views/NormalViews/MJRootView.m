@@ -55,7 +55,6 @@ static MJRootView *MJView;
     self.popButton = [UIButton buttonWithType:UIButtonTypeSystem];
     
     self.popButton.frame = CGRectMake(0, 0, 60, 60);
-//    [self.popButton setTitle:@"+" forState:UIControlStateNormal];
     self.popButton.backgroundColor = [UIColor colorWithRed:0.693 green:0.974 blue:1.000 alpha:1.000];
     [self.popButton setBackgroundImage:[UIImage imageNamed:@"添加.png"] forState:UIControlStateNormal];
     self.popButton.layer.cornerRadius = 30;

@@ -26,12 +26,10 @@
 @property (nonatomic, strong)UIScrollView *scrollView;
 //存储解析出来的数据
 @property (nonatomic, strong)NSMutableArray *arr;
-//第一步页面网址
-@property (nonatomic, copy)NSString *str;
 //记录当前segment的index
 @property (nonatomic, assign)NSInteger index;
 //记录当前刷新的次数
-@property (nonatomic, assign)NSInteger count;
+@property (nonatomic, assign)int count;
 
 
 // 轮播图地址数组
@@ -39,13 +37,13 @@
 // 图片新闻地址
 @property (nonatomic, strong) NSMutableArray *loopPicNewsArr;
 @property (nonatomic, strong)UIView *whiteView;
+@property (nonatomic, strong)UIScrollView *loopPicView;
 @end
 
 @implementation informationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        self.str = @"http://sitemap.chexun.com/chexun/getDataIntoJson.do?category=%ld&page=%ld_%ld";
     
 
     self.arr = [NSMutableArray array];
@@ -96,35 +94,44 @@
         }
     }
     
-    
-    if (self.segment.selectedSegmentIndex == 0) {
-        UIScrollView *loopPicView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, Width, 200)];
-        loopPicView.contentSize = CGSizeMake(Width*3, 200);
-        loopPicView.pagingEnabled = YES;
-        loopPicView.bounces = NO;
+        self.loopPicView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, Width, 200)];
+        self.loopPicView.contentSize = CGSizeMake(Width*3, 200);
+        self.loopPicView.pagingEnabled = YES;
+        self.loopPicView.bounces = NO;
         for (int i = 0; i <3; i++) {
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(Width*i, 0, Width, 200)];
             [imgView sd_setImageWithURL:[NSURL URLWithString:self.loopPicUrlArr[i]]];
-            [loopPicView addSubview:imgView];
+            [self.loopPicView addSubview:imgView];
         }
-        self.tableView.tableHeaderView = loopPicView;
-    }
-    
+        self.tableView.tableHeaderView = self.loopPicView;
     
 }
+
+
+
+
 - (IBAction)segmentAction:(UISegmentedControl *)sender {
-    self.count = 2;
+    if (sender.selectedSegmentIndex != 0) {
+        self.tableView.tableHeaderView = [[UIView alloc] init];
+    } else {
+        [self loadLoopPicData];
+    }
+    
+       self.count = 2;
     self.index = sender.selectedSegmentIndex + 1;
     [self update:sender.selectedSegmentIndex + 1];
  }
 
 
 - (void)update:(NSInteger)indesx {
-    [[InformationManager shareInstance] solve:[NSString stringWithFormat:self.str, indesx, 1, 1] finish:^(NSMutableArray *arr) {
+        [[InformationManager shareInstance] solve:[NSString stringWithFormat:informationUrl, indesx, 1, 1] finish:^(NSMutableArray *arr) {
+       
          [self.arr removeAllObjects];
          [self.arr addObjectsFromArray:arr];
          [self.arr removeObjectAtIndex:self.arr.count - 1];
          [self.tableView reloadData];
+         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionBottom];
+
     }];
     
 }
@@ -132,7 +139,7 @@
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 
     if (indexPath.row == self.arr.count - 2) {
-        [[InformationManager shareInstance] solve:[NSString stringWithFormat:self.str, self.index, self.count, self.count] finish:^(NSMutableArray *arr) {
+        [[InformationManager shareInstance] solve:[NSString stringWithFormat:informationUrl, self.index, self.count, self.count] finish:^(NSMutableArray *arr) {
             [self.arr addObjectsFromArray:arr];
             [self.arr removeObjectAtIndex:self.arr.count - 1];
             [self.tableView reloadData];
