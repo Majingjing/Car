@@ -11,4 +11,9 @@
 @interface MineView : UIView
 
 @property (nonatomic,strong)UITableView *mineTableView;
+
+@property (nonatomic,strong) UIButton *loginBtn;
+
+@property (nonatomic,strong) UILabel *stateLabel;
+
 @end

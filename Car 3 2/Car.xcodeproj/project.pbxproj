@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		B8F21E4D1C8EF7CC00CD06E9 /* MineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F21E4C1C8EF7CC00CD06E9 /* MineView.m */; };
+		C209048E1C904DCA003A0D1A /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C209048D1C904DCA003A0D1A /* AVOSCloud.framework */; };
+		C20904971C904F4D003A0D1A /* ShouCangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20904961C904F4D003A0D1A /* ShouCangViewController.m */; };
+		C209049B1C904F99003A0D1A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20904991C904F99003A0D1A /* LoginViewController.m */; };
+		C209049C1C904F99003A0D1A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C209049A1C904F99003A0D1A /* LoginViewController.xib */; };
+		C20904A11C90523F003A0D1A /* RegiserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C209049F1C90523F003A0D1A /* RegiserViewController.m */; };
+		C20904A21C90523F003A0D1A /* RegiserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20904A01C90523F003A0D1A /* RegiserViewController.xib */; };
+		C20904A41C9059E9003A0D1A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20904A31C9059E9003A0D1A /* CoreLocation.framework */; };
+		C20904A61C9059FB003A0D1A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20904A51C9059FB003A0D1A /* CoreTelephony.framework */; };
+		C20904A81C905A0D003A0D1A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20904A71C905A0D003A0D1A /* MobileCoreServices.framework */; };
+		C20904AA1C905A18003A0D1A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20904A91C905A18003A0D1A /* SystemConfiguration.framework */; };
+		C20904AE1C9061E8003A0D1A /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20904AD1C9061E8003A0D1A /* SetViewController.m */; };
 		C21A581C1C8DA499009737DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C21A581B1C8DA499009737DD /* AppDelegate.m */; };
 		C24859291C87C80D00BC8FC9 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C24859091C87C80D00BC8FC9 /* MKAnnotationView+WebCache.m */; };
 		C248592A1C87C80D00BC8FC9 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = C248590B1C87C80D00BC8FC9 /* NSData+ImageContentType.m */; };
@@ -70,8 +81,6 @@
 		C279A64E1C8EE7F700202A0D /* informationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C279A6471C8EE7F700202A0D /* informationViewController.xib */; };
 		C279A64F1C8EE7F700202A0D /* motorcycleTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6491C8EE7F700202A0D /* motorcycleTypeViewController.m */; };
 		C279A6501C8EE7F700202A0D /* motorcycleTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C279A64A1C8EE7F700202A0D /* motorcycleTypeViewController.xib */; };
-		C279A6511C8EE7F700202A0D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A64C1C8EE7F700202A0D /* RootViewController.m */; };
-		C279A6581C8EFF2400202A0D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6571C8EFF2400202A0D /* LoginViewController.m */; };
 		C279A65B1C8EFF7000202A0D /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A65A1C8EFF7000202A0D /* IntroductionViewController.m */; };
 		C279A6611C8F012800202A0D /* PositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279A6601C8F012800202A0D /* PositionViewController.m */; };
 		C27CDEAD1C885A5F00EDD04F /* ChaiCheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C27CDEAC1C885A5F00EDD04F /* ChaiCheModel.m */; };
@@ -94,6 +103,21 @@
 /* Begin PBXFileReference section */
 		B8F21E4B1C8EF7CC00CD06E9 /* MineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineView.h; sourceTree = "<group>"; };
 		B8F21E4C1C8EF7CC00CD06E9 /* MineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineView.m; sourceTree = "<group>"; };
+		C209048D1C904DCA003A0D1A /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		C20904951C904F4D003A0D1A /* ShouCangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouCangViewController.h; sourceTree = "<group>"; };
+		C20904961C904F4D003A0D1A /* ShouCangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouCangViewController.m; sourceTree = "<group>"; };
+		C20904981C904F99003A0D1A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C20904991C904F99003A0D1A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C209049A1C904F99003A0D1A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C209049E1C90523F003A0D1A /* RegiserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegiserViewController.h; sourceTree = "<group>"; };
+		C209049F1C90523F003A0D1A /* RegiserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegiserViewController.m; sourceTree = "<group>"; };
+		C20904A01C90523F003A0D1A /* RegiserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegiserViewController.xib; sourceTree = "<group>"; };
+		C20904A31C9059E9003A0D1A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C20904A51C9059FB003A0D1A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C20904A71C905A0D003A0D1A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C20904A91C905A18003A0D1A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C20904AC1C9061E8003A0D1A /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
+		C20904AD1C9061E8003A0D1A /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
 		C21A581A1C8DA499009737DD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C21A581B1C8DA499009737DD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C24859081C87C80D00BC8FC9 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -202,10 +226,6 @@
 		C279A6481C8EE7F700202A0D /* motorcycleTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = motorcycleTypeViewController.h; sourceTree = "<group>"; };
 		C279A6491C8EE7F700202A0D /* motorcycleTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = motorcycleTypeViewController.m; sourceTree = "<group>"; };
 		C279A64A1C8EE7F700202A0D /* motorcycleTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = motorcycleTypeViewController.xib; sourceTree = "<group>"; };
-		C279A64B1C8EE7F700202A0D /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		C279A64C1C8EE7F700202A0D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		C279A6561C8EFF2400202A0D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		C279A6571C8EFF2400202A0D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C279A6591C8EFF7000202A0D /* IntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionViewController.h; sourceTree = "<group>"; };
 		C279A65A1C8EFF7000202A0D /* IntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroductionViewController.m; sourceTree = "<group>"; };
 		C279A65F1C8F012800202A0D /* PositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionViewController.h; sourceTree = "<group>"; };
@@ -245,12 +265,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20904AA1C905A18003A0D1A /* SystemConfiguration.framework in Frameworks */,
+				C20904A81C905A0D003A0D1A /* MobileCoreServices.framework in Frameworks */,
+				C20904A61C9059FB003A0D1A /* CoreTelephony.framework in Frameworks */,
+				C20904A41C9059E9003A0D1A /* CoreLocation.framework in Frameworks */,
+				C209048E1C904DCA003A0D1A /* AVOSCloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C209048B1C904DBC003A0D1A /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				C209048C1C904DCA003A0D1A /* AVOSCloud */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		C209048C1C904DCA003A0D1A /* AVOSCloud */ = {
+			isa = PBXGroup;
+			children = (
+				C209048D1C904DCA003A0D1A /* AVOSCloud.framework */,
+			);
+			path = AVOSCloud;
+			sourceTree = "<group>";
+		};
+		C209048F1C904DFB003A0D1A /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				C20904981C904F99003A0D1A /* LoginViewController.h */,
+				C20904991C904F99003A0D1A /* LoginViewController.m */,
+				C209049A1C904F99003A0D1A /* LoginViewController.xib */,
+			);
+			path = LoginPage;
+			sourceTree = "<group>";
+		};
+		C209049D1C905223003A0D1A /* RegisterPage */ = {
+			isa = PBXGroup;
+			children = (
+				C209049E1C90523F003A0D1A /* RegiserViewController.h */,
+				C209049F1C90523F003A0D1A /* RegiserViewController.m */,
+				C20904A01C90523F003A0D1A /* RegiserViewController.xib */,
+			);
+			path = RegisterPage;
+			sourceTree = "<group>";
+		};
+		C20904AB1C9061D9003A0D1A /* SetPage */ = {
+			isa = PBXGroup;
+			children = (
+				C20904AC1C9061E8003A0D1A /* SetViewController.h */,
+				C20904AD1C9061E8003A0D1A /* SetViewController.m */,
+			);
+			path = SetPage;
+			sourceTree = "<group>";
+		};
 		C21A58191C8DA499009737DD /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,12 +396,12 @@
 		C279A6521C8EFEF600202A0D /* MineViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C279A6561C8EFF2400202A0D /* LoginViewController.h */,
-				C279A6571C8EFF2400202A0D /* LoginViewController.m */,
 				C279A6591C8EFF7000202A0D /* IntroductionViewController.h */,
 				C279A65A1C8EFF7000202A0D /* IntroductionViewController.m */,
 				C279A65F1C8F012800202A0D /* PositionViewController.h */,
 				C279A6601C8F012800202A0D /* PositionViewController.m */,
+				C20904951C904F4D003A0D1A /* ShouCangViewController.h */,
+				C20904961C904F4D003A0D1A /* ShouCangViewController.m */,
 			);
 			path = MineViewControllers;
 			sourceTree = "<group>";
@@ -339,6 +409,7 @@
 		C2911B1E1C8672AE00657AFA /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				C209048B1C904DBC003A0D1A /* libs */,
 				C21A58191C8DA499009737DD /* AppDelegate */,
 				C2911B201C8672AE00657AFA /* Headers */,
 				C2911B221C8672AE00657AFA /* Helpers */,
@@ -419,6 +490,9 @@
 		C2911B251C8672AE00657AFA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C20904AB1C9061D9003A0D1A /* SetPage */,
+				C209049D1C905223003A0D1A /* RegisterPage */,
+				C209048F1C904DFB003A0D1A /* LoginPage */,
 				C279A6521C8EFEF600202A0D /* MineViewControllers */,
 				C2911B261C8672AE00657AFA /* BaseViewControllers */,
 				C2911B271C8672AE00657AFA /* NormalViewControllers */,
@@ -442,8 +516,6 @@
 				C279A6481C8EE7F700202A0D /* motorcycleTypeViewController.h */,
 				C279A6491C8EE7F700202A0D /* motorcycleTypeViewController.m */,
 				C279A64A1C8EE7F700202A0D /* motorcycleTypeViewController.xib */,
-				C279A64B1C8EE7F700202A0D /* RootViewController.h */,
-				C279A64C1C8EE7F700202A0D /* RootViewController.m */,
 				C27508701C893D190061CD5E /* mThirdViewController.h */,
 				C27508711C893D190061CD5E /* mThirdViewController.m */,
 				C27508721C893D190061CD5E /* mThirdViewController.xib */,
@@ -511,6 +583,10 @@
 		C2E25D941C854895003EF8F8 = {
 			isa = PBXGroup;
 			children = (
+				C20904A91C905A18003A0D1A /* SystemConfiguration.framework */,
+				C20904A71C905A0D003A0D1A /* MobileCoreServices.framework */,
+				C20904A51C9059FB003A0D1A /* CoreTelephony.framework */,
+				C20904A31C9059E9003A0D1A /* CoreLocation.framework */,
 				C2E25D9F1C854895003EF8F8 /* Car */,
 				C2E25D9E1C854895003EF8F8 /* Products */,
 			);
@@ -612,11 +688,13 @@
 				C27508281C891F850061CD5E /* 52.jpg in Resources */,
 				C27508481C89301E0061CD5E /* 拆车坊.png in Resources */,
 				C26439E51C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib in Resources */,
+				C209049C1C904F99003A0D1A /* LoginViewController.xib in Resources */,
 				C279A6261C8E712A00202A0D /* mosCycleTableViewCell.xib in Resources */,
 				C275084A1C89301E0061CD5E /* 图片.png in Resources */,
 				C2E25DB01C854895003EF8F8 /* LaunchScreen.storyboard in Resources */,
 				C275083C1C892D6E0061CD5E /* 添加.png in Resources */,
 				C279A62B1C8E713300202A0D /* ChaiCheTableViewCell.xib in Resources */,
+				C20904A21C90523F003A0D1A /* RegiserViewController.xib in Resources */,
 				C275088D1C89A8AD0061CD5E /* 上一张.png in Resources */,
 				C2911B631C871A7000657AFA /* InformationTableViewCell.xib in Resources */,
 				C27508741C893D190061CD5E /* mThirdViewController.xib in Resources */,
@@ -653,7 +731,7 @@
 				C248592E1C87C80D00BC8FC9 /* SDWebImageDownloader.m in Sources */,
 				C279A6411C8EC02200202A0D /* MJRefreshHeaderView.m in Sources */,
 				C2911B491C86DE3900657AFA /* PictureViewController.m in Sources */,
-				C279A6581C8EFF2400202A0D /* LoginViewController.m in Sources */,
+				C20904AE1C9061E8003A0D1A /* SetViewController.m in Sources */,
 				C279A6401C8EC02200202A0D /* MJRefreshFooterView.m in Sources */,
 				C2911B511C8701A500657AFA /* MineViewController.m in Sources */,
 				C248593E1C87EA1A00BC8FC9 /* WebViewController.m in Sources */,
@@ -681,15 +759,17 @@
 				C248592F1C87C80D00BC8FC9 /* SDWebImageDownloaderOperation.m in Sources */,
 				C279A64D1C8EE7F700202A0D /* informationViewController.m in Sources */,
 				C279A63F1C8EC02200202A0D /* MJRefreshConst.m in Sources */,
+				C209049B1C904F99003A0D1A /* LoginViewController.m in Sources */,
 				C2911B4C1C86E32E00657AFA /* ModelCollectionViewCell.m in Sources */,
 				C24859371C87C80D00BC8FC9 /* UIImageView+WebCache.m in Sources */,
 				C279A6611C8F012800202A0D /* PositionViewController.m in Sources */,
 				C279A61C1C8E702A00202A0D /* SYHNetTools.m in Sources */,
+				C20904971C904F4D003A0D1A /* ShouCangViewController.m in Sources */,
 				C279A64F1C8EE7F700202A0D /* motorcycleTypeViewController.m in Sources */,
 				C24859361C87C80D00BC8FC9 /* UIImageView+HighlightedWebCache.m in Sources */,
+				C20904A11C90523F003A0D1A /* RegiserViewController.m in Sources */,
 				C26439E01C8D77250097B766 /* ChaiCheVideoModel.m in Sources */,
 				C2643A131C8D89680097B766 /* ChaiDetailModel.m in Sources */,
-				C279A6511C8EE7F700202A0D /* RootViewController.m in Sources */,
 				C2643A0F1C8D884F0097B766 /* ChaiDetailViewController.m in Sources */,
 				C279A6161C8E6FAF00202A0D /* moroModel.m in Sources */,
 				C279A65B1C8EFF7000202A0D /* IntroductionViewController.m in Sources */,
@@ -810,10 +890,21 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Car/Class/libs/AVOSCloud",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Car/Class/Headers/Header.h";
 				INFOPLIST_FILE = Car/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lsqlite3",
+					"-lc++",
+					"-lz",
+					"-licucore",
+					"-objc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = coolcar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -827,10 +918,21 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Car/Class/libs/AVOSCloud",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Car/Class/Headers/Header.h";
 				INFOPLIST_FILE = Car/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lsqlite3",
+					"-lc++",
+					"-lz",
+					"-licucore",
+					"-objc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = coolcar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
