@@ -2,7 +2,7 @@
 //  SetViewController.m
 //  Car
 //
-//  Created by lanou3g on 16/3/9.
+//  Created by jiabin on 16/3/9.
 //  Copyright © 2016年 麻静. All rights reserved.
 //
 
@@ -30,7 +30,7 @@
     
     [self.table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"jiabin_cell"];
     
-    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(leftAction)];
+    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithTitle:@"<返回" style:UIBarButtonItemStyleDone target:self action:@selector(leftAction)];
     self.navigationItem.leftBarButtonItem = leftBtn;
     // Do any additional setup after loading the view.
 }

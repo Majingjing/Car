@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12E9BD8E1C91922E0030548E /* PicCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E9BD8D1C91922E0030548E /* PicCollectionViewCell.m */; };
 		B8F21E4D1C8EF7CC00CD06E9 /* MineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F21E4C1C8EF7CC00CD06E9 /* MineView.m */; };
 		C209048E1C904DCA003A0D1A /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C209048D1C904DCA003A0D1A /* AVOSCloud.framework */; };
 		C20904971C904F4D003A0D1A /* ShouCangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20904961C904F4D003A0D1A /* ShouCangViewController.m */; };
@@ -102,6 +103,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12E9BD8C1C91922E0030548E /* PicCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicCollectionViewCell.h; sourceTree = "<group>"; };
+		12E9BD8D1C91922E0030548E /* PicCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicCollectionViewCell.m; sourceTree = "<group>"; };
 		B8F21E4B1C8EF7CC00CD06E9 /* MineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineView.h; sourceTree = "<group>"; };
 		B8F21E4C1C8EF7CC00CD06E9 /* MineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineView.m; sourceTree = "<group>"; };
 		C209048D1C904DCA003A0D1A /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
@@ -578,6 +581,8 @@
 				C26439E11C8D7B320097B766 /* ChaiVideoCollectionViewCell.h */,
 				C26439E21C8D7B320097B766 /* ChaiVideoCollectionViewCell.m */,
 				C26439E31C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib */,
+				12E9BD8C1C91922E0030548E /* PicCollectionViewCell.h */,
+				12E9BD8D1C91922E0030548E /* PicCollectionViewCell.m */,
 				C2911B4D1C86FCAE00657AFA /* 10.png */,
 			);
 			path = NormalViews;
@@ -770,6 +775,7 @@
 				C279A61C1C8E702A00202A0D /* SYHNetTools.m in Sources */,
 				C20904971C904F4D003A0D1A /* ShouCangViewController.m in Sources */,
 				C279A64F1C8EE7F700202A0D /* motorcycleTypeViewController.m in Sources */,
+				12E9BD8E1C91922E0030548E /* PicCollectionViewCell.m in Sources */,
 				C24859361C87C80D00BC8FC9 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C20904A11C90523F003A0D1A /* RegiserViewController.m in Sources */,
 				C26439E01C8D77250097B766 /* ChaiCheVideoModel.m in Sources */,

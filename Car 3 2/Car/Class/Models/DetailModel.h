@@ -2,7 +2,7 @@
 //  DetailModel.h
 //  Car
 //
-//  Created by lanou3g on 16/3/4.
+//  Created by mj on 16/3/4.
 //  Copyright © 2016年 麻静. All rights reserved.
 //
 

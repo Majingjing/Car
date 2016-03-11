@@ -2,7 +2,7 @@
 //  DetailViewController.m
 //  Car
 //
-//  Created by lanou3g on 16/3/4.
+//  Created by mj on 16/3/4.
 //  Copyright © 2016年 麻静. All rights reserved.
 //
 
@@ -11,6 +11,9 @@
 #import "UIImageView+WebCache.h"
 #import "DetailModel.h"
 #import "InformationManager.h"
+#import <AVOSCloud/AVOSCloud.h>
+
+
 @interface DetailViewController ()<UIScrollViewDelegate>
 @property (nonatomic, strong)UILabel *label;
 @property (nonatomic, assign)NSInteger count;
@@ -23,7 +26,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
     
-     UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(leftAction)];
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:@"<返回" style:UIBarButtonItemStyleDone target:self action:@selector(leftAction)];
     self.navigationItem.leftBarButtonItem = left;
     
     
@@ -93,11 +96,59 @@
             
             DetailModel *model = [InformationManager shareInstance].pictureArr[i];
             [imageView sd_setImageWithURL:[NSURL URLWithString:model.bigImagePath]];
+            imageView.userInteractionEnabled = YES;
+            imageView.tag = 100+i;
+            UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longAction:)];
+            [imageView addGestureRecognizer:longPress];
             [self.scrollView addSubview:imageView];
         }
     }];
 
 }
+
+
+
+
+
+-(void)longAction:(UITapGestureRecognizer *)sender{
+   
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否收藏" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            if ([AVUser currentUser] == nil) {
+                [self remindAction];
+                return;
+            }
+            NSMutableArray *arr = [[AVUser currentUser]objectForKey:@"images"];
+            DetailModel *model = [InformationManager shareInstance].pictureArr[sender.view.tag-100];
+            [arr addObject:model.bigImagePath];
+            NSLog(@"%@",arr);
+            [[AVUser currentUser]saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                [[AVUser currentUser] setObject:arr forKey:@"images"];
+                [[AVUser currentUser] saveInBackground];
+            }];
+            
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        [alert addAction:cancelAction];
+        [alert addAction:sureAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+}
+
+-(void)remindAction{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"先去登录吧" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *Action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alert addAction:Action];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
 - (void)lastAction {
     if (self.scrollView.contentOffset.x >= Width) {
         self.scrollView.contentOffset = CGPointMake(self.scrollView.contentOffset.x - Width, 0);

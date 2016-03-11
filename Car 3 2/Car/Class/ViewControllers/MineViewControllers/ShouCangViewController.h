@@ -2,7 +2,7 @@
 //  ShouCangViewController.h
 //  Car
 //
-//  Created by lanou3g on 16/3/9.
+//  Created by jiabin on 16/3/9.
 //  Copyright © 2016年 麻静. All rights reserved.
 //
 

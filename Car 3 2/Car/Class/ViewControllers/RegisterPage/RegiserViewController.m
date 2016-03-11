@@ -2,7 +2,7 @@
 //  RegiserViewController.m
 //  Car
 //
-//  Created by lanou3g on 16/3/9.
+//  Created by jiabin on 16/3/9.
 //  Copyright © 2016年 麻静. All rights reserved.
 //
 
@@ -36,27 +36,36 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"注册成功");
-            if (_delegate && [_delegate respondsToSelector:@selector(sendValue:word:)]) {
-                [_delegate sendValue:self.userName.text word:self.passWord.text];
-            }
-            [self.navigationController popViewControllerAnimated:YES];
-            
+            [user setObject:[NSMutableArray array] forKey:@"images"];
+            [user saveInBackground];
+            [self successAction];
         }else{
             NSLog(@"注册失败%@",error);
-            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 80)];
-            label.font = [UIFont systemFontOfSize:20];
-            label.center = CGPointMake(self.view.center.x, self.view.center.y+30);
-            label.textAlignment = NSTextAlignmentCenter;
-            label.numberOfLines = 0;
-            label.textColor = [UIColor redColor];
-            label.text = @"注册失败\n用户名或邮箱不可用";
-            [self.view addSubview:label];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [label removeFromSuperview];
-            });
+            [self remindAction];
             
         }
     }];
+}
+
+
+-(void)remindAction{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"注册失败" message:@"用户名或邮箱不可用" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+-(void)successAction{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"恭喜你" message:@"注册成功" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        if (_delegate && [_delegate respondsToSelector:@selector(sendValue:word:)]) {
+            [_delegate sendValue:self.userName.text word:self.passWord.text];
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
