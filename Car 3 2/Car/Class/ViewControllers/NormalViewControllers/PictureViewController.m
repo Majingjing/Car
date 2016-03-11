@@ -88,7 +88,7 @@
     PictureModel *model = self.Picturearr[indexPath.row];
     cell.lable.text = [NSString stringWithFormat:@"%@共%ld张图片",model.albumName,model.picNumber];
     cell.lable.numberOfLines = 0;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.imagePath]];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.imagePath] placeholderImage:[UIImage imageNamed:@""]];
      return cell;
 }
 
@@ -100,8 +100,6 @@
     [self presentViewController:nvc animated:YES completion:nil];
     
 }
-
-
 
 - (void)jumpAction:(NSInteger)tag {
     [self dismissViewControllerAnimated:NO completion:^{
