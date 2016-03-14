@@ -85,9 +85,14 @@
 }
 
 - (void)jumpAction:(NSInteger)tag {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];
+    
+    if (tag == 104) {
+        return;
+    }
+
     [self dismissViewControllerAnimated:NO completion:^{
         [[NSNotificationCenter defaultCenter] postNotificationName:@"dismiss" object:nil userInfo:@{@"tag":[NSNumber numberWithInteger:tag]}];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];
     }];
 
 }

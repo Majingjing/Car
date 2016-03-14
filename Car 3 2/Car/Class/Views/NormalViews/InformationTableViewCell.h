@@ -10,4 +10,5 @@
 @class InformationModel;
 @interface InformationTableViewCell : UITableViewCell
 @property (nonatomic, strong)InformationModel *model;
+//+ (CGFloat)heighForRow:(NSString *)str;
 @end

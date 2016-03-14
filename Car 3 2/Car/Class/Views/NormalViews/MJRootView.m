@@ -29,6 +29,7 @@ static MJRootView *MJView;
         
         MJView.center = CGPointMake(Width / 2, Height - 30);
         MJView.backgroundColor = [UIColor colorWithRed:0.977 green:0.957 blue:1.000 alpha:0.7];
+        
     });
     return MJView;
 }
@@ -55,8 +56,8 @@ static MJRootView *MJView;
     self.popButton = [UIButton buttonWithType:UIButtonTypeSystem];
     
     self.popButton.frame = CGRectMake(0, 0, 60, 60);
-    self.popButton.backgroundColor = [UIColor colorWithRed:0.693 green:0.974 blue:1.000 alpha:1.000];
-    [self.popButton setBackgroundImage:[UIImage imageNamed:@"添加.png"] forState:UIControlStateNormal];
+//    self.popButton.backgroundColor = [UIColor colorWithRed:0.693 green:0.974 blue:1.000 alpha:1.000];
+    [self.popButton setBackgroundImage:[UIImage imageNamed:@"14.png"] forState:UIControlStateNormal];
     self.popButton.layer.cornerRadius = 30;
     [self.popButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.popButton];
@@ -97,6 +98,7 @@ static MJRootView *MJView;
     }
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(Width / 2 - 20, Height - 40, 40, 40)];
     [button setTitle:@"X" forState:UIControlStateNormal];
+    button.font = [UIFont systemFontOfSize:35];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(downAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:button];
@@ -111,6 +113,7 @@ static MJRootView *MJView;
 - (void)buttonAction:(UIButton *)sender {
     MJView.layer.cornerRadius = 0;
     MJView.frame = [UIScreen mainScreen].bounds;
+
     self.popButton.hidden = YES;
 }
 
