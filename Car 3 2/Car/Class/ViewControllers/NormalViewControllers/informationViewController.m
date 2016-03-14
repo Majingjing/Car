@@ -38,6 +38,8 @@
 @property (nonatomic, strong) NSMutableArray *loopPicNewsArr;
 @property (nonatomic, strong)UIView *whiteView;
 @property (nonatomic, strong)UIScrollView *loopPicView;
+//简介
+@property (nonatomic, strong)UIScrollView *introScrollView;
 @end
 
 @implementation informationViewController
@@ -52,7 +54,6 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"InformationTableViewCell" bundle:nil] forCellReuseIdentifier:@"information"];
     [self update:1];
     
-    
     self.count = 2;
     
     self.index = 1;
@@ -65,6 +66,36 @@
     [self.view addSubview:self.whiteView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissAction:) name:@"dismiss" object:nil];
+    
+    //简介
+    NSString *docPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *carPath = [docPath stringByAppendingString:@"/car.tex"];
+    NSString *result = [NSString stringWithContentsOfFile:carPath encoding:NSUTF8StringEncoding error:nil];
+    if (result) {
+        NSLog(@"非首次登陆");
+    } else {
+        NSLog(@"首次登陆");
+        [@"1" writeToFile:carPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+        self.introScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, Width, Height)];
+        self.introScrollView.contentSize = CGSizeMake(Width * 3, Height);
+        self.introScrollView.bounces = NO;
+        self.introScrollView.pagingEnabled = YES;
+        for (int i = 0; i < 3; i ++) {
+            UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backimage"]];
+            imageView.frame = CGRectMake(Width * i, 0, Width, Height);
+            imageView.userInteractionEnabled = YES;
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+            button.frame = CGRectMake(Width - 60, 30, 60, 30);
+            [button setTitle:@"跳过》" forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
+            [imageView addSubview:button];
+            [self.introScrollView addSubview:imageView];
+        }
+        [self.view addSubview:self.introScrollView];
+        [self.view insertSubview:self.introScrollView aboveSubview:[MJRootView shareInstance]];
+        [MJRootView shareInstance].hidden = YES;
+    }
+
         // Do any additional setup after loading the view.
 }
 
@@ -75,10 +106,13 @@
 -(void)viewWillAppear:(BOOL)animated {
     [self.view addSubview:[MJRootView shareInstance]];
     [MJRootView shareInstance].delegate = self;
- 
+    
 }
 
-
+- (void)action {
+    [self.introScrollView removeFromSuperview];
+    [MJRootView shareInstance].hidden = NO;
+}
 // 解析轮播图地址
 -(void)loadLoopPicData{
     NSURL *url = [NSURL URLWithString:picUrlString];
@@ -117,7 +151,7 @@
         [self loadLoopPicData];
     }
     
-       self.count = 2;
+    self.count = 2;
     self.index = sender.selectedSegmentIndex + 1;
     [self update:sender.selectedSegmentIndex + 1];
  }
@@ -172,7 +206,10 @@
     
 }
 
-
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    InformationModel *model = self.arr[indexPath.row];
+//    return [InformationTableViewCell heighForRow:model.subhead];
+//}
 
 - (void)jumpAction:(NSInteger)tag {
      [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];

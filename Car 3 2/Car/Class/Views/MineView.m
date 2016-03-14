@@ -39,8 +39,8 @@
     
     self.mineTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Height*0.4, Width, Height*0.6) style:UITableViewStylePlain];
     self.mineTableView.alpha = 0.7;
-    self.mineTableView.bounces = NO;
-    [self addSubview:self.mineTableView];
+//    self.mineTableView.bounces = NO;
+    [imgView addSubview:self.mineTableView];
     
  
 }

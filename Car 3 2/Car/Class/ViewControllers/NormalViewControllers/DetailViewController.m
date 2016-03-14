@@ -73,6 +73,7 @@
         self.label.text = [NSString stringWithFormat:@"1/%ld", self.count];
         self.label.textAlignment = NSTextAlignmentCenter;
         
+        
         UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
         button.frame = CGRectMake(Width * arr.count,  0, Width, Height - 300);
         [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
@@ -108,8 +109,12 @@
 
 - (void)action {
     self.page++;
+    for (UIView *view in self.scrollView.subviews) {
+        [view removeFromSuperview];
+    }
     [self loadData:[[InformationManager shareInstance] modelIDbyIndex:self.page]];
     self.scrollView.contentOffset = CGPointMake(0, 0);
+    
 }
 
 
