@@ -26,7 +26,7 @@
 -(void)setModel:(InformationModel *)model {
     self.titleLabel.text = model.title;
     self.subheadLabel.text = model.subhead;
-    [self.photoImage sd_setImageWithURL:[NSURL URLWithString:model.coverpic] placeholderImage:[UIImage imageNamed:@""]];
+    [self.photoImage sd_setImageWithURL:[NSURL URLWithString:model.coverpic] placeholderImage:[UIImage imageNamed:@"ddd"]];
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

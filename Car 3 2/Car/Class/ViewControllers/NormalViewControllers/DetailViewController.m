@@ -113,9 +113,9 @@
 -(void)longAction:(UITapGestureRecognizer *)sender{
    
     if (sender.state == UIGestureRecognizerStateBegan) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否收藏" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更多" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
         
-        UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIAlertAction *shouCangAction = [UIAlertAction actionWithTitle:@"收藏到云端" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             if ([AVUser currentUser] == nil) {
                 [self remindAction];
                 return;
@@ -130,11 +130,16 @@
             }];
             
         }];
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            
+        UIAlertAction *baocunAction = [UIAlertAction actionWithTitle:@"保存到本地" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIImageView *imgView = [self.view viewWithTag:sender.view.tag];;
+            UIImageWriteToSavedPhotosAlbum(imgView.image, nil, nil,nil);
         }];
+        
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        }];
+        [alert addAction:shouCangAction];
+        [alert addAction:baocunAction];
         [alert addAction:cancelAction];
-        [alert addAction:sureAction];
         [self presentViewController:alert animated:YES completion:nil];
     }
 }
