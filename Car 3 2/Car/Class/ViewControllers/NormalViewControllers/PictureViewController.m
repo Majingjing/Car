@@ -2,7 +2,7 @@
 //  PictureViewController.m
 //  Car
 //
-//  Created by lanou3g on 16/3/2.
+//  Created by mj on 16/3/2.
 //  Copyright © 2016年 麻静. All rights reserved.
 //
 
@@ -69,8 +69,6 @@
     self.layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
     self.layout.itemSize = CGSizeMake((Width - 20) / 2, (Width - 20) / 2);
     self.modelCollection = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 50, Width, Height - 50) collectionViewLayout:self.layout];
-     //self.modelCollection.backgroundColor = [UIColor redColor];
-    self.modelCollection.backgroundColor = [UIColor  cyanColor];
  
     [self.modelCollection registerClass:[ModelCollectionViewCell class] forCellWithReuseIdentifier:@"model"];
     self.modelCollection.backgroundColor = [UIColor whiteColor];

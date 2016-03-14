@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12E9BD8E1C91922E0030548E /* PicCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E9BD8D1C91922E0030548E /* PicCollectionViewCell.m */; };
 		B8F21E4D1C8EF7CC00CD06E9 /* MineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F21E4C1C8EF7CC00CD06E9 /* MineView.m */; };
 		C209048E1C904DCA003A0D1A /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C209048D1C904DCA003A0D1A /* AVOSCloud.framework */; };
 		C20904971C904F4D003A0D1A /* ShouCangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20904961C904F4D003A0D1A /* ShouCangViewController.m */; };
@@ -38,13 +39,13 @@
 		C24859381C87C80D00BC8FC9 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C24859281C87C80D00BC8FC9 /* UIView+WebCacheOperation.m */; };
 		C248593E1C87EA1A00BC8FC9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C248593D1C87EA1A00BC8FC9 /* WebViewController.m */; };
 		C24859411C87EE2E00BC8FC9 /* MotorcycleTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C24859401C87EE2E00BC8FC9 /* MotorcycleTypeModel.m */; };
-		C25B0DA71C918C38006D92CC /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = C25B0DA61C918C38006D92CC /* 14.png */; };
 		C26439E01C8D77250097B766 /* ChaiCheVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C26439DF1C8D77250097B766 /* ChaiCheVideoModel.m */; };
 		C26439E41C8D7B320097B766 /* ChaiVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26439E21C8D7B320097B766 /* ChaiVideoCollectionViewCell.m */; };
 		C26439E51C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26439E31C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib */; };
 		C2643A0F1C8D884F0097B766 /* ChaiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2643A0D1C8D884F0097B766 /* ChaiDetailViewController.m */; };
 		C2643A131C8D89680097B766 /* ChaiDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2643A121C8D89680097B766 /* ChaiDetailModel.m */; };
 		C27508281C891F850061CD5E /* 52.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C27508271C891F850061CD5E /* 52.jpg */; };
+		C275083C1C892D6E0061CD5E /* 添加.png in Resources */ = {isa = PBXBuildFile; fileRef = C27508371C892D6E0061CD5E /* 添加.png */; };
 		C27508421C892ECE0061CD5E /* 车型.png in Resources */ = {isa = PBXBuildFile; fileRef = C27508411C892ECE0061CD5E /* 车型.png */; };
 		C27508471C89301E0061CD5E /* 资讯.png in Resources */ = {isa = PBXBuildFile; fileRef = C27508431C89301E0061CD5E /* 资讯.png */; };
 		C27508481C89301E0061CD5E /* 拆车坊.png in Resources */ = {isa = PBXBuildFile; fileRef = C27508441C89301E0061CD5E /* 拆车坊.png */; };
@@ -88,7 +89,9 @@
 		C2911B461C86785500657AFA /* ChaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B451C86785500657AFA /* ChaiViewController.m */; };
 		C2911B491C86DE3900657AFA /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B481C86DE3900657AFA /* PictureViewController.m */; };
 		C2911B4C1C86E32E00657AFA /* ModelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B4B1C86E32E00657AFA /* ModelCollectionViewCell.m */; };
+		C2911B4E1C86FCAE00657AFA /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = C2911B4D1C86FCAE00657AFA /* 10.png */; };
 		C2911B511C8701A500657AFA /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B501C8701A500657AFA /* MineViewController.m */; };
+		C2911B5B1C87046A00657AFA /* 8879-11091423105869.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2911B5A1C87046A00657AFA /* 8879-11091423105869.jpg */; };
 		C2911B621C871A7000657AFA /* InformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B601C871A7000657AFA /* InformationTableViewCell.m */; };
 		C2911B631C871A7000657AFA /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2911B611C871A7000657AFA /* InformationTableViewCell.xib */; };
 		C2911B691C871E4600657AFA /* InformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2911B681C871E4600657AFA /* InformationModel.m */; };
@@ -100,6 +103,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12E9BD8C1C91922E0030548E /* PicCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicCollectionViewCell.h; sourceTree = "<group>"; };
+		12E9BD8D1C91922E0030548E /* PicCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicCollectionViewCell.m; sourceTree = "<group>"; };
 		B8F21E4B1C8EF7CC00CD06E9 /* MineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineView.h; sourceTree = "<group>"; };
 		B8F21E4C1C8EF7CC00CD06E9 /* MineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineView.m; sourceTree = "<group>"; };
 		C209048D1C904DCA003A0D1A /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
@@ -156,7 +161,6 @@
 		C248593D1C87EA1A00BC8FC9 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		C248593F1C87EE2E00BC8FC9 /* MotorcycleTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotorcycleTypeModel.h; sourceTree = "<group>"; };
 		C24859401C87EE2E00BC8FC9 /* MotorcycleTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotorcycleTypeModel.m; sourceTree = "<group>"; };
-		C25B0DA61C918C38006D92CC /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
 		C26439DE1C8D77250097B766 /* ChaiCheVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiCheVideoModel.h; sourceTree = "<group>"; };
 		C26439DF1C8D77250097B766 /* ChaiCheVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiCheVideoModel.m; sourceTree = "<group>"; };
 		C26439E11C8D7B320097B766 /* ChaiVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiVideoCollectionViewCell.h; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		C2643A111C8D89680097B766 /* ChaiDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiDetailModel.h; sourceTree = "<group>"; };
 		C2643A121C8D89680097B766 /* ChaiDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChaiDetailModel.m; sourceTree = "<group>"; };
 		C27508271C891F850061CD5E /* 52.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 52.jpg; sourceTree = "<group>"; };
+		C27508371C892D6E0061CD5E /* 添加.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加.png"; sourceTree = "<group>"; };
 		C27508411C892ECE0061CD5E /* 车型.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "车型.png"; sourceTree = "<group>"; };
 		C27508431C89301E0061CD5E /* 资讯.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "资讯.png"; sourceTree = "<group>"; };
 		C27508441C89301E0061CD5E /* 拆车坊.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "拆车坊.png"; sourceTree = "<group>"; };
@@ -240,8 +245,10 @@
 		C2911B481C86DE3900657AFA /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
 		C2911B4A1C86E32E00657AFA /* ModelCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelCollectionViewCell.h; sourceTree = "<group>"; };
 		C2911B4B1C86E32E00657AFA /* ModelCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCollectionViewCell.m; sourceTree = "<group>"; };
+		C2911B4D1C86FCAE00657AFA /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		C2911B4F1C8701A500657AFA /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		C2911B501C8701A500657AFA /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		C2911B5A1C87046A00657AFA /* 8879-11091423105869.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "8879-11091423105869.jpg"; sourceTree = "<group>"; };
 		C2911B5F1C871A7000657AFA /* InformationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationTableViewCell.h; sourceTree = "<group>"; };
 		C2911B601C871A7000657AFA /* InformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationTableViewCell.m; sourceTree = "<group>"; };
 		C2911B611C871A7000657AFA /* InformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationTableViewCell.xib; sourceTree = "<group>"; };
@@ -474,7 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				C27508411C892ECE0061CD5E /* 车型.png */,
-				C25B0DA61C918C38006D92CC /* 14.png */,
+				C27508371C892D6E0061CD5E /* 添加.png */,
 				C27508431C89301E0061CD5E /* 资讯.png */,
 				C27508441C89301E0061CD5E /* 拆车坊.png */,
 				C27508451C89301E0061CD5E /* 我的.png */,
@@ -547,6 +554,7 @@
 		C2911B2D1C8672AE00657AFA /* BaseViews */ = {
 			isa = PBXGroup;
 			children = (
+				C2911B5A1C87046A00657AFA /* 8879-11091423105869.jpg */,
 			);
 			path = BaseViews;
 			sourceTree = "<group>";
@@ -554,25 +562,28 @@
 		C2911B2E1C8672AE00657AFA /* NormalViews */ = {
 			isa = PBXGroup;
 			children = (
-				C2911B321C8672AE00657AFA /* MJRootView.h */,
-				C2911B331C8672AE00657AFA /* MJRootView.m */,
-				C2911B5F1C871A7000657AFA /* InformationTableViewCell.h */,
-				C2911B601C871A7000657AFA /* InformationTableViewCell.m */,
-				C2911B611C871A7000657AFA /* InformationTableViewCell.xib */,
+				C279A6271C8E713300202A0D /* ChaiCheTableViewCell.h */,
+				C279A6281C8E713300202A0D /* ChaiCheTableViewCell.m */,
+				C279A6291C8E713300202A0D /* ChaiCheTableViewCell.xib */,
 				C279A61D1C8E712A00202A0D /* moroCycleTableViewCell.h */,
 				C279A61E1C8E712A00202A0D /* moroCycleTableViewCell.m */,
 				C279A61F1C8E712A00202A0D /* moroCycleTableViewCell.xib */,
 				C279A6201C8E712A00202A0D /* mosCycleTableViewCell.h */,
 				C279A6211C8E712A00202A0D /* mosCycleTableViewCell.m */,
 				C279A6221C8E712A00202A0D /* mosCycleTableViewCell.xib */,
-				C279A6271C8E713300202A0D /* ChaiCheTableViewCell.h */,
-				C279A6281C8E713300202A0D /* ChaiCheTableViewCell.m */,
-				C279A6291C8E713300202A0D /* ChaiCheTableViewCell.xib */,
+				C2911B321C8672AE00657AFA /* MJRootView.h */,
+				C2911B331C8672AE00657AFA /* MJRootView.m */,
 				C2911B4A1C86E32E00657AFA /* ModelCollectionViewCell.h */,
 				C2911B4B1C86E32E00657AFA /* ModelCollectionViewCell.m */,
+				C2911B5F1C871A7000657AFA /* InformationTableViewCell.h */,
+				C2911B601C871A7000657AFA /* InformationTableViewCell.m */,
+				C2911B611C871A7000657AFA /* InformationTableViewCell.xib */,
 				C26439E11C8D7B320097B766 /* ChaiVideoCollectionViewCell.h */,
 				C26439E21C8D7B320097B766 /* ChaiVideoCollectionViewCell.m */,
 				C26439E31C8D7B320097B766 /* ChaiVideoCollectionViewCell.xib */,
+				12E9BD8C1C91922E0030548E /* PicCollectionViewCell.h */,
+				12E9BD8D1C91922E0030548E /* PicCollectionViewCell.m */,
+				C2911B4D1C86FCAE00657AFA /* 10.png */,
 			);
 			path = NormalViews;
 			sourceTree = "<group>";
@@ -678,7 +689,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C279A6501C8EE7F700202A0D /* motorcycleTypeViewController.xib in Resources */,
-				C25B0DA71C918C38006D92CC /* 14.png in Resources */,
 				C27508471C89301E0061CD5E /* 资讯.png in Resources */,
 				C27508421C892ECE0061CD5E /* 车型.png in Resources */,
 				C279A63D1C8EC02200202A0D /* MJRefresh.bundle in Resources */,
@@ -690,16 +700,19 @@
 				C279A6261C8E712A00202A0D /* mosCycleTableViewCell.xib in Resources */,
 				C275084A1C89301E0061CD5E /* 图片.png in Resources */,
 				C2E25DB01C854895003EF8F8 /* LaunchScreen.storyboard in Resources */,
+				C275083C1C892D6E0061CD5E /* 添加.png in Resources */,
 				C279A62B1C8E713300202A0D /* ChaiCheTableViewCell.xib in Resources */,
 				C20904A21C90523F003A0D1A /* RegiserViewController.xib in Resources */,
 				C275088D1C89A8AD0061CD5E /* 上一张.png in Resources */,
 				C2911B631C871A7000657AFA /* InformationTableViewCell.xib in Resources */,
 				C27508741C893D190061CD5E /* mThirdViewController.xib in Resources */,
+				C2911B4E1C86FCAE00657AFA /* 10.png in Resources */,
 				C2E25DAD1C854895003EF8F8 /* Assets.xcassets in Resources */,
 				C279A6241C8E712A00202A0D /* moroCycleTableViewCell.xib in Resources */,
 				C2E25DAB1C854895003EF8F8 /* Main.storyboard in Resources */,
 				C275088C1C89A8AD0061CD5E /* 下一张.png in Resources */,
 				C27508491C89301E0061CD5E /* 我的.png in Resources */,
+				C2911B5B1C87046A00657AFA /* 8879-11091423105869.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +775,7 @@
 				C279A61C1C8E702A00202A0D /* SYHNetTools.m in Sources */,
 				C20904971C904F4D003A0D1A /* ShouCangViewController.m in Sources */,
 				C279A64F1C8EE7F700202A0D /* motorcycleTypeViewController.m in Sources */,
+				12E9BD8E1C91922E0030548E /* PicCollectionViewCell.m in Sources */,
 				C24859361C87C80D00BC8FC9 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C20904A11C90523F003A0D1A /* RegiserViewController.m in Sources */,
 				C26439E01C8D77250097B766 /* ChaiCheVideoModel.m in Sources */,
