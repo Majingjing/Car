@@ -2,7 +2,7 @@
 //  informationViewController.m
 //  Car
 //
-//  Created by lanou3g on 16/3/1.
+//  Created by mj on 16/3/1.
 //  Copyright © 2016年 麻静. All rights reserved.
 //
 
@@ -26,27 +26,26 @@
 @property (nonatomic, strong)UIScrollView *scrollView;
 //存储解析出来的数据
 @property (nonatomic, strong)NSMutableArray *arr;
-//第一步页面网址
-@property (nonatomic, copy)NSString *str;
 //记录当前segment的index
 @property (nonatomic, assign)NSInteger index;
 //记录当前刷新的次数
-@property (nonatomic, assign)NSInteger count;
+@property (nonatomic, assign)int count;
 
 
 // 轮播图地址数组
-@property (nonatomic,strong) NSMutableArray *loopPicUrlArr;
+@property (nonatomic, strong) NSMutableArray *loopPicUrlArr;
 // 图片新闻地址
-@property (nonatomic,strong) NSMutableArray *loopPicNewsArr;
+@property (nonatomic, strong) NSMutableArray *loopPicNewsArr;
+@property (nonatomic, strong)UIView *whiteView;
+@property (nonatomic, strong)UIScrollView *loopPicView;
+//简介
+@property (nonatomic, strong)UIScrollView *introScrollView;
 @end
 
 @implementation informationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view addSubview:[MJRootView shareInstance]];
-    [MJRootView shareInstance].delegate = self;
-    self.str = @"http://sitemap.chexun.com/chexun/getDataIntoJson.do?category=%ld&page=%ld_%ld";
     
 
     self.arr = [NSMutableArray array];
@@ -55,15 +54,65 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"InformationTableViewCell" bundle:nil] forCellReuseIdentifier:@"information"];
     [self update:1];
     
-    
     self.count = 2;
     
     self.index = 1;
     
     [self loadLoopPicData];
+    
+    self.whiteView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.whiteView.backgroundColor = [UIColor whiteColor];
+    self.whiteView.hidden = YES;
+    [self.view addSubview:self.whiteView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissAction:) name:@"dismiss" object:nil];
+    
+    //简介
+    NSString *docPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *carPath = [docPath stringByAppendingString:@"/car.tex"];
+    NSString *result = [NSString stringWithContentsOfFile:carPath encoding:NSUTF8StringEncoding error:nil];
+    if (result) {
+        NSLog(@"非首次登陆");
+    } else {
+        NSLog(@"首次登陆");
+        [@"1" writeToFile:carPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+        self.introScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, Width, Height)];
+        self.introScrollView.contentSize = CGSizeMake(Width * 3, Height);
+        self.introScrollView.bounces = NO;
+        self.introScrollView.pagingEnabled = YES;
+        for (int i = 0; i < 3; i ++) {
+            UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backimage"]];
+            imageView.frame = CGRectMake(Width * i, 0, Width, Height);
+            imageView.userInteractionEnabled = YES;
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+            button.frame = CGRectMake(Width - 60, 30, 60, 30);
+            [button setTitle:@"跳过》" forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
+            [imageView addSubview:button];
+            [self.introScrollView addSubview:imageView];
+        }
+        [self.view addSubview:self.introScrollView];
+        [self.view insertSubview:self.introScrollView aboveSubview:[MJRootView shareInstance]];
+        [MJRootView shareInstance].hidden = YES;
+    }
+
         // Do any additional setup after loading the view.
 }
 
+- (void)dismissAction:(NSNotification *)sender {
+    [self jumpAction:[sender.userInfo[@"tag"] integerValue]];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self.view addSubview:[MJRootView shareInstance]];
+    [MJRootView shareInstance].delegate = self;
+    
+}
+
+- (void)action {
+    [self.introScrollView removeFromSuperview];
+    [MJRootView shareInstance].hidden = NO;
+}
 // 解析轮播图地址
 -(void)loadLoopPicData{
     NSURL *url = [NSURL URLWithString:picUrlString];
@@ -79,23 +128,29 @@
         }
     }
     
-    
-    if (self.segment.selectedSegmentIndex == 0) {
-        UIScrollView *loopPicView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, Width, 200)];
-        loopPicView.contentSize = CGSizeMake(Width*3, 200);
-        loopPicView.pagingEnabled = YES;
-        loopPicView.bounces = NO;
+        self.loopPicView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, Width, 200)];
+        self.loopPicView.contentSize = CGSizeMake(Width*3, 200);
+        self.loopPicView.pagingEnabled = YES;
+        self.loopPicView.bounces = NO;
         for (int i = 0; i <3; i++) {
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(Width*i, 0, Width, 200)];
             [imgView sd_setImageWithURL:[NSURL URLWithString:self.loopPicUrlArr[i]]];
-            [loopPicView addSubview:imgView];
+            [self.loopPicView addSubview:imgView];
         }
-        self.tableView.tableHeaderView = loopPicView;
-    }
-    
+        self.tableView.tableHeaderView = self.loopPicView;
     
 }
+
+
+
+
 - (IBAction)segmentAction:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex != 0) {
+        self.tableView.tableHeaderView = [[UIView alloc] init];
+    } else {
+        [self loadLoopPicData];
+    }
+    
     self.count = 2;
     self.index = sender.selectedSegmentIndex + 1;
     [self update:sender.selectedSegmentIndex + 1];
@@ -103,11 +158,14 @@
 
 
 - (void)update:(NSInteger)indesx {
-    [[InformationManager shareInstance] solve:[NSString stringWithFormat:self.str, indesx, 1, 1] finish:^(NSMutableArray *arr) {
+        [[InformationManager shareInstance] solve:[NSString stringWithFormat:informationUrl, indesx, 1, 1] finish:^(NSMutableArray *arr) {
+       
          [self.arr removeAllObjects];
          [self.arr addObjectsFromArray:arr];
          [self.arr removeObjectAtIndex:self.arr.count - 1];
          [self.tableView reloadData];
+         [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionBottom];
+
     }];
     
 }
@@ -115,7 +173,7 @@
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 
     if (indexPath.row == self.arr.count - 2) {
-        [[InformationManager shareInstance] solve:[NSString stringWithFormat:self.str, self.index, self.count, self.count] finish:^(NSMutableArray *arr) {
+        [[InformationManager shareInstance] solve:[NSString stringWithFormat:informationUrl, self.index, self.count, self.count] finish:^(NSMutableArray *arr) {
             [self.arr addObjectsFromArray:arr];
             [self.arr removeObjectAtIndex:self.arr.count - 1];
             [self.tableView reloadData];
@@ -148,10 +206,18 @@
     
 }
 
-
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    InformationModel *model = self.arr[indexPath.row];
+//    return [InformationTableViewCell heighForRow:model.subhead];
+//}
 
 - (void)jumpAction:(NSInteger)tag {
      [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];
+    if (tag != 100) {
+        self.whiteView.hidden = NO;
+    } else {
+        self.whiteView.hidden = YES;
+    }
     switch (tag) {
         case 100:
             break;

@@ -2,7 +2,7 @@
 //  ChaiDetailViewController.m
 //  Car
 //
-//  Created by lanou3g on 16/3/7.
+//  Created by jiabin on 16/3/7.
 //  Copyright © 2016年 麻静. All rights reserved.
 //
 
@@ -32,6 +32,7 @@
     self.title = @"拆车坊--视频";
 
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0.338 green:0.366 blue:1.000 alpha:1.000];
+    
     UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(goBackAction)];
     self.navigationItem.leftBarButtonItem = left;
     
@@ -55,6 +56,7 @@
     [self.scrollView addSubview:self.webView];
     self.textLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 290, Width-10, Height-270)];
     self.textLabel.numberOfLines = 0;
+    
     [self.scrollView addSubview:self.textLabel];
 }
 
@@ -62,6 +64,7 @@
     [self loadNewView];
     [self loadData];
 }
+
 -(void)loadData{
     [[InformationManager shareInstance] chaiCheVideoDetailSolve:self.urlString finish:^(ChaiDetailModel *model) {
         self.model = model;
@@ -70,6 +73,14 @@
         [title appendFormat:@"\n%@",self.model.time];
         self.titleLabel.text = title;
         self.textLabel.text = self.model.littitle;
+        
+        CGSize size = CGSizeMake(Width - 10, 20000);
+        NSDictionary *dic = @{NSFontAttributeName:[UIFont systemFontOfSize:15]};
+        CGRect rect = [self.model.littitle boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:dic context:nil];
+        CGRect frame = self.textLabel.frame;
+        frame.size.height = rect.size.height;
+        self.textLabel.frame = frame;
+        
         NSURL *url = [NSURL URLWithString:self.model.vurl];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         [self.webView loadRequest:request];

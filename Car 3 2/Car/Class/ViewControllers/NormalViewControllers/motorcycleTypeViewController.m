@@ -2,7 +2,7 @@
 //  motorcycleTypeViewController.m
 //  Car
 //
-//  Created by lanou3g on 16/3/1.
+//  Created by mj on 16/3/1.
 //  Copyright © 2016年 麻静. All rights reserved.
 //
 
@@ -116,7 +116,7 @@ static NSString *msIdentifier = @"msCell";
         NSString *url = [NSString stringWithFormat:MscleUrl,self.brandId];
         [[morosManger  shareInstanceMsclecy] requestMscycleWithUrl:url didFinsn:^{
 //            self.data = [morosManger shareInstanceMsclecy].msArr;
-            [UIView animateWithDuration:0.3 animations:^{
+            [UIView animateWithDuration:0.7 animations:^{
                 CGRect rect = self.mTableView.frame;
                 rect.origin.x -= 240;
                 self.mTableView.frame = rect;
@@ -126,19 +126,11 @@ static NSString *msIdentifier = @"msCell";
         }];
     }];
     
-    /*
-    UIView *tapView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 114, 736)];
-    tapView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
-    [self.view addSubview:tapView];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
-    [tapView addGestureRecognizer:tap];
-     */
     
     UIButton *tapBtn = [UIButton  buttonWithType:UIButtonTypeSystem];
                         
     tapBtn.frame = CGRectMake(0, 0, Width, Height);
     
-    //tapBtn.backgroundColor = [UIColor whiteColor];
     
     [self.view  insertSubview:tapBtn atIndex:2];
     [tapBtn addTarget:self action:@selector(tapAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -190,7 +182,6 @@ static NSString *msIdentifier = @"msCell";
         
         cell.morosNamelable.text = model.seriesName;
         
-       // NSLog(@"%@ ==== ",model.seriesName);
         
         cell.morosPriceLable.text = model.guidePrice;
         
@@ -235,26 +226,15 @@ static NSString *msIdentifier = @"msCell";
 }
 - (void)jumpAction:(NSInteger)tag {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];
-    switch (tag) {
-        case 100:
-            [self presentViewController:[[informationViewController alloc] initWithNibName:@"informationViewController" bundle:nil] animated:YES completion:nil];
-            break;
-        case 101:
-            
-            break;
-        case 102:
-            [self presentViewController:[[ChaiViewController alloc] init] animated:YES completion:nil];
-            break;
-        case 103:
-            [self presentViewController:[[PictureViewController alloc] init] animated:YES completion:nil];
-            break;
-        case 104:
-            [self presentViewController:[[MineViewController alloc] init] animated:YES completion:nil];
-            break;
 
-        default:
-            break;
+    if (tag == 101) {
+        return;
     }
+    [self dismissViewControllerAnimated:NO completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"dismiss" object:nil userInfo:@{@"tag":[NSNumber numberWithInteger:tag]}];
+    }];
+    
+    
 }
 
 

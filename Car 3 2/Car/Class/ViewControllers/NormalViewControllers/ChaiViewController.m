@@ -2,7 +2,7 @@
 //  ChaiViewController.m
 //  Car
 //
-//  Created by lanou3g on 16/3/2.
+//  Created by jiabin on 16/3/2.
 //  Copyright © 2016年 麻静. All rights reserved.
 //
 
@@ -134,26 +134,15 @@
 
 - (void)jumpAction:(NSInteger)tag {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];
-    switch (tag) {
-        case 100:
-            [self presentViewController:[[informationViewController alloc] initWithNibName:@"informationViewController" bundle:nil] animated:YES completion:nil];
-            break;
-        case 101:
-            [self presentViewController:[[motorcycleTypeViewController alloc] initWithNibName:@"motorcycleTypeViewController" bundle:nil] animated:YES completion:nil];
-            break;
-        case 102:
-            
-            break;
-        case 103:
-            [self presentViewController:[[PictureViewController alloc] init] animated:YES completion:nil];
-            break;
-        case 104:
-            [self presentViewController:[[MineViewController alloc] init] animated:YES completion:nil];
-            break;
-
-        default:
-            break;
+    
+    if (tag == 102) {
+        return;
     }
+
+    [self dismissViewControllerAnimated:NO completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"dismiss" object:nil userInfo:@{@"tag":[NSNumber numberWithInteger:tag]}];
+    }];
+
 }
 
 - (void)segmentAction:(UISegmentedControl *)sender {

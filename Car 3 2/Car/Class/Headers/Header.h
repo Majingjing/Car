@@ -2,7 +2,7 @@
 //  Header.h
 //  Car
 //
-//  Created by lanou3g on 16/3/1.
+//  Created by mj on 16/3/1.
 //  Copyright © 2016年 麻静. All rights reserved.
 //
 
@@ -12,7 +12,7 @@
 #define Width CGRectGetWidth([UIScreen mainScreen].bounds)
 #define Height CGRectGetHeight([UIScreen mainScreen].bounds)
 
-
+#define informationUrl @"http://sitemap.chexun.com/chexun/getDataIntoJson.do?category=%ld&page=%d_%d"
 #define chaiDataUrl @"http://sitemap.chexun.com/m/ccfnewsjson.do?count=10&page=%d"
 #define chaiVideoDataUrl @"http://sitemap.chexun.com/m/ccvideojson.do?count=6&page=%d"
 #define chaiVideoUrl @"http://sitemap.chexun.com/m/videonewsjson.do?id=%@"

@@ -2,7 +2,7 @@
 //  PictureViewController.m
 //  Car
 //
-//  Created by lanou3g on 16/3/2.
+//  Created by mj on 16/3/2.
 //  Copyright © 2016年 麻静. All rights reserved.
 //
 
@@ -69,8 +69,6 @@
     self.layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
     self.layout.itemSize = CGSizeMake((Width - 20) / 2, (Width - 20) / 2);
     self.modelCollection = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 50, Width, Height - 50) collectionViewLayout:self.layout];
-     //self.modelCollection.backgroundColor = [UIColor redColor];
-    self.modelCollection.backgroundColor = [UIColor  cyanColor];
  
     [self.modelCollection registerClass:[ModelCollectionViewCell class] forCellWithReuseIdentifier:@"model"];
     self.modelCollection.backgroundColor = [UIColor whiteColor];
@@ -90,7 +88,7 @@
     PictureModel *model = self.Picturearr[indexPath.row];
     cell.lable.text = [NSString stringWithFormat:@"%@共%ld张图片",model.albumName,model.picNumber];
     cell.lable.numberOfLines = 0;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.imagePath]];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.imagePath] placeholderImage:[UIImage imageNamed:@""]];
      return cell;
 }
 
@@ -103,29 +101,17 @@
     
 }
 
-
-
 - (void)jumpAction:(NSInteger)tag {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"downAction" object:nil];
-    switch (tag) {
-        case 100:
-            [self presentViewController:[[informationViewController alloc] initWithNibName:@"informationViewController" bundle:nil] animated:YES completion:nil];
-            break;
-        case 101:
-            [self presentViewController:[[motorcycleTypeViewController alloc] init] animated:YES completion:nil];
-            break;
-        case 102:
-            [self presentViewController:[[ChaiViewController alloc] init] animated:YES completion:nil];
-            break;
-        case 103:
-            break;
-        case 104:
-            [self presentViewController:[[MineViewController alloc] init] animated:YES completion:nil];
-            break;
-
-        default:
-            break;
+    
+    if (tag == 103) {
+        return;
     }
+
+    [self dismissViewControllerAnimated:NO completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"dismiss" object:nil userInfo:@{@"tag":[NSNumber numberWithInteger:tag]}];
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {
